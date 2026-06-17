@@ -58,9 +58,9 @@ phases:
 
 ## Current Sprint Status
 
-**Sprint**: SPRINT-001
-**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → Build ✅ → Validate ✅ → **Iterate** ✅ (완결)
-**Status**: ✅ SPRINT-001 전 단계 완료 — Sprint 002 진입 승인
+**Sprint**: SPRINT-002
+**Phase**: Build 🔨 (Task 3/4 완료)
+**Status**: 🔨 SPRINT-002 Build 진행 중
 
 ### 라이브 URL
 
@@ -70,15 +70,19 @@ phases:
 | Vercel 대시보드 | https://vercel.com/brother14752s-projects/side-hustle-platform |
 | GitHub          | https://github.com/brother1-4752/side-hustle-platform          |
 
-### Completed — SPRINT-001 전 단계 ✅
+### SPRINT-001 — 전 단계 완결 ✅
 
-- [x] Discover — `01_DISCOVER.md` 완성 (2026-06-17)
-- [x] Define — `02_DEFINE.md` 완성 (2026-06-17) ⚠️ Scope Freeze
-- [x] Design — `03_DESIGN.md` 완성 (2026-06-17)
-- [x] PRD — `04_PRD.md` 완성 (2026-06-17) ⚠️ SCOPE FREEZE
-- [x] Build — `06_BUILD.md` 완성 (2026-06-17) — Task 1~6 전체 구현, 36/36 pages SSG
-- [x] Validate — `07_VALIDATE.md` 완성 (2026-06-17) — 유저 5명 테스트, KPI CTR 100% / 체류 75.4초
+- [x] Discover / Define / Design / PRD — `01~04_*.md` 완성 (2026-06-17)
+- [x] Build — `06_BUILD.md` 완성 (2026-06-17) — 36/36 pages SSG
+- [x] Validate — `07_VALIDATE.md` 완성 (2026-06-17) — CTR 100%, 체류 75.4초
 - [x] Iterate — `08_ITERATE.md` 완성 (2026-06-17) — Sprint 002 진입 승인
+
+### SPRINT-002 — Build 진행 현황
+
+- [x] Task 1: `requiredHoursPerDay` 스키마 + MetricPanel 5메트릭 벤토 그리드 (커밋: `f2dc4d2`)
+- [x] Task 2: AdSense 승인용 Privacy·Terms 페이지 신설 + Footer 링크 (커밋: `2197adf`)
+- [x] Task 3: 다중 태그 AND 교차 필터링 + URL 동기화 (커밋: `e38c4a7`)
+- [ ] Task 4: AI 자동 데이터 수집 파이프라인 기반 구축 (미시작)
 
 ### 기술 스택 (확정)
 
@@ -87,16 +91,9 @@ phases:
 - `next/font/google` (Noto Sans KR)
 - Vercel Analytics, Google AdSense Level 2
 
-### Validate 결과 요약 ✅
-
-- [x] 유저 5명 테스트 완료 (김지은, 이민우, 박서연, 최동현, 정정훈)
-- [x] KPI 달성: 카드 클릭률 100% (목표 30% 초과), 평균 체류 75.4초 (목표 60초 초과)
-- [x] 핵심 Pain Point: 직장인 '하루 투입 시간' 지표 누락 → Sprint 002 `requiredHoursPerDay` 필드 추가 예정
-- [x] Go/No-Go: ITERATE 후 BUILD — Sprint 002 진입 승인
-
 ### Next Action
 
-→ Sprint 002: `requiredHoursPerDay` 필드 + 다중 태그 필터 + AI 자동 데이터 수집 파이프라인 구축
+→ SPRINT-002 Task 4: AI 자동 데이터 수집 파이프라인 (`scripts/collect.ts` + Claude API 연동)
 
 ## Automated Workflow Rules
 
