@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 import type { SideHustle } from "@/types";
 
 const DIFFICULTY_CONFIG: Record<
@@ -37,6 +40,9 @@ export default function HustleCard({ hustle }: HustleCardProps) {
   return (
     <Link
       href={`/side-hustle/${hustle.slug}`}
+      onClick={() =>
+        track("hustle_card_click", { slug: hustle.slug, title: hustle.title })
+      }
       className="group block bg-white/80 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-[0_2px_12px_rgb(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.10)] hover:-translate-y-1.5 hover:border-black/[0.08] transition-all duration-300 ease-out"
     >
       <div className="p-5">
