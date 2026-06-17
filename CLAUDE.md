@@ -86,7 +86,11 @@ phases:
   - `AdSlot.tsx`: `in-content` 사이즈 타입 추가 (728×90)
   - 사이드바: 관련 부업 2개 (공통 태그 기준, trendScore 정렬) + AdSlot rectangle/half-page
   - `npm run build` 정적 빌드 성공 (9/9 pages, lint 0, tsc 0, SSG 0 에러)
-- [ ] Task 4: 콘텐츠 데이터 (30~50개 항목 완성)
+- [x] Task 4: 콘텐츠 데이터 확장 (2026-06-17)
+  - `data/side-hustles.json`: 5개 → 30개 항목 확장
+  - 카테고리: AI활용(5), 제휴마케팅(2), 이커머스(6), 지식창업(3), 크리에이터(5), 프리랜서(5), 교육(1), 기타(3)
+  - 난이도: beginner(18), intermediate(11), advanced(1)
+  - `npm run build` 34/34 pages SSG 성공 (lint 0, tsc 0, 에러 0)
 - [ ] Task 5: Analytics + SEO 메타태그 + 최종 점검
 
 ### 기술 스택 (확정)
@@ -98,7 +102,7 @@ phases:
 
 ### Next Action
 
-→ Task 4: 콘텐츠 데이터 확장 (data/side-hustles.json, 30~50개 항목)
+→ Task 5: Vercel Analytics + SEO 메타태그 + 최종 점검
 
 ## Automated Workflow Rules
 

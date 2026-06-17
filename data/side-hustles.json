@@ -6,15 +6,8 @@
     "title": "쿠팡파트너스",
     "summary": "링크 공유만으로 구매 수수료를 받는 제휴마케팅의 가장 쉬운 시작점",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": {
-      "min": 5,
-      "max": 30,
-      "note": "채널 규모 및 활동량에 따라 상이"
-    },
-    "initialCost": {
-      "amount": 0,
-      "note": "무료 가입, 별도 비용 없음"
-    },
+    "expectedMonthlyIncome": { "min": 5, "max": 30, "note": "채널 규모 및 활동량에 따라 상이" },
+    "initialCost": { "amount": 0, "note": "무료 가입, 별도 비용 없음" },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 3~5시간",
     "category": "온라인 마케팅",
@@ -51,15 +44,8 @@
     "title": "네이버 블로그 수익화",
     "summary": "일상 글쓰기로 애드포스트·협찬·체험단 수익을 동시에 만드는 검증된 방법",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": {
-      "min": 10,
-      "max": 100,
-      "note": "방문자 수와 포스팅 빈도에 따라 차이 큼"
-    },
-    "initialCost": {
-      "amount": 0,
-      "note": "네이버 계정만 있으면 무료 시작"
-    },
+    "expectedMonthlyIncome": { "min": 10, "max": 100, "note": "방문자 수와 포스팅 빈도에 따라 차이 큼" },
+    "initialCost": { "amount": 0, "note": "네이버 계정만 있으면 무료 시작" },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 5~10시간",
     "category": "콘텐츠 크리에이터",
@@ -96,15 +82,8 @@
     "title": "AI 콘텐츠 제작 서비스",
     "summary": "ChatGPT·Claude 등 AI 툴을 활용해 블로그 글·SNS 카피·상세페이지를 대행 제작",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": {
-      "min": 30,
-      "max": 200,
-      "note": "건당 3~20만원, 단가는 경력에 따라 급상승"
-    },
-    "initialCost": {
-      "amount": 2,
-      "note": "ChatGPT Plus 월 구독료 약 2만원"
-    },
+    "expectedMonthlyIncome": { "min": 30, "max": 200, "note": "건당 3~20만원, 단가는 경력에 따라 급상승" },
+    "initialCost": { "amount": 2, "note": "ChatGPT Plus 월 구독료 약 2만원" },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 10~20시간",
     "category": "AI 활용",
@@ -141,15 +120,8 @@
     "title": "네이버 스마트스토어",
     "summary": "국내 최대 쇼핑 플랫폼에서 내 상품을 판매하는 온라인 창업의 정석",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": {
-      "min": 20,
-      "max": 300,
-      "note": "상품 카테고리와 마케팅 역량에 따라 편차 매우 큼"
-    },
-    "initialCost": {
-      "amount": 30,
-      "note": "초기 재고 매입비 (위탁판매 시 0원으로 시작 가능)"
-    },
+    "expectedMonthlyIncome": { "min": 20, "max": 300, "note": "상품 카테고리와 마케팅 역량에 따라 편차 매우 큼" },
+    "initialCost": { "amount": 30, "note": "초기 재고 매입비 (위탁판매 시 0원으로 시작 가능)" },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 10~15시간",
     "category": "이커머스",
@@ -186,15 +158,8 @@
     "title": "쇼츠·릴스 영상 편집 대행",
     "summary": "스마트폰 하나로 유튜브 쇼츠·인스타 릴스 편집을 대행해 수익을 올리는 트렌디한 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": {
-      "min": 20,
-      "max": 150,
-      "note": "클라이언트 수와 편집 단가에 따라 상이"
-    },
-    "initialCost": {
-      "amount": 0,
-      "note": "CapCut 등 무료 앱으로 시작 가능"
-    },
+    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "클라이언트 수와 편집 단가에 따라 상이" },
+    "initialCost": { "amount": 0, "note": "CapCut 등 무료 앱으로 시작 가능" },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
     "category": "영상 편집",
@@ -221,6 +186,956 @@
       }
     ],
     "relatedTags": ["CapCut", "유튜브쇼츠", "인스타그램릴스", "크몽"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "midjourney-goods",
+    "slug": "midjourney-goods",
+    "icon": "🎨",
+    "title": "미드저니 AI 굿즈 디자인",
+    "summary": "미드저니로 생성한 AI 이미지를 마플샵·Redbubble에 올려 잠자는 동안에도 수익을 만드는 무재고 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 5, "max": 80, "note": "디자인 업로드 수와 플랫폼 노출에 비례" },
+    "initialCost": { "amount": 1, "note": "미드저니 Basic 플랜 월 약 1.2만원" },
+    "timeToFirstIncome": "2~6주",
+    "weeklyTimeRequired": "주 3~8시간",
+    "category": "AI 활용",
+    "tags": ["AI활용", "디자인", "무재고", "재택", "패시브인컴"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 87,
+    "overview": "미드저니(Midjourney)로 생성한 독창적인 AI 아트를 티셔츠, 폰케이스, 에코백 등의 굿즈로 만들어 판매하는 부업입니다. 마플샵(국내), Redbubble·Society6(해외) 등 POD 플랫폼을 이용하면 재고 없이 주문 발생 시 자동으로 제작·배송이 이루어집니다.\n\n한 번 업로드한 디자인이 지속적으로 수익을 만들어내는 패시브 인컴 구조가 매력입니다. 트렌디한 키워드(kawaii, minimalist, vintage floral 등)로 빠르게 대량 업로드하는 전략이 핵심입니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "미드저니 가입 및 스타일 탐색",
+        "description": "Discord에서 Midjourney 서버 가입 후 Basic 플랜($10/월) 구독. '/imagine' 명령어로 'kawaii cat illustration', 'minimalist line art' 같은 키워드를 실험해 나만의 스타일을 찾습니다."
+      },
+      {
+        "step": 2,
+        "title": "마플샵 또는 Redbubble 입점",
+        "description": "마플샵(marpple.shop)은 국내 배송, Redbubble은 글로벌 판매. 둘 다 무료 입점 가능. 생성한 AI 이미지를 PNG로 저장 후 각 플랫폼 가이드라인에 맞게 업로드합니다."
+      },
+      {
+        "step": 3,
+        "title": "SEO 태그 최적화 및 업로드 반복",
+        "description": "상품 태그에 영문 키워드를 정확히 입력하는 것이 노출의 핵심입니다. 초기 3개월은 주 5개 이상 업로드를 목표로 꾸준히 쌓으면 자동 판매가 시작됩니다."
+      }
+    ],
+    "relatedTags": ["마플샵", "Redbubble", "POD", "AI아트"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "chatgpt-api-saas",
+    "slug": "chatgpt-api-saas",
+    "icon": "⚙️",
+    "title": "ChatGPT API 활용 소규모 SaaS",
+    "summary": "OpenAI API로 특정 문제를 해결하는 소규모 웹 서비스를 만들어 구독 수익을 올리는 개발자형 부업",
+    "difficulty": "advanced",
+    "expectedMonthlyIncome": { "min": 50, "max": 500, "note": "PMF 달성 시 급등 가능, 초기 3~6개월은 인내 필요" },
+    "initialCost": { "amount": 10, "note": "OpenAI API 크레딧 + Vercel/Supabase 기본 플랜" },
+    "timeToFirstIncome": "1~3개월",
+    "weeklyTimeRequired": "주 10~20시간",
+    "category": "AI 활용",
+    "tags": ["AI활용", "개발", "SaaS", "재택", "패시브인컴"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 93,
+    "overview": "OpenAI API를 활용해 특정 니즈를 해결하는 소규모 웹 서비스를 만들고 월 구독료를 받는 방식입니다. 유튜브 자막 요약 서비스, 쇼핑몰 리뷰 자동 분석 도구, 법률 문서 초안 생성기 등이 좋은 사례입니다.\n\nNext.js + OpenAI SDK 조합으로 빠르게 프로토타입을 만들고, 결제는 Stripe나 포트원(Portone)으로 연동합니다. 특정 틈새 시장 문제를 겨냥하면 소수 유료 사용자만으로도 의미 있는 수익을 낼 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "해결할 문제 하나 정하기",
+        "description": "내가 잘 아는 분야(부동산, 법률, 쇼핑몰, HR 등)에서 반복 작업을 AI로 자동화할 수 있는 문제를 찾습니다. 커뮤니티(Reddit, 디시인사이드)에서 반복 불만이 많은 주제가 힌트입니다."
+      },
+      {
+        "step": 2,
+        "title": "MVP 1주일 안에 배포",
+        "description": "Next.js 14 + OpenAI SDK + Vercel 무료 티어로 프론트엔드와 API를 함께 배포합니다. Supabase를 DB로 연동하면 별도 서버 없이 인증·데이터 저장이 가능합니다."
+      },
+      {
+        "step": 3,
+        "title": "초기 사용자 10명 확보 후 유료화",
+        "description": "무료 공개 후 Product Hunt, 커리어리, 네이버 카페에 공유해 초기 사용자를 모읍니다. 피드백 반영 후 월 9,900원~19,900원 구독으로 전환합니다."
+      }
+    ],
+    "relatedTags": ["OpenAI", "Next.js", "Vercel", "Stripe", "인디해커"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "ai-avatar-youtube",
+    "slug": "ai-avatar-youtube",
+    "icon": "🪄",
+    "title": "AI 아바타 유튜브 채널 운영",
+    "summary": "얼굴 공개 없이 HeyGen AI 아바타로 정보성 영상을 제작해 유튜브 수익화를 달성하는 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 10, "max": 200, "note": "구독자 1000명·시청 4000시간 달성 후 수익화 시작" },
+    "initialCost": { "amount": 3, "note": "HeyGen Starter 플랜 월 약 3만원" },
+    "timeToFirstIncome": "3~6개월",
+    "weeklyTimeRequired": "주 5~10시간",
+    "category": "AI 활용",
+    "tags": ["AI활용", "유튜브", "재택", "크리에이터", "패시브인컴"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 89,
+    "overview": "HeyGen, D-ID 등 AI 아바타 영상 생성 서비스를 사용하면 실제 얼굴 노출 없이 사실적인 AI 프레젠터가 등장하는 유튜브 영상을 제작할 수 있습니다. 스크립트를 ChatGPT로 작성하고, 영상은 AI 아바타로 생성하면 주 1~2편 업로드가 가능합니다.\n\n경제, 자기계발, 역사, 과학 등 정보성 콘텐츠 채널에 특히 적합합니다. 채널이 성장하면 광고 수익 외에도 협찬·디지털 상품 판매로 수익 구조를 다각화할 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "채널 컨셉과 타겟 키워드 설정",
+        "description": "네이버 데이터랩, 유튜브 스튜디오 키워드 도구로 검색량은 많고 경쟁은 적은 틈새 주제를 찾습니다. '5분 경제 용어', '잠 못 드는 역사 이야기' 같이 구체적인 포맷이 빠른 성장에 유리합니다."
+      },
+      {
+        "step": 2,
+        "title": "AI 아바타 첫 영상 제작",
+        "description": "ChatGPT로 600자 스크립트 작성 후 HeyGen(heygen.com)에 붙여넣기. 아바타·목소리 선택 후 5분 내 영상 생성. CapCut으로 자막·배경음악 추가 후 업로드합니다."
+      },
+      {
+        "step": 3,
+        "title": "주 2편 업로드로 수익화 조건 달성",
+        "description": "구독자 1,000명·시청시간 4,000시간(또는 쇼츠 1,000만 조회) 달성 시 YouTube 파트너 프로그램 신청. 기준 달성까지 평균 6~12개월이므로 초기 스프린트가 중요합니다."
+      }
+    ],
+    "relatedTags": ["HeyGen", "D-ID", "유튜브파트너", "AI영상"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "aliexpress-affiliate",
+    "slug": "aliexpress-affiliate",
+    "icon": "🌏",
+    "title": "알리익스프레스 어필리에이트",
+    "summary": "AliExpress 공식 어필리에이트로 글로벌 이커머스 트래픽을 활용해 달러 수수료를 받는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 5, "max": 50, "note": "달러 수수료 최대 8.5%, 환율 이득 포함" },
+    "initialCost": { "amount": 0, "note": "무료 가입, 별도 비용 없음" },
+    "timeToFirstIncome": "2~6주",
+    "weeklyTimeRequired": "주 3~7시간",
+    "category": "온라인 마케팅",
+    "tags": ["제휴마케팅", "온라인마케팅", "무자본", "재택", "달러수익"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 76,
+    "overview": "알리익스프레스(AliExpress) 어필리에이트 프로그램에 가입하면 상품 링크를 공유해 구매가 발생할 때마다 최대 8.5%의 수수료를 달러로 받을 수 있습니다. 알리익스프레스의 저렴한 가격과 방대한 상품군은 '직구 추천' 콘텐츠에 최적화되어 있습니다.\n\n네이버 블로그나 유튜브에 직구 핵꿀템 리뷰를 올리는 방식이 가장 효과적이며, 달러 수수료이므로 환율 이득도 누릴 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "어필리에이트 포털 가입",
+        "description": "portals.aliexpress.com 접속 후 이메일로 파트너 계정 생성. 'Content Creator' 유형으로 신청하면 별도 심사 없이 즉시 링크 생성이 가능합니다."
+      },
+      {
+        "step": 2,
+        "title": "직구 핵꿀템 리뷰 콘텐츠 제작",
+        "description": "직접 구매해 사용해보거나, 상품 리뷰와 스펙을 비교하는 '알리 핵꿀템 TOP 5' 형식의 블로그/영상을 제작합니다. 구체적인 사용 후기가 클릭률을 높입니다."
+      },
+      {
+        "step": 3,
+        "title": "검색 최적화로 지속 트래픽 확보",
+        "description": "네이버 블로그, 유튜브, 인스타 릴스 등에 콘텐츠를 배포하고, 제목에 '알리익스프레스', '직구', '추천' 등 검색량 높은 키워드를 포함시킵니다."
+      }
+    ],
+    "relatedTags": ["알리직구", "직구추천", "해외쇼핑", "어필리에이트"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "kmong-ebook",
+    "slug": "kmong-ebook",
+    "icon": "📘",
+    "title": "크몽 전자책 자동 판매",
+    "summary": "내가 가진 전문 지식을 PDF 전자책으로 만들어 크몽에 올리면 24시간 자동으로 팔리는 패시브 인컴",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 10, "max": 150, "note": "주제 수요와 가격 설정에 따라 상이" },
+    "initialCost": { "amount": 0, "note": "구글 독스 또는 파워포인트로 무료 제작 가능" },
+    "timeToFirstIncome": "1~4주",
+    "weeklyTimeRequired": "주 1~3시간",
+    "category": "지식 창업",
+    "tags": ["전자책", "지식창업", "무자본", "재택", "패시브인컴"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 83,
+    "overview": "내가 아는 것을 PDF 전자책으로 만들어 크몽에 등록하면, 24시간 플랫폼이 판매를 대신해주는 자동화 수익 구조입니다. 투자·재테크 노하우, 자소서 작성법, 재택 부업 가이드, 특정 시험 합격 후기 등 수요 있는 주제라면 무엇이든 상품이 됩니다.\n\n한 번 만들어두면 별도 관리 없이 꾸준히 팔리는 패시브 인컴의 정석입니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "주제 선정 및 경쟁 리서치",
+        "description": "크몽(kmong.com) 디지털 자료 카테고리에서 베스트셀러 전자책을 분석합니다. 재테크, 이직, 다이어트, N잡 관련 주제가 꾸준히 판매됩니다. 경쟁 상품 리뷰를 읽고 차별화 포인트를 찾습니다."
+      },
+      {
+        "step": 2,
+        "title": "PPT로 전자책 제작",
+        "description": "파워포인트나 Google Slides로 20~50페이지 분량의 전자책을 제작합니다. 글씨만 빽빽한 것보다 이미지, 표, 체크리스트를 포함한 구성이 후기 평점에 유리합니다."
+      },
+      {
+        "step": 3,
+        "title": "크몽 등록 및 초기 가격 전략",
+        "description": "PDF로 내보내기 후 크몽 디지털 자료 카테고리에 등록합니다. 초기 가격은 경쟁 제품보다 약 20% 낮게 설정하고, 리뷰 5개 이상 모이면 단가를 올립니다."
+      }
+    ],
+    "relatedTags": ["크몽", "디지털콘텐츠", "PDF", "지식판매"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "notion-template",
+    "slug": "notion-template",
+    "icon": "🗒️",
+    "title": "노션 템플릿 제작·판매",
+    "summary": "Notion으로 만든 업무·생산성·재테크 템플릿을 Gumroad나 크몽에서 자동으로 판매하는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 5, "max": 100, "note": "Gumroad 글로벌 판매 시 달러 수익 가능" },
+    "initialCost": { "amount": 0, "note": "Notion 무료 플랜으로 충분" },
+    "timeToFirstIncome": "1~3주",
+    "weeklyTimeRequired": "주 2~5시간",
+    "category": "지식 창업",
+    "tags": ["노션", "지식창업", "무자본", "재택", "패시브인컴", "생산성"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 84,
+    "overview": "Notion 사용자가 급증하면서 잘 만든 템플릿에 대한 수요도 함께 늘었습니다. 독서 기록, 가계부, 사이드프로젝트 관리, 취업 준비 등 구체적인 문제를 해결하는 템플릿은 구매 의향이 높습니다.\n\n한 번 만든 템플릿을 Gumroad(글로벌), 크몽(국내)에 동시 판매하면 별도 작업 없이 수익이 발생하는 구조입니다. Gumroad의 경우 달러로 수수료가 지급됩니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "수요 있는 템플릿 주제 발굴",
+        "description": "Gumroad(gumroad.com)의 Notion 카테고리에서 판매량 상위 템플릿을 분석합니다. '2024 Year Planner', 'Freelance Client CRM', '독서 100권 챌린지' 등 구체적인 목표 해결 템플릿이 인기입니다."
+      },
+      {
+        "step": 2,
+        "title": "Notion으로 템플릿 제작",
+        "description": "사용자 경험을 우선으로 직관적인 UI와 아이콘, 컬러 배지를 활용해 시각적으로 완성도 높은 템플릿을 만듭니다. 데이터베이스, 캘린더, 타임라인 뷰를 조합하면 차별화됩니다."
+      },
+      {
+        "step": 3,
+        "title": "Gumroad에 올리고 SNS 홍보",
+        "description": "Gumroad에서 '$0+'(자율 가격제) 또는 $5~$15 고정가로 등록합니다. 인스타그램, X(트위터)에 템플릿 미리보기 영상을 올리면 무료로 초기 트래픽을 만들 수 있습니다."
+      }
+    ],
+    "relatedTags": ["Notion", "Gumroad", "생산성도구", "템플릿판매"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "inflearn-lecture",
+    "slug": "inflearn-lecture",
+    "icon": "🎓",
+    "title": "인프런·클래스101 강의 판매",
+    "summary": "내가 잘 아는 기술이나 취미를 영상 강의로 만들어 온라인 플랫폼에서 파는 장기 패시브 인컴",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 10, "max": 300, "note": "강의 퀄리티와 마케팅 역량에 크게 달림" },
+    "initialCost": { "amount": 5, "note": "마이크(1~3만원) + OBS Studio 무료 화면 녹화" },
+    "timeToFirstIncome": "1~3개월",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "지식 창업",
+    "tags": ["강의", "지식창업", "재택", "패시브인컴", "교육"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 81,
+    "overview": "인프런(inflearn.com)은 IT·개발, 클래스101은 다양한 라이프스타일 분야 강의 플랫폼입니다. 한 번 촬영해 올린 강의가 수년간 판매되는 레버리지 효과가 높은 부업 모델입니다.\n\n엑셀 함수, 파이썬 기초, 포토샵, 재테크, 드로잉 등 수요 있는 주제라면 진입 장벽이 낮습니다. 수강생 리뷰가 쌓일수록 자동으로 판매량이 증가합니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "강의 주제 선정 및 커리큘럼 기획",
+        "description": "인프런 베스트셀러 페이지에서 수요 있는 분야를 확인합니다. '왕초보를 위한 00 입문', '실무에 바로 쓰는 00' 등 초보자 대상 강의의 수요가 높습니다. 총 2~4시간 분량이 적정합니다."
+      },
+      {
+        "step": 2,
+        "title": "강의 녹화 및 편집",
+        "description": "화면 녹화는 OBS Studio(무료), 카메라 녹화는 스마트폰으로 충분합니다. 다빈치 리졸브(무료)로 자막을 추가합니다. 강의를 3~5개 영상으로 쪼개면 완주율이 높아집니다."
+      },
+      {
+        "step": 3,
+        "title": "출시 초기 할인으로 리뷰 쌓기",
+        "description": "인프런 지식공유자 신청 후 심사 통과 시 강의 등록. 출시 첫 달은 50% 할인 쿠폰을 SNS에 배포해 초기 수강생 30명을 모아 리뷰를 쌓는 전략이 효과적입니다."
+      }
+    ],
+    "relatedTags": ["인프런", "클래스101", "VOD강의", "강의출판"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "kream-resell",
+    "slug": "kream-resell",
+    "icon": "👟",
+    "title": "KREAM 한정판 리셀",
+    "summary": "나이키 조던, 뉴발란스 등 한정판 스니커즈를 정가에 구매 후 KREAM에서 프리미엄을 붙여 재판매",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 10, "max": 200, "note": "드롭 타이밍과 아이템 선정이 수익 결정" },
+    "initialCost": { "amount": 20, "note": "초기 구매 자금 필요, 리셀 이익은 20~100% 수준" },
+    "timeToFirstIncome": "1~4주",
+    "weeklyTimeRequired": "주 2~5시간",
+    "category": "이커머스",
+    "tags": ["리셀", "이커머스", "스니커즈", "재테크"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 78,
+    "overview": "한정판 스니커즈·의류를 정가에 구매(Draw/래플)해 KREAM, 솔드아웃 등 국내 리셀 플랫폼에서 높은 가격으로 재판매하는 방식입니다. 인기 아이템의 경우 정가 대비 30~100% 이상의 리셀 프리미엄이 붙기도 합니다.\n\n트렌드 분석과 발매 일정 파악이 성패를 좌우합니다. SNKRS 앱, 나이키 멤버십 등 래플 당첨률 높이는 전략이 중요합니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "발매 일정 파악 및 트렌드 공부",
+        "description": "Sneakers Korea, 스니커즈픽, 솔드아웃 블로그 등을 구독해 발매 예정 리스트를 확인합니다. 리셀가가 높은 아이템(조던1, 덩크, NB 9060 등)의 패턴을 분석합니다."
+      },
+      {
+        "step": 2,
+        "title": "래플·드로우 최대한 참여",
+        "description": "나이키 SNKRS 앱, 라인프렌즈, 무신사 래플 등 다양한 채널에서 드로우에 참여합니다. 나이키 멤버십 활성화, 구매 이력 쌓기가 당첨률을 높입니다."
+      },
+      {
+        "step": 3,
+        "title": "KREAM에 즉시 등록",
+        "description": "당첨 즉시 KREAM(kream.co.kr)에 검수 전 거래 또는 보관 판매로 등록합니다. 시장가보다 5~10% 낮은 가격으로 시작하면 빠른 거래가 가능합니다."
+      }
+    ],
+    "relatedTags": ["KREAM", "솔드아웃", "스니커즈", "드로우"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "etsy-digital",
+    "slug": "etsy-digital",
+    "icon": "🖼️",
+    "title": "Etsy 디지털 파일 판매",
+    "summary": "Canva로 만든 플래너·이력서·초대장 파일을 Etsy에 올려 글로벌 달러 수익을 자동으로 만드는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 5, "max": 150, "note": "달러 수익(환율 이득 포함), 상품 수에 따라 성장" },
+    "initialCost": { "amount": 0, "note": "Canva 무료 버전으로 시작, Etsy 상품 등록 건당 $0.2" },
+    "timeToFirstIncome": "2~8주",
+    "weeklyTimeRequired": "주 3~8시간",
+    "category": "이커머스",
+    "tags": ["Etsy", "디자인", "무재고", "재택", "달러수익", "패시브인컴"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 86,
+    "overview": "Etsy는 글로벌 최대 수공예·디지털 상품 마켓플레이스입니다. 직접 구매·배송 없이 디지털 파일(PDF, PNG, SVG 등)을 판매하면 판매 후 자동으로 파일이 전달되는 완전 자동화 수익이 가능합니다.\n\n인기 상품군: 미국식 주간 플래너, Canva 이력서 템플릿, 웨딩 초대장, 교사용 학습지 등. 미국·영국 타겟 영문 상품이 국내 대비 단가가 10배 이상 높습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "수요 높은 디자인 리서치",
+        "description": "Everbee, Marmalead 등 Etsy 키워드 리서치 툴로 수요 높은 상품을 분석합니다. Canva 무료 계정으로 미국식 주간 플래너나 이력서 템플릿을 만들고 PDF로 저장합니다."
+      },
+      {
+        "step": 2,
+        "title": "Etsy 샵 개설 및 상품 등록",
+        "description": "etsy.com에서 Seller 계정을 생성하고 샵 이름을 설정합니다. 상품 사진은 Canva 목업 기능으로 실제처럼 연출하면 클릭률이 올라갑니다."
+      },
+      {
+        "step": 3,
+        "title": "영문 SEO 최적화 및 상품 수 확대",
+        "description": "상품 제목에 'Printable Weekly Planner', 'Canva Resume Template' 등 검색량 높은 영문 키워드를 포함시킵니다. 상품 수가 늘어날수록 노출 기회가 증가합니다."
+      }
+    ],
+    "relatedTags": ["Etsy", "Canva", "디지털다운로드", "플래너"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "mapleshop-goods",
+    "slug": "mapleshop-goods",
+    "icon": "🧸",
+    "title": "마플샵 무재고 굿즈 판매",
+    "summary": "마플샵에서 디자인만 올리면 주문·제작·배송을 마플이 대신 처리하는 진짜 무자본·무재고 굿즈 사업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 3, "max": 50, "note": "팬덤 또는 바이럴 콘텐츠 보유 시 급등 가능" },
+    "initialCost": { "amount": 0, "note": "완전 무료, 판매 수수료만 발생" },
+    "timeToFirstIncome": "1~4주",
+    "weeklyTimeRequired": "주 1~3시간",
+    "category": "이커머스",
+    "tags": ["마플샵", "무재고", "굿즈", "무자본", "재택", "POD"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 74,
+    "overview": "마플샵(marpple.shop)은 국내 최대 주문형 인쇄(POD) 플랫폼입니다. 내 디자인을 업로드하면 티셔츠, 에코백, 스티커, 폰케이스 등 다양한 굿즈로 자동 제작·판매됩니다.\n\n팬아트, 밈, 캐릭터, 로컬 굿즈 등 바이럴 가능성 있는 디자인이 성공 확률이 높습니다. 자신의 IP(캐릭터, 로고)가 있다면 추가 브랜드 수익도 기대할 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "마플샵 크리에이터 신청",
+        "description": "marpple.shop에서 '크리에이터로 시작하기'를 클릭해 무료 샵을 개설합니다. 사업자 등록 없이 개인으로 시작 가능합니다."
+      },
+      {
+        "step": 2,
+        "title": "디자인 파일 업로드",
+        "description": "Canva(무료) 또는 포토샵으로 1000x1000픽셀 이상 PNG 파일을 제작합니다. 배경이 투명한 디자인이 굿즈에 어울리며, 마플샵이 자동으로 목업 이미지를 생성합니다."
+      },
+      {
+        "step": 3,
+        "title": "SNS 홍보로 첫 판매 만들기",
+        "description": "인스타그램, 트위터, 카카오채널에 상품 사진과 링크를 공유합니다. 오픈 기념 '선착순 할인 이벤트' 형식이 초기 판매를 자극합니다."
+      }
+    ],
+    "relatedTags": ["마플샵", "굿즈제작", "POD", "인쇄주문"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "youtube-channel",
+    "slug": "youtube-channel",
+    "icon": "▶️",
+    "title": "유튜브 채널 수익화",
+    "summary": "좋아하는 주제의 유튜브 채널을 키워 광고 수익·협찬·멤버십으로 월 수익을 만드는 중장기 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 5, "max": 500, "note": "구독자 1만명 이상부터 의미 있는 수익 발생" },
+    "initialCost": { "amount": 5, "note": "스마트폰 카메라로 시작 가능, 조명 2~5만원 권장" },
+    "timeToFirstIncome": "3~12개월",
+    "weeklyTimeRequired": "주 5~20시간",
+    "category": "콘텐츠 크리에이터",
+    "tags": ["유튜브", "크리에이터", "재택", "광고수익", "협찬"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 80,
+    "overview": "유튜브 파트너 프로그램(YPP) 가입 기준은 구독자 1,000명 + 최근 12개월 시청 시간 4,000시간(또는 쇼츠 1,000만 조회)입니다. 광고 수익 외에도 협찬, 멤버십, 슈퍼챗, 유료 강의 판매 등 다양한 수익 구조를 더할 수 있습니다.\n\n특히 '정보성 틈새 채널'은 구독자 수 대비 수익률이 높습니다. 재테크, 부업, 자기계발, 특정 직업군 브이로그 등이 꾸준히 인기 있는 카테고리입니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "채널 주제와 포맷 확정",
+        "description": "경쟁이 적으면서 내가 1~2년간 꾸준히 다룰 수 있는 주제를 정합니다. '5분 투자 팁', '직장인 재테크 일상' 같이 구체적인 컨셉이 빠른 성장에 유리합니다."
+      },
+      {
+        "step": 2,
+        "title": "첫 10개 영상 빠르게 업로드",
+        "description": "초기에는 완성도보다 업로드 속도를 우선합니다. 스마트폰으로 촬영하고 CapCut 앱으로 편집합니다. 썸네일은 Canva로 제작하고, 제목에 핵심 키워드를 반드시 포함시킵니다."
+      },
+      {
+        "step": 3,
+        "title": "YPP 조건 달성 후 수익화 신청",
+        "description": "구독자 1,000명·시청시간 4,000시간 달성 즉시 YouTube Studio에서 수익 창출을 신청합니다. 비슷한 규모의 채널 운영자들과 협업해 구독자를 교환하는 전략이 효과적입니다."
+      }
+    ],
+    "relatedTags": ["유튜브파트너", "YPP", "썸네일", "크리에이터이코노미"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "stock-media",
+    "slug": "stock-media",
+    "icon": "📷",
+    "title": "스톡 이미지·영상 판매",
+    "summary": "내가 촬영한 사진과 영상을 Shutterstock·Adobe Stock에 올려 저작권료로 달러를 자동으로 받는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 3, "max": 80, "note": "포트폴리오 수에 비례, 달러 수익" },
+    "initialCost": { "amount": 0, "note": "스마트폰 카메라로 시작 가능" },
+    "timeToFirstIncome": "2~8주",
+    "weeklyTimeRequired": "주 2~5시간",
+    "category": "콘텐츠 크리에이터",
+    "tags": ["사진", "영상", "스톡", "달러수익", "패시브인컴", "무자본"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 67,
+    "overview": "Shutterstock, Adobe Stock, Getty Images 등 글로벌 스톡 플랫폼에 사진·영상을 업로드하면 다운로드마다 로열티를 달러로 받을 수 있습니다.\n\n한국 관련 이미지(K-푸드, 서울 야경, 한복, 한옥 등)는 외국 사용자 수요가 높아 경쟁이 적습니다. 비즈니스 컨셉 이미지, 4K 영상 클립은 단가가 특히 높습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "기여자 계정 생성",
+        "description": "Shutterstock Contributor(contributor.shutterstock.com)와 Adobe Stock(contributor.stock.adobe.com)에 동시 가입합니다. 신분증 인증 후 바로 업로드 가능합니다."
+      },
+      {
+        "step": 2,
+        "title": "수요 높은 키워드로 촬영",
+        "description": "Shutterstock의 'Editor's Choice' 탭에서 수요 높은 키워드를 파악합니다. '직장인', '커피샵', '재택근무', '한식' 등 일상 주제를 자연광에서 촬영합니다."
+      },
+      {
+        "step": 3,
+        "title": "영문 키워드 태그 최적화 후 대량 업로드",
+        "description": "사진마다 50개 영문 키워드를 정확히 입력하는 것이 핵심입니다. 한 달에 50장 이상 업로드를 목표로 꾸준히 쌓으면 월 $10~$30 수준의 자동 수익이 시작됩니다."
+      }
+    ],
+    "relatedTags": ["Shutterstock", "AdobeStock", "스톡사진", "로열티"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "translation-service",
+    "slug": "translation-service",
+    "icon": "🌐",
+    "title": "번역·영어 교정 서비스",
+    "summary": "영어 실력을 활용해 한↔영 번역 또는 영문 교정을 온라인으로 제공하는 고단가 프리랜서 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 20, "max": 200, "note": "전문 분야 번역은 건당 단가 10~30만원 수준" },
+    "initialCost": { "amount": 0, "note": "별도 비용 없음" },
+    "timeToFirstIncome": "1~3주",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "프리랜서",
+    "tags": ["번역", "영어", "프리랜서", "재택", "언어"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 70,
+    "overview": "한↔영 번역 및 영문 교정은 수요가 꾸준하고 전문 분야(법률, 의료, 특허, IT)로 갈수록 단가가 높아집니다. 크몽, 프리모아, Upwork, Fiverr 등 플랫폼에서 안정적인 의뢰를 받을 수 있습니다.\n\nDeepL이나 ChatGPT를 보조 도구로 활용해 작업 속도를 높이면 시간당 수익을 크게 높일 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "전문 분야 정하기",
+        "description": "IT/게임, 법률, 의료, 마케팅 등 본인의 배경지식을 가진 분야를 선택합니다. 일반 번역보다 전문 분야 번역이 단가가 2~5배 높습니다."
+      },
+      {
+        "step": 2,
+        "title": "포트폴리오 샘플 준비",
+        "description": "공개 문서(뉴스 기사, 블로그 글)를 번역해 샘플 2~3개를 만듭니다. DeepL로 초안을 만든 후 자연스럽게 다듬는 방식으로 속도를 높입니다."
+      },
+      {
+        "step": 3,
+        "title": "크몽·Upwork 동시 등록",
+        "description": "크몽(국내)과 Upwork(해외)에 서비스를 등록합니다. 첫 3건은 낮은 단가(건당 5~10만원)로 진행해 후기를 쌓고, 이후 단가를 올립니다."
+      }
+    ],
+    "relatedTags": ["크몽", "Upwork", "Fiverr", "DeepL", "영어번역"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "wordpress-webdev",
+    "slug": "wordpress-webdev",
+    "icon": "💻",
+    "title": "워드프레스 웹사이트 제작",
+    "summary": "소상공인·스타트업에게 워드프레스 홈페이지를 제작해주는 고단가 프리랜서 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 30, "max": 300, "note": "프로젝트당 30~150만원, 월 2~3건 수주 가능" },
+    "initialCost": { "amount": 3, "note": "호스팅(월 1~2만원) + 유료 테마(5~10만원 일시)" },
+    "timeToFirstIncome": "2~6주",
+    "weeklyTimeRequired": "주 5~20시간",
+    "category": "프리랜서",
+    "tags": ["웹개발", "워드프레스", "프리랜서", "재택", "소상공인"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 72,
+    "overview": "워드프레스(WordPress)는 전 세계 웹사이트의 43%가 사용하는 CMS입니다. 코딩 지식이 없어도 Elementor, Divi 등 페이지 빌더를 활용하면 프로 수준의 홈페이지를 빠르게 제작할 수 있습니다.\n\n소상공인(식당, 미용실, 스튜디오), 스타트업, 개인 브랜드를 대상으로 하며 제작비 30~150만원이 일반적입니다. 유지보수 계약으로 월정 수익(월 5~20만원)도 추가할 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "Elementor로 샘플 사이트 3개 제작",
+        "description": "카페24 또는 Hosting.kr에서 저렴한 호스팅(월 5천~2만원)을 구매하고 워드프레스를 설치합니다. Elementor(무료)로 식당·포트폴리오·쇼핑몰 분야 샘플 사이트를 만듭니다."
+      },
+      {
+        "step": 2,
+        "title": "소상공인 대상 영업",
+        "description": "인스타그램에 '홈페이지 없는 소상공인 DM 주세요' 포스팅을 올립니다. 네이버 지역 카페, 소상공인 커뮤니티에서도 홍보가 효과적입니다."
+      },
+      {
+        "step": 3,
+        "title": "유지보수 패키지로 반복 수익 확보",
+        "description": "제작 완료 후 '월 5만원 유지보수 패키지(업데이트·백업·이메일 지원)'를 제안합니다. 고객 10명만 확보해도 월 50만원의 안정적인 수익이 됩니다."
+      }
+    ],
+    "relatedTags": ["Elementor", "워드프레스", "홈페이지제작", "소상공인마케팅"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "logo-branding",
+    "slug": "logo-branding",
+    "icon": "✏️",
+    "title": "로고·브랜딩 디자인",
+    "summary": "창업하는 소상공인에게 Figma로 로고와 브랜드 디자인을 납품하는 고단가 프리랜서 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 30, "max": 250, "note": "로고 1건 30~100만원, 풀 브랜딩은 100~300만원" },
+    "initialCost": { "amount": 0, "note": "Figma 무료 플랜으로 시작 가능" },
+    "timeToFirstIncome": "1~4주",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "프리랜서",
+    "tags": ["디자인", "로고", "프리랜서", "재택", "브랜딩"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 73,
+    "overview": "매년 수십만 개의 신규 사업체가 생겨나고, 이들 모두 로고와 브랜드 디자인이 필요합니다. 크몽에서 로고 디자인은 상시 상위 판매 카테고리입니다.\n\nFigma(무료) 또는 Adobe Illustrator를 활용하면 완성도 높은 벡터 로고를 제작할 수 있습니다. 브랜드 컬러, 폰트, 명함, SNS 프로필 키트 등 풀패키지로 납품하면 단가를 크게 높일 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "포트폴리오 3~5개 제작",
+        "description": "가상의 브랜드(카페, 스튜디오, 온라인샵)의 로고를 직접 만들어 포트폴리오를 구성합니다. Behance 또는 Pinterest에서 최신 로고 트렌드를 참고해 다양한 스타일을 연습합니다."
+      },
+      {
+        "step": 2,
+        "title": "크몽 서비스 등록",
+        "description": "크몽에 '로고 디자인' 서비스를 등록하고 포트폴리오 이미지를 첨부합니다. 패키지는 '기본(로고 파일)', '스탠다드(로고+명함)', '프리미엄(풀 브랜딩 키트)'으로 나눕니다."
+      },
+      {
+        "step": 3,
+        "title": "초기 할인으로 후기 5개 확보",
+        "description": "첫 5건은 정가의 60~70% 수준으로 제공해 5점 후기를 빠르게 쌓습니다. 크몽 검색 알고리즘은 후기 수와 평점을 주요 지표로 활용합니다."
+      }
+    ],
+    "relatedTags": ["크몽", "Figma", "일러스트레이터", "브랜드디자인"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "sns-management",
+    "slug": "sns-management",
+    "icon": "📱",
+    "title": "SNS 계정 관리 대행",
+    "summary": "소상공인·브랜드의 인스타그램 계정을 대신 운영해 월 정액 수익을 받는 프리랜서 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 30, "max": 200, "note": "계정당 월 10~50만원, 3~5개 계정 동시 운영 가능" },
+    "initialCost": { "amount": 0, "note": "별도 초기 비용 없음" },
+    "timeToFirstIncome": "1~3주",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "프리랜서",
+    "tags": ["SNS", "인스타그램", "마케팅", "프리랜서", "재택"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 77,
+    "overview": "SNS 마케팅이 필수가 되었지만 직접 운영할 여력이 없는 소상공인과 스타트업이 많습니다. 인스타그램 피드 기획·콘텐츠 제작·댓글 관리·해시태그 전략 등을 대신 맡아주는 서비스 수요가 높습니다.\n\n3~5개 계정을 동시에 관리하면 월 100~200만원의 안정적인 수익을 만들 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "인스타그램 운영 역량 키우기",
+        "description": "본인 계정으로 먼저 인스타그램 알고리즘, 해시태그 전략, 릴스 트렌드를 직접 실험합니다. Meta Business Suite 무료 과정을 수강하면 기본기를 빠르게 익힐 수 있습니다."
+      },
+      {
+        "step": 2,
+        "title": "무료 파일럿 클라이언트 확보",
+        "description": "지인의 소상공인 사업체에 1개월 무료 파일럿 운영을 제안합니다. 팔로워 증가와 참여율 향상 수치를 리포트로 제출하면 유료 계약으로 이어집니다."
+      },
+      {
+        "step": 3,
+        "title": "서비스 패키지화 및 단가 책정",
+        "description": "월 기본 패키지(포스팅 8회 + 릴스 4회 = 월 20만원) 형식으로 표준화합니다. 크몽, 숨고에도 서비스를 등록해 인바운드 문의를 추가로 받습니다."
+      }
+    ],
+    "relatedTags": ["인스타그램", "SNS마케팅", "크몽", "소셜미디어"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "english-tutoring",
+    "slug": "english-tutoring",
+    "icon": "🗣️",
+    "title": "화상 영어 과외·튜터링",
+    "summary": "Zoom으로 영어 회화·수능·토익을 가르치는 온라인 과외로 시간당 3~8만원의 수익을 만드는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "주 5~10시간 수업 기준, 학생 수에 따라 상승" },
+    "initialCost": { "amount": 0, "note": "Zoom 무료 플랜으로 충분" },
+    "timeToFirstIncome": "1~2주",
+    "weeklyTimeRequired": "주 5~10시간",
+    "category": "교육",
+    "tags": ["과외", "영어", "재택", "교육", "튜터링"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 75,
+    "overview": "영어 회화, 토익·토플, 수능 영어 등 수요가 꾸준한 영어 과외를 온라인으로 제공하는 부업입니다. 플랫폼(튜터링, 링글)에 등록하거나 직접 SNS·맘카페에서 학생을 모집할 수 있습니다.\n\n기존 대면 과외 대비 이동 없이 운영 가능하며, 영어 자격증(TOEIC 900+, OPIC AL 등)이 있으면 시간당 단가를 높일 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "수업 주제와 레벨 타겟 정하기",
+        "description": "직장인 비즈니스 영어, 초등 영어 회화, 수능 문법 등 본인이 가장 잘 가르칠 수 있는 분야를 정합니다. 하나의 주제에 집중하면 수업 준비 효율이 높아집니다."
+      },
+      {
+        "step": 2,
+        "title": "플랫폼 등록 또는 직접 모집",
+        "description": "튜터링(tutoring.co.kr), 클래스유에 강사로 등록하거나, 직장인 커뮤니티·맘카페에 모집 글을 올립니다. 시범 수업 20분 무료 제공이 첫 학생 확보에 효과적입니다."
+      },
+      {
+        "step": 3,
+        "title": "수업 루틴화 및 장기 수강 유도",
+        "description": "수업마다 피드백 메모를 남기고 카카오톡으로 숙제를 공유합니다. 매달 학습 성과를 리포트로 제공하면 장기 수강으로 이어질 가능성이 높아집니다."
+      }
+    ],
+    "relatedTags": ["튜터링", "클래스유", "영어회화", "토익과외"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "data-labeling",
+    "slug": "data-labeling",
+    "icon": "🏷️",
+    "title": "AI 데이터 라벨링",
+    "summary": "AI 학습에 필요한 이미지·텍스트·음성 데이터를 분류·태깅하는 재택 알바로 즉시 수익을 시작할 수 있는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 10, "max": 60, "note": "작업량에 비례, 숙련도 높아질수록 시간당 단가 상승" },
+    "initialCost": { "amount": 0, "note": "PC와 인터넷만 있으면 무료 시작" },
+    "timeToFirstIncome": "1~2주",
+    "weeklyTimeRequired": "주 5~20시간",
+    "category": "기타",
+    "tags": ["데이터라벨링", "재택", "AI", "알바", "무자본"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 82,
+    "overview": "AI 모델 학습을 위해서는 사람이 직접 분류하고 태깅한 정제 데이터가 필수입니다. 이미지에서 물체를 바운딩 박스로 표시하거나, 문장의 감정을 분류하거나, 음성을 텍스트로 변환하는 작업을 합니다.\n\n국내 플랫폼(크라우드웍스, 에이모)과 해외 플랫폼(Scale AI, Appen)에서 상시 채용이 이루어지며, 특별한 기술 없이 누구나 시작 가능합니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "라벨링 플랫폼 가입",
+        "description": "크라우드웍스(crowdworks.kr), 에이모(aimo.ai)에 작업자로 가입합니다. 해외 단가가 높은 Appen(appen.com), Remotasks(remotasks.com)도 동시 가입을 추천합니다."
+      },
+      {
+        "step": 2,
+        "title": "기초 교육 이수 및 자격 획득",
+        "description": "각 플랫폼의 입문 교육을 이수하면 더 단가 높은 작업에 접근할 수 있습니다. 에이모는 테스트를 통과해야 고단가 프로젝트 참여가 가능합니다."
+      },
+      {
+        "step": 3,
+        "title": "고단가 이미지 라벨링 집중",
+        "description": "바운딩 박스, 폴리곤 분류 같은 이미지 라벨링 작업이 텍스트 분류보다 단가가 높습니다. 빠른 마우스 속도와 집중력이 핵심 역량입니다. 하루 2시간 투자로 월 15~30만원이 목표입니다."
+      }
+    ],
+    "relatedTags": ["크라우드웍스", "에이모", "Remotasks", "AI학습데이터"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "coupang-eats-delivery",
+    "slug": "coupang-eats-delivery",
+    "icon": "🛵",
+    "title": "쿠팡이츠·배민 배달 라이더",
+    "summary": "내 시간에 자유롭게 배달해 시간당 1.5~2만원의 수익을 만드는 가장 빠르게 현금화되는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 30, "max": 200, "note": "주말 피크타임 집중 시 효율 극대화" },
+    "initialCost": { "amount": 5, "note": "자전거/전동킥보드 기준, 오토바이는 보험 추가 필요" },
+    "timeToFirstIncome": "1~7일",
+    "weeklyTimeRequired": "주 5~20시간",
+    "category": "기타",
+    "tags": ["배달", "라이더", "즉시수익", "알바"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 76,
+    "overview": "쿠팡이츠, 배달의민족 등 배달 플랫폼의 라이더로 등록하면 원하는 시간에 자유롭게 배달할 수 있습니다. 앱을 켜고 끄는 것만으로 근무 시간을 조절할 수 있어 직장인 주말 부업으로 많이 활용됩니다.\n\n자전거나 전동킥보드로도 시작 가능하며, 점심(11~14시)·저녁(18~21시)·금토 피크타임에 집중하면 시간당 수익이 극대화됩니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "플랫폼 선택 및 라이더 등록",
+        "description": "쿠팡이츠(배달파트너 앱), 배달의민족 배민커넥트 중 하나를 선택합니다. 자전거나 킥보드로 시작하면 배민커넥트 진입 장벽이 낮습니다. 신분증 인증 후 1~3일 내 등록 완료됩니다."
+      },
+      {
+        "step": 2,
+        "title": "피크타임 전략으로 효율 극대화",
+        "description": "점심(11~14시), 저녁(18~21시), 주말 전체가 가장 수수료가 높습니다. 음식점 밀집 지역을 파악해 대기 위치를 정하면 배차 속도가 빨라집니다."
+      },
+      {
+        "step": 3,
+        "title": "월 목표 수익 설정 및 계획적 운영",
+        "description": "쿠팡이츠는 수시 정산, 배민커넥트는 주 2회 정산입니다. 월 목표 수익(예: 50만원)을 정하고 주간 시간표를 짜서 계획적으로 운영하면 번아웃 없이 꾸준히 할 수 있습니다."
+      }
+    ],
+    "relatedTags": ["쿠팡이츠", "배민커넥트", "배달파트너", "배달알바"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "tiktok-live",
+    "slug": "tiktok-live",
+    "icon": "🎵",
+    "title": "틱톡 라이브 수익화",
+    "summary": "틱톡 라이브 방송으로 시청자의 선물(다이아몬드)을 받아 현금화하는 MZ세대의 실시간 수익 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 5, "max": 100, "note": "팔로워 수보다 라이브 소통 능력이 수익에 직결" },
+    "initialCost": { "amount": 0, "note": "스마트폰만 있으면 무료 시작" },
+    "timeToFirstIncome": "1~4주",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "콘텐츠 크리에이터",
+    "tags": ["틱톡", "라이브", "크리에이터", "무자본", "재택"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 85,
+    "overview": "틱톡 라이브는 팔로워 1,000명 이상이면 누구나 시작할 수 있습니다. 시청자는 선물을 보내고, 이 선물이 다이아몬드로 전환되어 현금으로 인출됩니다.\n\n노래, 춤, 요리, 공부방, 대화 등 특별한 기술 없이도 소통이 재미있다면 수익 창출이 가능합니다. 특히 '같이 공부해요' 형식의 스터디 라이브는 꾸준한 재방문 시청자를 만드는 데 효과적입니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "팔로워 1,000명 먼저 확보",
+        "description": "틱톡 라이브 조건(팔로워 1,000명 이상)을 먼저 충족합니다. 틱톡 알고리즘은 팔로워 없어도 콘텐츠를 추천하므로 1주일 매일 업로드로 빠르게 팔로워를 늘릴 수 있습니다."
+      },
+      {
+        "step": 2,
+        "title": "라이브 컨셉 정하고 정기 방송",
+        "description": "'매일 밤 11시 같이 공부방', '주말 요리 라이브' 등 고정 스케줄로 방송하면 재방문 시청자가 생깁니다. 시청자 이름을 불러주고 댓글에 적극 반응하는 것이 선물 유도의 핵심입니다."
+      },
+      {
+        "step": 3,
+        "title": "다이아몬드 환전 및 장비 업그레이드",
+        "description": "틱톡 앱 지갑에서 다이아몬드를 현금으로 전환합니다. 일정 수익이 생기면 링 라이트(2~3만원)에 재투자해 방송 퀄리티를 높이면 수익이 빠르게 성장합니다."
+      }
+    ],
+    "relatedTags": ["틱톡", "다이아몬드", "라이브방송", "틱톡크리에이터"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "second-hand-resell",
+    "slug": "second-hand-resell",
+    "icon": "♻️",
+    "title": "당근·번개 중고 판매",
+    "summary": "집 안 안 쓰는 물건부터 시작해 저가 매입·고가 판매 차익을 만드는 누구나 시작할 수 있는 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 5, "max": 50, "note": "판매량과 소싱 역량에 따라 상이" },
+    "initialCost": { "amount": 0, "note": "집 안 물건부터 시작 시 0원" },
+    "timeToFirstIncome": "1~7일",
+    "weeklyTimeRequired": "주 2~5시간",
+    "category": "이커머스",
+    "tags": ["중고판매", "재테크", "무자본", "당근마켓", "번개장터"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 71,
+    "overview": "당근마켓, 번개장터, 중고나라에서 쓰지 않는 물건을 팔거나, 경매·창고 세일에서 저렴하게 매입 후 리셀하는 방식입니다. 처음에는 집 안 물건 정리로 시작하고, 점차 특정 카테고리(카메라, 골프, 명품, 피규어 등) 전문가로 성장하면 수익이 커집니다.\n\n사진 잘 찍고 가격 책정을 잘하면 같은 물건도 더 빠르고 비싸게 팔 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "집 안 물건 정리 및 첫 판매",
+        "description": "사용하지 않는 가전, 의류, 책, 소품을 모아 당근마켓 앱에 올립니다. 깨끗하게 세척 후 자연광에서 찍은 사진이 판매 속도를 크게 높입니다."
+      },
+      {
+        "step": 2,
+        "title": "전문 카테고리 정하고 소싱 루트 찾기",
+        "description": "카메라·렌즈, 명품백, 골프채, 건담 피규어 등 수익률 높은 카테고리를 정합니다. 경매 사이트(코베이, 옥션), 오프라인 창고세일, eBay에서 저렴하게 소싱합니다."
+      },
+      {
+        "step": 3,
+        "title": "번개장터 배송 거래로 전국 판매",
+        "description": "번개장터는 배송 거래가 가능해 전국 바이어에게 판매할 수 있어 더 높은 가격 실현이 가능합니다. 당근마켓보다 희귀 아이템의 시세가 높게 형성됩니다."
+      }
+    ],
+    "relatedTags": ["당근마켓", "번개장터", "중고나라", "리셀"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "ai-thumbnail-design",
+    "slug": "ai-thumbnail-design",
+    "icon": "🎯",
+    "title": "AI 썸네일·배너 디자인 대행",
+    "summary": "Canva·미드저니를 활용해 유튜브 썸네일과 SNS 배너를 빠르게 제작해주는 수요 폭발 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "건당 1~5만원, 월정 계약으로 전환하면 안정적" },
+    "initialCost": { "amount": 1, "note": "Canva Pro 월 1.3만원 (무료 버전으로도 시작 가능)" },
+    "timeToFirstIncome": "1~2주",
+    "weeklyTimeRequired": "주 5~10시간",
+    "category": "AI 활용",
+    "tags": ["AI활용", "디자인", "썸네일", "프리랜서", "재택", "Canva"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 88,
+    "overview": "유튜브 채널, 블로그, 쇼핑몰 운영자들은 매주 썸네일과 배너 디자인이 필요하지만 직접 만들 역량이나 시간이 없는 경우가 많습니다. Canva와 미드저니를 조합하면 1시간 안에 프로급 썸네일을 제작할 수 있습니다.\n\n클릭률에 직결되는 썸네일의 중요성 때문에 유튜버·마케터들의 수요가 지속적으로 높습니다. 월정 계약(월 8개 제작 = 30만원)으로 전환하면 안정적인 수익이 됩니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "고클릭률 썸네일 공식 분석",
+        "description": "Canva에서 '유튜브 썸네일' 템플릿을 열고, 고클릭률 썸네일의 공통 요소(큰 텍스트, 인물 클로즈업, 대비 강한 색상)를 분석합니다. 미드저니로 배경을 생성하고 Canva에서 텍스트를 합성합니다."
+      },
+      {
+        "step": 2,
+        "title": "비포·애프터 포트폴리오 5개 제작",
+        "description": "구독자 1만명 이상 채널의 영상에서 썸네일을 리디자인한 '비포·애프터' 샘플을 만듭니다. 분야별(게임, 요리, 재테크, 브이로그)로 다양하게 준비하면 수주 확률이 높아집니다."
+      },
+      {
+        "step": 3,
+        "title": "유튜버 DM 영업 및 크몽 등록",
+        "description": "구독자 1천~1만명대 중소 유튜버에게 '1주일 무료 썸네일 3개 제작' DM을 보냅니다. 크몽에도 '유튜브 썸네일 디자인' 서비스를 등록해 인바운드 문의를 받습니다."
+      }
+    ],
+    "relatedTags": ["Canva", "썸네일디자인", "유튜버", "미드저니"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "podcast-monetization",
+    "slug": "podcast-monetization",
+    "icon": "🎙️",
+    "title": "팟캐스트 운영 수익화",
+    "summary": "관심 주제의 팟캐스트 채널을 키워 스폰서십·멤버십으로 수익을 만드는 오디오 크리에이터 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 5, "max": 150, "note": "월 다운로드 1만회 이상부터 스폰서십 협상 가능" },
+    "initialCost": { "amount": 5, "note": "USB 마이크(2~5만원) + Buzzsprout 호스팅 월 $12부터" },
+    "timeToFirstIncome": "2~6개월",
+    "weeklyTimeRequired": "주 3~8시간",
+    "category": "콘텐츠 크리에이터",
+    "tags": ["팟캐스트", "오디오", "크리에이터", "재택", "스폰서십"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 65,
+    "overview": "팟캐스트는 이동 중·운동 중 소비할 수 있는 오디오 콘텐츠로, 특정 니즈에 충실한 틈새 팟캐스트가 스폰서십 협상력이 높습니다. 비즈니스, 투자, 심리, 연애, 게임 등 구체적인 주제로 시작하면 좋습니다.\n\nSpotify, Apple Podcasts에 동시 배포하면 청취자를 빠르게 모을 수 있습니다. 스폰서십 외에도 Patreon 멤버십으로 고정 수익을 만들 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "주제 정하고 파일럿 에피소드 3개 녹음",
+        "description": "내가 매주 1시간 이야기할 수 있는 주제를 정합니다. '30대 직장인 재테크 일기', '커리어 전환 인터뷰' 등 구체적인 컨셉이 팬덤을 만듭니다. Audacity(무료)로 녹음·편집합니다."
+      },
+      {
+        "step": 2,
+        "title": "Buzzsprout에 배포 세팅",
+        "description": "Buzzsprout(buzzsprout.com)에 계정을 만들면 Spotify, Apple Podcasts에 동시 배포됩니다. RSS 피드가 자동 생성되어 별도 작업 없이 모든 플랫폼에 에피소드가 올라갑니다."
+      },
+      {
+        "step": 3,
+        "title": "스폰서십 협상 또는 멤버십 오픈",
+        "description": "월 다운로드 수가 1,000회를 넘으면 관련 분야 소규모 브랜드에 스폰서십 제안 메일을 보냅니다. Patreon에서 월 멤버십(광고 없는 에피소드 등 혜택)도 병행합니다."
+      }
+    ],
+    "relatedTags": ["Buzzsprout", "Spotify팟캐스트", "스폰서십", "Patreon"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "overseas-proxy-shopping",
+    "slug": "overseas-proxy-shopping",
+    "icon": "✈️",
+    "title": "해외 직구 구매대행",
+    "summary": "일본·미국의 인기 브랜드 상품을 대신 구매해주고 수수료를 받는 이커머스 부업",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "전문 카테고리 특화 시 안정적인 수익 가능" },
+    "initialCost": { "amount": 10, "note": "초기 운전 자금 또는 고객 선입금 방식으로 운영 가능" },
+    "timeToFirstIncome": "2~4주",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "이커머스",
+    "tags": ["구매대행", "직구", "이커머스", "재택", "일본직구"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 68,
+    "overview": "해외 직구 구매대행은 고객이 원하는 해외 상품을 대신 구매해 국내로 배송해주고 수수료(상품 가격의 5~15%)를 받는 비즈니스입니다. 일본(돈키호테, 드럭스토어), 미국(아마존, 나이키) 등 수요가 많은 지역에 특화하면 단가를 높일 수 있습니다.\n\n스마트스토어, 번개장터에서 주문받은 후 배송대행지(아이포터, 몰테일)를 활용하면 개인도 쉽게 시작 가능합니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "특화 카테고리와 국가 선택",
+        "description": "일본 화장품·의약품, 미국 아웃도어·스니커즈, 유럽 명품 중 내가 잘 아는 분야를 선택합니다. 수요와 마진이 높은 카테고리를 먼저 리서치합니다."
+      },
+      {
+        "step": 2,
+        "title": "배송대행지 및 결제 수단 세팅",
+        "description": "아이포터, 몰테일 등 배송대행지에 가입해 해외 주소를 확보합니다. 해외 결제 수수료가 낮은 토스·트래블로그 카드를 준비합니다."
+      },
+      {
+        "step": 3,
+        "title": "스마트스토어에서 주문 받기",
+        "description": "스마트스토어 또는 카카오채널에 'OO 구매대행' 채널을 개설합니다. 주문 입금 후 구매·배송대행지·국내 배송 루틴을 표준화하면 업무 효율이 높아집니다."
+      }
+    ],
+    "relatedTags": ["아이포터", "몰테일", "직구대행", "스마트스토어"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "voice-recording",
+    "slug": "voice-recording",
+    "icon": "🎤",
+    "title": "성우·내레이션 녹음 서비스",
+    "summary": "좋은 목소리를 활용해 광고·유튜브·AI 학습 데이터 녹음을 대행하는 고단가 프리랜서 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": { "min": 10, "max": 120, "note": "건당 3~30만원, 방송 경험 있으면 단가 상승" },
+    "initialCost": { "amount": 5, "note": "USB 마이크(2~5만원), 방음 환경 구성" },
+    "timeToFirstIncome": "2~4주",
+    "weeklyTimeRequired": "주 3~10시간",
+    "category": "프리랜서",
+    "tags": ["성우", "녹음", "프리랜서", "재택", "목소리"],
+    "isTrending": false,
+    "isPopular": false,
+    "trendScore": 63,
+    "overview": "유튜브 내레이션, 광고 보이스오버, 오디오북, AI TTS 학습 데이터 녹음 등 목소리 관련 의뢰가 꾸준히 늘고 있습니다. 전문 성우 자격증 없이도 크몽에서 의뢰를 받아 시작할 수 있습니다.\n\n조용한 방과 USB 마이크(Blue Yeti 또는 국산 저가 마이크) 하나면 전문 수준의 녹음이 가능합니다. AI TTS 데이터 녹음은 단순하지만 상시 수요가 있는 틈새 시장입니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "목소리 샘플 3가지 제작",
+        "description": "스마트폰 또는 USB 마이크로 30초~1분 분량의 내레이션 샘플 3개(뉴스 어조, 광고 어조, 친근한 어조)를 제작합니다. Audacity(무료)로 잡음을 제거합니다."
+      },
+      {
+        "step": 2,
+        "title": "크몽 성우·내레이션 카테고리 등록",
+        "description": "크몽의 '성우·내레이션' 카테고리에 서비스를 등록합니다. 국제 플랫폼인 Voice123, Backstage에도 프로필을 등록하면 달러 수익도 가능합니다."
+      },
+      {
+        "step": 3,
+        "title": "AI TTS 데이터 플랫폼 병행 참여",
+        "description": "크라우드웍스의 '음성 데이터 수집' 프로젝트에 참여하면 대기 없이 즉시 수익이 발생합니다. 정해진 문장을 읽는 단순 작업이며 분당 정해진 단가가 지급됩니다."
+      }
+    ],
+    "relatedTags": ["크몽", "내레이션", "보이스오버", "성우"],
     "lastUpdated": "2026-06-17",
     "dataVersion": "1.0"
   }
