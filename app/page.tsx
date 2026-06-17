@@ -1,20 +1,20 @@
-import { Suspense }    from 'react'
-import hustleData     from '@/data/side-hustles.json'
-import type { SideHustle } from '@/types'
-import Sidebar        from '@/components/layout/Sidebar'
-import FilteredFeed   from '@/components/home/FilteredFeed'
+import { Suspense } from "react";
+import hustleData from "@/data/side-hustles.json";
+import type { SideHustle } from "@/types";
+import Sidebar from "@/components/layout/Sidebar";
+import FilteredFeed from "@/components/home/FilteredFeed";
 
-const hustles = hustleData as SideHustle[]
+const hustles = hustleData as SideHustle[];
 
 /** 태그 빈도 내림차순으로 정렬된 고유 태그 목록 */
 function getSortedTags(data: SideHustle[]): string[] {
-  const freq = new Map<string, number>()
+  const freq = new Map<string, number>();
   data.forEach((h) =>
-    h.tags.forEach((t) => freq.set(t, (freq.get(t) ?? 0) + 1))
-  )
+    h.tags.forEach((t) => freq.set(t, (freq.get(t) ?? 0) + 1)),
+  );
   return Array.from(freq.entries())
     .sort((a, b) => b[1] - a[1])
-    .map(([tag]) => tag)
+    .map(([tag]) => tag);
 }
 
 /** Suspense fallback — 카드 영역 스켈레톤 */
@@ -37,11 +37,11 @@ function FeedSkeleton() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default function HomePage() {
-  const allTags = getSortedTags(hustles)
+  const allTags = getSortedTags(hustles);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -51,7 +51,7 @@ export default function HomePage() {
           지금 가장 뜨는 부업, 광고 없이 한눈에. 🌿
         </h1>
         <p className="text-gray-500 text-base">
-          사기 없이, 지금 바로 시작할 수 있는 부업 정보만 모았습니다.
+          지금 바로 시작할 수 있는 부업 정보만 모았습니다.
         </p>
       </section>
 
@@ -73,5 +73,5 @@ export default function HomePage() {
         <Sidebar />
       </div>
     </div>
-  )
+  );
 }

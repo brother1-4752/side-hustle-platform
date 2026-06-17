@@ -1,26 +1,26 @@
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import hustleData from '@/data/side-hustles.json'
-import type { SideHustle } from '@/types'
-import DetailHeader from '@/components/detail/DetailHeader'
-import MetricPanel  from '@/components/detail/MetricPanel'
-import StartGuide   from '@/components/detail/StartGuide'
-import AdSlot       from '@/components/ui/AdSlot'
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Link from "next/link";
+import hustleData from "@/data/side-hustles.json";
+import type { SideHustle } from "@/types";
+import DetailHeader from "@/components/detail/DetailHeader";
+import MetricPanel from "@/components/detail/MetricPanel";
+import StartGuide from "@/components/detail/StartGuide";
+import AdSlot from "@/components/ui/AdSlot";
 
-const hustles = hustleData as SideHustle[]
+const hustles = hustleData as SideHustle[];
 
 export function generateStaticParams() {
-  return hustles.map((h) => ({ slug: h.slug }))
+  return hustles.map((h) => ({ slug: h.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: { slug: string };
 }): Promise<Metadata> {
-  const hustle = hustles.find((h) => h.slug === params.slug)
-  if (!hustle) return {}
+  const hustle = hustles.find((h) => h.slug === params.slug);
+  if (!hustle) return {};
 
   return {
     title: `${hustle.title} 부업 완전 가이드`,
@@ -29,23 +29,24 @@ export async function generateMetadata({
       title: `${hustle.title} 부업 완전 가이드 | 부업레이더`,
       description: hustle.summary,
     },
-  }
+  };
 }
 
 export default function SideHustleDetailPage({
   params,
 }: {
-  params: { slug: string }
+  params: { slug: string };
 }) {
-  const hustle = hustles.find((h) => h.slug === params.slug)
-  if (!hustle) notFound()
+  const hustle = hustles.find((h) => h.slug === params.slug);
+  if (!hustle) notFound();
 
   const related = hustles
     .filter(
-      (h) => h.slug !== hustle.slug && h.tags.some((t) => hustle.tags.includes(t))
+      (h) =>
+        h.slug !== hustle.slug && h.tags.some((t) => hustle.tags.includes(t)),
     )
     .sort((a, b) => b.trendScore - a.trendScore)
-    .slice(0, 2)
+    .slice(0, 2);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -80,7 +81,10 @@ export default function SideHustleDetailPage({
           </section>
 
           {/* In-content AdSlot (데스크톱, 728×90) */}
-          <div className="hidden md:flex justify-center my-8" aria-hidden="true">
+          <div
+            className="hidden md:flex justify-center my-8"
+            aria-hidden="true"
+          >
             <AdSlot size="in-content" slotId="" />
           </div>
 
@@ -88,7 +92,10 @@ export default function SideHustleDetailPage({
           <StartGuide steps={hustle.startGuide} />
 
           {/* 모바일 AdSlot */}
-          <div className="flex justify-center mt-8 md:hidden" aria-hidden="true">
+          <div
+            className="flex justify-center mt-8 md:hidden"
+            aria-hidden="true"
+          >
             <AdSlot size="mobile-banner" slotId="" />
           </div>
 
@@ -122,7 +129,10 @@ export default function SideHustleDetailPage({
                         href={`/side-hustle/${r.slug}`}
                         className="flex items-center gap-3 group"
                       >
-                        <span className="text-xl leading-none" aria-hidden="true">
+                        <span
+                          className="text-xl leading-none"
+                          aria-hidden="true"
+                        >
                           {r.icon}
                         </span>
                         <div>
@@ -130,7 +140,8 @@ export default function SideHustleDetailPage({
                             {r.title}
                           </p>
                           <p className="text-xs text-gray-400">
-                            월 {r.expectedMonthlyIncome.min}~{r.expectedMonthlyIncome.max}만원
+                            월 {r.expectedMonthlyIncome.min}~
+                            {r.expectedMonthlyIncome.max}만원
                           </p>
                         </div>
                       </Link>
@@ -146,5 +157,5 @@ export default function SideHustleDetailPage({
         </aside>
       </div>
     </div>
-  )
+  );
 }

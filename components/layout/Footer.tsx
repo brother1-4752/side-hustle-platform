@@ -5,11 +5,12 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-gray-400">
           <span className="font-semibold text-gray-600">☀️ 부업레이더</span>
           <span className="text-center">
-            데이터는 정기적으로 업데이트됩니다. 수익은 개인 역량에 따라 상이합니다.
+            데이터는 정기적으로 업데이트됩니다. 수익은 개인 역량에 따라
+            상이합니다.
           </span>
           <span>© 2026 부업레이더</span>
         </div>
       </div>
     </footer>
-  )
+  );
 }

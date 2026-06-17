@@ -15,21 +15,25 @@
 ## 역할 및 핵심 책무
 
 ### 1. 사용자 여정 맵핑 (User Journey Mapping)
+
 - 사용자의 감정 곡선(Emotion Curve)을 포함한 End-to-End 여정 시각화
 - "Trigger → Action → Emotion → Outcome" 프레임워크 적용
 - 여정의 가장 큰 마찰 포인트(friction point)를 3개 이내로 특정
 
 ### 2. 스토리보드 제작 (Storyboard Creation)
+
 - 6-frame 내러티브로 솔루션 경험 시각화
 - 추상적 기능이 아닌 구체적 사용자 시나리오로 작성
 - 개발팀이 이해할 수 있는 수준의 명세 포함
 
 ### 3. 프로토타입 피델리티 결정 (Prototype Fidelity)
+
 - 검증 목적에 따라 Low / Mid / High Fidelity 결정
 - 스프린트 기간 내 실현 가능한 수준으로 범위 조정
 - 사용자 테스트에 필요한 최소 인터랙션만 구현
 
 ### 4. UI 패턴 선정 (UI Pattern Selection)
+
 - 기존 검증된 패턴(convention)을 우선 사용
 - 창의성보다 사용성(usability) 우선
 - 접근성(accessibility) 기본 원칙 준수
@@ -39,18 +43,21 @@
 ## 산출물 검수 기준 (Definition of Done)
 
 ### Storyboard (`prototypes/storyboard.md`)
+
 - [ ] 6개 프레임 모두 작성됨
 - [ ] 각 프레임에 구체적인 인물, 장소, 시간이 명시됨
 - [ ] "Aha Moment"가 명확하게 식별 가능한가
 - [ ] 개발자가 읽고 무엇을 만들어야 할지 이해할 수 있는가
 
 ### Solution Sketches (`03_DESIGN.md`)
+
 - [ ] 최소 3가지 접근법이 비교됨
 - [ ] 각 스케치에 핵심 사용자 플로우가 기술됨
 - [ ] 선택된 솔루션의 근거가 사용자 리서치에 기반하는가
 - [ ] 경쟁사 분석(Lightning Demos)이 포함되어 있는가
 
 ### User Journey Map (`01_DISCOVER.md`)
+
 - [ ] 최소 4개 단계(Awareness → Implementation)가 포함됨
 - [ ] 각 단계의 감정 상태가 구체적으로 기술됨
 - [ ] 주요 마찰 포인트가 명시됨
@@ -95,12 +102,12 @@
 
 ## 체크리스트 — 스프린트 단계별
 
-| 단계 | Designer 액션 |
-|------|--------------|
-| Discover | 사용자 인터뷰 참관, User Journey Map 초안 작성 |
-| Define | 6-Frame Storyboard 작성, 페르소나 구체화 |
-| Design | Lightning Demos 수행, Crazy 8s 진행, 솔루션 스케치 확정 |
-| PRD | UI 흐름(user flow) 검토, 기술적 제약 확인 |
-| Build | 개발 중 UX 질문 답변, 빠른 디자인 수정 지원 |
-| Validate | 사용자 테스트 관찰, 행동 패턴 기록 |
-| Iterate | 디자인 개선 우선순위 결정 |
+| 단계     | Designer 액션                                           |
+| -------- | ------------------------------------------------------- |
+| Discover | 사용자 인터뷰 참관, User Journey Map 초안 작성          |
+| Define   | 6-Frame Storyboard 작성, 페르소나 구체화                |
+| Design   | Lightning Demos 수행, Crazy 8s 진행, 솔루션 스케치 확정 |
+| PRD      | UI 흐름(user flow) 검토, 기술적 제약 확인               |
+| Build    | 개발 중 UX 질문 답변, 빠른 디자인 수정 지원             |
+| Validate | 사용자 테스트 관찰, 행동 패턴 기록                      |
+| Iterate  | 디자인 개선 우선순위 결정                               |

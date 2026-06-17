@@ -68,6 +68,7 @@ Stage → Trigger → Action → Emotion → Outcome → Next Step
 ```
 
 **Output Files**:
+
 - `01_DISCOVER.md` - All findings
 - `user-research/interview-notes.md` - Raw notes
 - `user-research/personas.md` - Proto-personas
@@ -79,6 +80,7 @@ Stage → Trigger → Action → Emotion → Outcome → Next Step
 **Goal**: Clarify what we're building and why
 
 **Outputs**:
+
 - [ ] Sprint Questions (validated)
 - [ ] Assumption Scorecard (5-7 risks)
 - [ ] Success Metrics
@@ -93,6 +95,7 @@ Stage → Trigger → Action → Emotion → Outcome → Next Step
 ## Highest-Risk Assumptions
 
 **Assumption 1**: [Describe what you believe]
+
 - Why we believe this: [evidence]
 - What would prove us wrong: [risk scenario]
 - Test method: [how we'll validate in Day 5]
@@ -232,6 +235,7 @@ Acceptance Criteria:
 - [ ] Criterion 3
 
 ## 3. Feature List
+
 - **P0 (Must-have MVP)**
   - Feature A
   - Feature B
@@ -243,12 +247,14 @@ Acceptance Criteria:
   - Feature D
 
 ## 4. Technical Requirements
+
 - Tech stack: [Frontend/Backend choices]
 - Integration points: [APIs, third-party services]
 - Data model: [Key entities]
 - Performance targets: [Speed/scale requirements]
 
 ## 5. Out of Scope
+
 - [What we're NOT building]
 - [Why not]
 ```

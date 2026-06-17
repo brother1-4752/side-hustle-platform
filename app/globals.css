@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-noto-sans-kr: 'Noto Sans KR', sans-serif;
+    --font-noto-sans-kr: "Noto Sans KR", sans-serif;
   }
 
   html {

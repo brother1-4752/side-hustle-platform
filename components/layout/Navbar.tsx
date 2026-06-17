@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useState } from 'react'
+import Link from "next/link";
+import { useState } from "react";
 
 const NAV_LINKS = [
-  { label: '뜨는 부업', href: '/?section=trending' },
-  { label: '인기 부업', href: '/?section=popular' },
-  { label: '모든 부업', href: '/?section=all' },
-]
+  { label: "뜨는 부업", href: "/?section=trending" },
+  { label: "인기 부업", href: "/?section=popular" },
+  { label: "모든 부업", href: "/?section=all" },
+];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           className="md:hidden p-2 flex flex-col gap-1"
-          aria-label={menuOpen ? '메뉴 닫기' : '메뉴 열기'}
+          aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((prev) => !prev)}
         >
@@ -70,5 +70,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }

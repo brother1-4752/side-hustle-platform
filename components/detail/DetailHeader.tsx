@@ -1,17 +1,17 @@
-import type { SideHustle } from '@/types'
+import type { SideHustle } from "@/types";
 
 const DIFFICULTY_BADGE: Record<string, { label: string; className: string }> = {
-  beginner:     { label: '초급', className: 'bg-green-100 text-green-800' },
-  intermediate: { label: '중급', className: 'bg-yellow-100 text-yellow-800' },
-  advanced:     { label: '고급', className: 'bg-red-100 text-red-800' },
-}
+  beginner: { label: "초급", className: "bg-green-100 text-green-800" },
+  intermediate: { label: "중급", className: "bg-yellow-100 text-yellow-800" },
+  advanced: { label: "고급", className: "bg-red-100 text-red-800" },
+};
 
 interface DetailHeaderProps {
-  hustle: SideHustle
+  hustle: SideHustle;
 }
 
 export default function DetailHeader({ hustle }: DetailHeaderProps) {
-  const badge = DIFFICULTY_BADGE[hustle.difficulty]
+  const badge = DIFFICULTY_BADGE[hustle.difficulty];
 
   return (
     <div className="mb-8">
@@ -19,7 +19,9 @@ export default function DetailHeader({ hustle }: DetailHeaderProps) {
         <span className="text-4xl leading-none" aria-hidden="true">
           {hustle.icon}
         </span>
-        <span className={`text-sm px-3 py-1 rounded-full font-medium ${badge.className}`}>
+        <span
+          className={`text-sm px-3 py-1 rounded-full font-medium ${badge.className}`}
+        >
           {badge.label}
         </span>
         {hustle.isTrending && (
@@ -53,5 +55,5 @@ export default function DetailHeader({ hustle }: DetailHeaderProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }

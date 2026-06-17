@@ -6,7 +6,11 @@
     "title": "쿠팡파트너스",
     "summary": "링크 공유만으로 구매 수수료를 받는 제휴마케팅의 가장 쉬운 시작점",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 30, "note": "채널 규모 및 활동량에 따라 상이" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 30,
+      "note": "채널 규모 및 활동량에 따라 상이"
+    },
     "initialCost": { "amount": 0, "note": "무료 가입, 별도 비용 없음" },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 3~5시간",
@@ -44,7 +48,11 @@
     "title": "네이버 블로그 수익화",
     "summary": "일상 글쓰기로 애드포스트·협찬·체험단 수익을 동시에 만드는 검증된 방법",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 10, "max": 100, "note": "방문자 수와 포스팅 빈도에 따라 차이 큼" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 100,
+      "note": "방문자 수와 포스팅 빈도에 따라 차이 큼"
+    },
     "initialCost": { "amount": 0, "note": "네이버 계정만 있으면 무료 시작" },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 5~10시간",
@@ -82,7 +90,11 @@
     "title": "AI 콘텐츠 제작 서비스",
     "summary": "ChatGPT·Claude 등 AI 툴을 활용해 블로그 글·SNS 카피·상세페이지를 대행 제작",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 30, "max": 200, "note": "건당 3~20만원, 단가는 경력에 따라 급상승" },
+    "expectedMonthlyIncome": {
+      "min": 30,
+      "max": 200,
+      "note": "건당 3~20만원, 단가는 경력에 따라 급상승"
+    },
     "initialCost": { "amount": 2, "note": "ChatGPT Plus 월 구독료 약 2만원" },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 10~20시간",
@@ -120,8 +132,15 @@
     "title": "네이버 스마트스토어",
     "summary": "국내 최대 쇼핑 플랫폼에서 내 상품을 판매하는 온라인 창업의 정석",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 20, "max": 300, "note": "상품 카테고리와 마케팅 역량에 따라 편차 매우 큼" },
-    "initialCost": { "amount": 30, "note": "초기 재고 매입비 (위탁판매 시 0원으로 시작 가능)" },
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 300,
+      "note": "상품 카테고리와 마케팅 역량에 따라 편차 매우 큼"
+    },
+    "initialCost": {
+      "amount": 30,
+      "note": "초기 재고 매입비 (위탁판매 시 0원으로 시작 가능)"
+    },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 10~15시간",
     "category": "이커머스",
@@ -158,12 +177,24 @@
     "title": "쇼츠·릴스 영상 편집 대행",
     "summary": "스마트폰 하나로 유튜브 쇼츠·인스타 릴스 편집을 대행해 수익을 올리는 트렌디한 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "클라이언트 수와 편집 단가에 따라 상이" },
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 150,
+      "note": "클라이언트 수와 편집 단가에 따라 상이"
+    },
     "initialCost": { "amount": 0, "note": "CapCut 등 무료 앱으로 시작 가능" },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
     "category": "영상 편집",
-    "tags": ["영상편집", "쇼츠", "릴스", "AI활용", "무자본", "재택", "프리랜서"],
+    "tags": [
+      "영상편집",
+      "쇼츠",
+      "릴스",
+      "AI활용",
+      "무자본",
+      "재택",
+      "프리랜서"
+    ],
     "isTrending": true,
     "isPopular": false,
     "trendScore": 91,
@@ -196,7 +227,11 @@
     "title": "미드저니 AI 굿즈 디자인",
     "summary": "미드저니로 생성한 AI 이미지를 마플샵·Redbubble에 올려 잠자는 동안에도 수익을 만드는 무재고 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 80, "note": "디자인 업로드 수와 플랫폼 노출에 비례" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 80,
+      "note": "디자인 업로드 수와 플랫폼 노출에 비례"
+    },
     "initialCost": { "amount": 1, "note": "미드저니 Basic 플랜 월 약 1.2만원" },
     "timeToFirstIncome": "2~6주",
     "weeklyTimeRequired": "주 3~8시간",
@@ -234,8 +269,15 @@
     "title": "ChatGPT API 활용 소규모 SaaS",
     "summary": "OpenAI API로 특정 문제를 해결하는 소규모 웹 서비스를 만들어 구독 수익을 올리는 개발자형 부업",
     "difficulty": "advanced",
-    "expectedMonthlyIncome": { "min": 50, "max": 500, "note": "PMF 달성 시 급등 가능, 초기 3~6개월은 인내 필요" },
-    "initialCost": { "amount": 10, "note": "OpenAI API 크레딧 + Vercel/Supabase 기본 플랜" },
+    "expectedMonthlyIncome": {
+      "min": 50,
+      "max": 500,
+      "note": "PMF 달성 시 급등 가능, 초기 3~6개월은 인내 필요"
+    },
+    "initialCost": {
+      "amount": 10,
+      "note": "OpenAI API 크레딧 + Vercel/Supabase 기본 플랜"
+    },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 10~20시간",
     "category": "AI 활용",
@@ -272,7 +314,11 @@
     "title": "AI 아바타 유튜브 채널 운영",
     "summary": "얼굴 공개 없이 HeyGen AI 아바타로 정보성 영상을 제작해 유튜브 수익화를 달성하는 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 10, "max": 200, "note": "구독자 1000명·시청 4000시간 달성 후 수익화 시작" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 200,
+      "note": "구독자 1000명·시청 4000시간 달성 후 수익화 시작"
+    },
     "initialCost": { "amount": 3, "note": "HeyGen Starter 플랜 월 약 3만원" },
     "timeToFirstIncome": "3~6개월",
     "weeklyTimeRequired": "주 5~10시간",
@@ -310,7 +356,11 @@
     "title": "알리익스프레스 어필리에이트",
     "summary": "AliExpress 공식 어필리에이트로 글로벌 이커머스 트래픽을 활용해 달러 수수료를 받는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 50, "note": "달러 수수료 최대 8.5%, 환율 이득 포함" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 50,
+      "note": "달러 수수료 최대 8.5%, 환율 이득 포함"
+    },
     "initialCost": { "amount": 0, "note": "무료 가입, 별도 비용 없음" },
     "timeToFirstIncome": "2~6주",
     "weeklyTimeRequired": "주 3~7시간",
@@ -348,8 +398,15 @@
     "title": "크몽 전자책 자동 판매",
     "summary": "내가 가진 전문 지식을 PDF 전자책으로 만들어 크몽에 올리면 24시간 자동으로 팔리는 패시브 인컴",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 10, "max": 150, "note": "주제 수요와 가격 설정에 따라 상이" },
-    "initialCost": { "amount": 0, "note": "구글 독스 또는 파워포인트로 무료 제작 가능" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 150,
+      "note": "주제 수요와 가격 설정에 따라 상이"
+    },
+    "initialCost": {
+      "amount": 0,
+      "note": "구글 독스 또는 파워포인트로 무료 제작 가능"
+    },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 1~3시간",
     "category": "지식 창업",
@@ -386,7 +443,11 @@
     "title": "노션 템플릿 제작·판매",
     "summary": "Notion으로 만든 업무·생산성·재테크 템플릿을 Gumroad나 크몽에서 자동으로 판매하는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 100, "note": "Gumroad 글로벌 판매 시 달러 수익 가능" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 100,
+      "note": "Gumroad 글로벌 판매 시 달러 수익 가능"
+    },
     "initialCost": { "amount": 0, "note": "Notion 무료 플랜으로 충분" },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 2~5시간",
@@ -424,8 +485,15 @@
     "title": "인프런·클래스101 강의 판매",
     "summary": "내가 잘 아는 기술이나 취미를 영상 강의로 만들어 온라인 플랫폼에서 파는 장기 패시브 인컴",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 10, "max": 300, "note": "강의 퀄리티와 마케팅 역량에 크게 달림" },
-    "initialCost": { "amount": 5, "note": "마이크(1~3만원) + OBS Studio 무료 화면 녹화" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 300,
+      "note": "강의 퀄리티와 마케팅 역량에 크게 달림"
+    },
+    "initialCost": {
+      "amount": 5,
+      "note": "마이크(1~3만원) + OBS Studio 무료 화면 녹화"
+    },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 5~15시간",
     "category": "지식 창업",
@@ -462,8 +530,15 @@
     "title": "KREAM 한정판 리셀",
     "summary": "나이키 조던, 뉴발란스 등 한정판 스니커즈를 정가에 구매 후 KREAM에서 프리미엄을 붙여 재판매",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 10, "max": 200, "note": "드롭 타이밍과 아이템 선정이 수익 결정" },
-    "initialCost": { "amount": 20, "note": "초기 구매 자금 필요, 리셀 이익은 20~100% 수준" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 200,
+      "note": "드롭 타이밍과 아이템 선정이 수익 결정"
+    },
+    "initialCost": {
+      "amount": 20,
+      "note": "초기 구매 자금 필요, 리셀 이익은 20~100% 수준"
+    },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 2~5시간",
     "category": "이커머스",
@@ -500,8 +575,15 @@
     "title": "Etsy 디지털 파일 판매",
     "summary": "Canva로 만든 플래너·이력서·초대장 파일을 Etsy에 올려 글로벌 달러 수익을 자동으로 만드는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 150, "note": "달러 수익(환율 이득 포함), 상품 수에 따라 성장" },
-    "initialCost": { "amount": 0, "note": "Canva 무료 버전으로 시작, Etsy 상품 등록 건당 $0.2" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 150,
+      "note": "달러 수익(환율 이득 포함), 상품 수에 따라 성장"
+    },
+    "initialCost": {
+      "amount": 0,
+      "note": "Canva 무료 버전으로 시작, Etsy 상품 등록 건당 $0.2"
+    },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 3~8시간",
     "category": "이커머스",
@@ -538,7 +620,11 @@
     "title": "마플샵 무재고 굿즈 판매",
     "summary": "마플샵에서 디자인만 올리면 주문·제작·배송을 마플이 대신 처리하는 진짜 무자본·무재고 굿즈 사업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 3, "max": 50, "note": "팬덤 또는 바이럴 콘텐츠 보유 시 급등 가능" },
+    "expectedMonthlyIncome": {
+      "min": 3,
+      "max": 50,
+      "note": "팬덤 또는 바이럴 콘텐츠 보유 시 급등 가능"
+    },
     "initialCost": { "amount": 0, "note": "완전 무료, 판매 수수료만 발생" },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 1~3시간",
@@ -576,8 +662,15 @@
     "title": "유튜브 채널 수익화",
     "summary": "좋아하는 주제의 유튜브 채널을 키워 광고 수익·협찬·멤버십으로 월 수익을 만드는 중장기 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 5, "max": 500, "note": "구독자 1만명 이상부터 의미 있는 수익 발생" },
-    "initialCost": { "amount": 5, "note": "스마트폰 카메라로 시작 가능, 조명 2~5만원 권장" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 500,
+      "note": "구독자 1만명 이상부터 의미 있는 수익 발생"
+    },
+    "initialCost": {
+      "amount": 5,
+      "note": "스마트폰 카메라로 시작 가능, 조명 2~5만원 권장"
+    },
     "timeToFirstIncome": "3~12개월",
     "weeklyTimeRequired": "주 5~20시간",
     "category": "콘텐츠 크리에이터",
@@ -614,7 +707,11 @@
     "title": "스톡 이미지·영상 판매",
     "summary": "내가 촬영한 사진과 영상을 Shutterstock·Adobe Stock에 올려 저작권료로 달러를 자동으로 받는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 3, "max": 80, "note": "포트폴리오 수에 비례, 달러 수익" },
+    "expectedMonthlyIncome": {
+      "min": 3,
+      "max": 80,
+      "note": "포트폴리오 수에 비례, 달러 수익"
+    },
     "initialCost": { "amount": 0, "note": "스마트폰 카메라로 시작 가능" },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 2~5시간",
@@ -652,7 +749,11 @@
     "title": "번역·영어 교정 서비스",
     "summary": "영어 실력을 활용해 한↔영 번역 또는 영문 교정을 온라인으로 제공하는 고단가 프리랜서 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 20, "max": 200, "note": "전문 분야 번역은 건당 단가 10~30만원 수준" },
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 200,
+      "note": "전문 분야 번역은 건당 단가 10~30만원 수준"
+    },
     "initialCost": { "amount": 0, "note": "별도 비용 없음" },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
@@ -690,8 +791,15 @@
     "title": "워드프레스 웹사이트 제작",
     "summary": "소상공인·스타트업에게 워드프레스 홈페이지를 제작해주는 고단가 프리랜서 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 30, "max": 300, "note": "프로젝트당 30~150만원, 월 2~3건 수주 가능" },
-    "initialCost": { "amount": 3, "note": "호스팅(월 1~2만원) + 유료 테마(5~10만원 일시)" },
+    "expectedMonthlyIncome": {
+      "min": 30,
+      "max": 300,
+      "note": "프로젝트당 30~150만원, 월 2~3건 수주 가능"
+    },
+    "initialCost": {
+      "amount": 3,
+      "note": "호스팅(월 1~2만원) + 유료 테마(5~10만원 일시)"
+    },
     "timeToFirstIncome": "2~6주",
     "weeklyTimeRequired": "주 5~20시간",
     "category": "프리랜서",
@@ -717,7 +825,12 @@
         "description": "제작 완료 후 '월 5만원 유지보수 패키지(업데이트·백업·이메일 지원)'를 제안합니다. 고객 10명만 확보해도 월 50만원의 안정적인 수익이 됩니다."
       }
     ],
-    "relatedTags": ["Elementor", "워드프레스", "홈페이지제작", "소상공인마케팅"],
+    "relatedTags": [
+      "Elementor",
+      "워드프레스",
+      "홈페이지제작",
+      "소상공인마케팅"
+    ],
     "lastUpdated": "2026-06-17",
     "dataVersion": "1.0"
   },
@@ -728,7 +841,11 @@
     "title": "로고·브랜딩 디자인",
     "summary": "창업하는 소상공인에게 Figma로 로고와 브랜드 디자인을 납품하는 고단가 프리랜서 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 30, "max": 250, "note": "로고 1건 30~100만원, 풀 브랜딩은 100~300만원" },
+    "expectedMonthlyIncome": {
+      "min": 30,
+      "max": 250,
+      "note": "로고 1건 30~100만원, 풀 브랜딩은 100~300만원"
+    },
     "initialCost": { "amount": 0, "note": "Figma 무료 플랜으로 시작 가능" },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 5~15시간",
@@ -766,7 +883,11 @@
     "title": "SNS 계정 관리 대행",
     "summary": "소상공인·브랜드의 인스타그램 계정을 대신 운영해 월 정액 수익을 받는 프리랜서 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 30, "max": 200, "note": "계정당 월 10~50만원, 3~5개 계정 동시 운영 가능" },
+    "expectedMonthlyIncome": {
+      "min": 30,
+      "max": 200,
+      "note": "계정당 월 10~50만원, 3~5개 계정 동시 운영 가능"
+    },
     "initialCost": { "amount": 0, "note": "별도 초기 비용 없음" },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
@@ -804,7 +925,11 @@
     "title": "화상 영어 과외·튜터링",
     "summary": "Zoom으로 영어 회화·수능·토익을 가르치는 온라인 과외로 시간당 3~8만원의 수익을 만드는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "주 5~10시간 수업 기준, 학생 수에 따라 상승" },
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 150,
+      "note": "주 5~10시간 수업 기준, 학생 수에 따라 상승"
+    },
     "initialCost": { "amount": 0, "note": "Zoom 무료 플랜으로 충분" },
     "timeToFirstIncome": "1~2주",
     "weeklyTimeRequired": "주 5~10시간",
@@ -842,7 +967,11 @@
     "title": "AI 데이터 라벨링",
     "summary": "AI 학습에 필요한 이미지·텍스트·음성 데이터를 분류·태깅하는 재택 알바로 즉시 수익을 시작할 수 있는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 10, "max": 60, "note": "작업량에 비례, 숙련도 높아질수록 시간당 단가 상승" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 60,
+      "note": "작업량에 비례, 숙련도 높아질수록 시간당 단가 상승"
+    },
     "initialCost": { "amount": 0, "note": "PC와 인터넷만 있으면 무료 시작" },
     "timeToFirstIncome": "1~2주",
     "weeklyTimeRequired": "주 5~20시간",
@@ -880,8 +1009,15 @@
     "title": "쿠팡이츠·배민 배달 라이더",
     "summary": "내 시간에 자유롭게 배달해 시간당 1.5~2만원의 수익을 만드는 가장 빠르게 현금화되는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 30, "max": 200, "note": "주말 피크타임 집중 시 효율 극대화" },
-    "initialCost": { "amount": 5, "note": "자전거/전동킥보드 기준, 오토바이는 보험 추가 필요" },
+    "expectedMonthlyIncome": {
+      "min": 30,
+      "max": 200,
+      "note": "주말 피크타임 집중 시 효율 극대화"
+    },
+    "initialCost": {
+      "amount": 5,
+      "note": "자전거/전동킥보드 기준, 오토바이는 보험 추가 필요"
+    },
     "timeToFirstIncome": "1~7일",
     "weeklyTimeRequired": "주 5~20시간",
     "category": "기타",
@@ -918,7 +1054,11 @@
     "title": "틱톡 라이브 수익화",
     "summary": "틱톡 라이브 방송으로 시청자의 선물(다이아몬드)을 받아 현금화하는 MZ세대의 실시간 수익 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 100, "note": "팔로워 수보다 라이브 소통 능력이 수익에 직결" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 100,
+      "note": "팔로워 수보다 라이브 소통 능력이 수익에 직결"
+    },
     "initialCost": { "amount": 0, "note": "스마트폰만 있으면 무료 시작" },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 5~15시간",
@@ -956,7 +1096,11 @@
     "title": "당근·번개 중고 판매",
     "summary": "집 안 안 쓰는 물건부터 시작해 저가 매입·고가 판매 차익을 만드는 누구나 시작할 수 있는 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 5, "max": 50, "note": "판매량과 소싱 역량에 따라 상이" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 50,
+      "note": "판매량과 소싱 역량에 따라 상이"
+    },
     "initialCost": { "amount": 0, "note": "집 안 물건부터 시작 시 0원" },
     "timeToFirstIncome": "1~7일",
     "weeklyTimeRequired": "주 2~5시간",
@@ -994,8 +1138,15 @@
     "title": "AI 썸네일·배너 디자인 대행",
     "summary": "Canva·미드저니를 활용해 유튜브 썸네일과 SNS 배너를 빠르게 제작해주는 수요 폭발 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "건당 1~5만원, 월정 계약으로 전환하면 안정적" },
-    "initialCost": { "amount": 1, "note": "Canva Pro 월 1.3만원 (무료 버전으로도 시작 가능)" },
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 150,
+      "note": "건당 1~5만원, 월정 계약으로 전환하면 안정적"
+    },
+    "initialCost": {
+      "amount": 1,
+      "note": "Canva Pro 월 1.3만원 (무료 버전으로도 시작 가능)"
+    },
     "timeToFirstIncome": "1~2주",
     "weeklyTimeRequired": "주 5~10시간",
     "category": "AI 활용",
@@ -1032,8 +1183,15 @@
     "title": "팟캐스트 운영 수익화",
     "summary": "관심 주제의 팟캐스트 채널을 키워 스폰서십·멤버십으로 수익을 만드는 오디오 크리에이터 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 5, "max": 150, "note": "월 다운로드 1만회 이상부터 스폰서십 협상 가능" },
-    "initialCost": { "amount": 5, "note": "USB 마이크(2~5만원) + Buzzsprout 호스팅 월 $12부터" },
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 150,
+      "note": "월 다운로드 1만회 이상부터 스폰서십 협상 가능"
+    },
+    "initialCost": {
+      "amount": 5,
+      "note": "USB 마이크(2~5만원) + Buzzsprout 호스팅 월 $12부터"
+    },
     "timeToFirstIncome": "2~6개월",
     "weeklyTimeRequired": "주 3~8시간",
     "category": "콘텐츠 크리에이터",
@@ -1070,8 +1228,15 @@
     "title": "해외 직구 구매대행",
     "summary": "일본·미국의 인기 브랜드 상품을 대신 구매해주고 수수료를 받는 이커머스 부업",
     "difficulty": "intermediate",
-    "expectedMonthlyIncome": { "min": 20, "max": 150, "note": "전문 카테고리 특화 시 안정적인 수익 가능" },
-    "initialCost": { "amount": 10, "note": "초기 운전 자금 또는 고객 선입금 방식으로 운영 가능" },
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 150,
+      "note": "전문 카테고리 특화 시 안정적인 수익 가능"
+    },
+    "initialCost": {
+      "amount": 10,
+      "note": "초기 운전 자금 또는 고객 선입금 방식으로 운영 가능"
+    },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 5~15시간",
     "category": "이커머스",
@@ -1108,8 +1273,15 @@
     "title": "성우·내레이션 녹음 서비스",
     "summary": "좋은 목소리를 활용해 광고·유튜브·AI 학습 데이터 녹음을 대행하는 고단가 프리랜서 부업",
     "difficulty": "beginner",
-    "expectedMonthlyIncome": { "min": 10, "max": 120, "note": "건당 3~30만원, 방송 경험 있으면 단가 상승" },
-    "initialCost": { "amount": 5, "note": "USB 마이크(2~5만원), 방음 환경 구성" },
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 120,
+      "note": "건당 3~30만원, 방송 경험 있으면 단가 상승"
+    },
+    "initialCost": {
+      "amount": 5,
+      "note": "USB 마이크(2~5만원), 방음 환경 구성"
+    },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 3~10시간",
     "category": "프리랜서",

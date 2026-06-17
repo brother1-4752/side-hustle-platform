@@ -19,12 +19,12 @@
 
 ## 확정된 설계 방향 (Scope Lock)
 
-| 항목 | 결정 |
-|------|------|
-| Next.js 라우터 | **App Router** (Next.js 13+), Server Components 기반 SSG |
-| 홈 레이아웃 | **B안** — 메인 피드 2/3 + 우측 사이드바 1/3 (매거진 스타일) |
+| 항목           | 결정                                                        |
+| -------------- | ----------------------------------------------------------- |
+| Next.js 라우터 | **App Router** (Next.js 13+), Server Components 기반 SSG    |
+| 홈 레이아웃    | **B안** — 메인 피드 2/3 + 우측 사이드바 1/3 (매거진 스타일) |
 | 카드 정보 밀도 | **Rich Card** — 아이콘 + 배지 + 수익 범위 + 1줄 설명 + 태그 |
-| AdSense | **Level 2** — 레이아웃 + 코드 삽입 완료, 승인 신청 후행 |
+| AdSense        | **Level 2** — 레이아웃 + 코드 삽입 완료, 승인 신청 후행     |
 
 ---
 
@@ -32,33 +32,33 @@
 
 ### Reference 1: NerdWallet (nerdwallet.com)
 
-| 항목 | 내용 |
-|------|------|
-| 어떻게 해결하는가 | 금융 정보를 광고·판매 없이 구조화된 텍스트로 제공. 난이도/비교표/추천 이유 명시 |
-| 우리 타겟이 쓰는가 | Partially — 미국 기준, 금융 특화 |
+| 항목                | 내용                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 어떻게 해결하는가   | 금융 정보를 광고·판매 없이 구조화된 텍스트로 제공. 난이도/비교표/추천 이유 명시                                     |
+| 우리 타겟이 쓰는가  | Partially — 미국 기준, 금융 특화                                                                                    |
 | **배울 점 (Steal)** | 각 항목마다 "이런 사람에게 적합" 명시. 핵심 지표를 눈에 띄는 숫자 카드로 강조. 신뢰도 = 광고와 콘텐츠의 명확한 분리 |
-| 피할 점 (Avoid) | 정보 밀도가 너무 높아 첫 방문자에게 무거움 |
-| 우리 차별화 | 한국 시장 특화 + 매거진 비주얼 + 부업 카테고리 전문성 |
+| 피할 점 (Avoid)     | 정보 밀도가 너무 높아 첫 방문자에게 무거움                                                                          |
+| 우리 차별화         | 한국 시장 특화 + 매거진 비주얼 + 부업 카테고리 전문성                                                               |
 
 ### Reference 2: 오늘의집 (ohou.se)
 
-| 항목 | 내용 |
-|------|------|
-| 어떻게 해결하는가 | 인테리어 정보를 매거진형 카드 피드로 탐색. 파스텔 컬러, 깔끔한 라인, 태그 필터 |
-| 우리 타겟이 쓰는가 | Yes — 동일 타겟(한국 20~30대)이 신뢰하고 즐겨 쓰는 비주얼 레퍼런스 |
+| 항목                | 내용                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------------------- |
+| 어떻게 해결하는가   | 인테리어 정보를 매거진형 카드 피드로 탐색. 파스텔 컬러, 깔끔한 라인, 태그 필터                |
+| 우리 타겟이 쓰는가  | Yes — 동일 타겟(한국 20~30대)이 신뢰하고 즐겨 쓰는 비주얼 레퍼런스                            |
 | **배울 점 (Steal)** | 파스텔 카드 레이아웃 / 태그 칩 필터 UI / 사이드바 큐레이션 / 화사하면서도 정돈된 타이포그래피 |
-| 피할 점 (Avoid) | 이미지 의존도가 높아 텍스트 기반 콘텐츠엔 그대로 적용 불가 |
-| 우리 차별화 | 이미지 없이도 구조화된 데이터(배지, 수치)로 시각적 밀도 확보 |
+| 피할 점 (Avoid)     | 이미지 의존도가 높아 텍스트 기반 콘텐츠엔 그대로 적용 불가                                    |
+| 우리 차별화         | 이미지 없이도 구조화된 데이터(배지, 수치)로 시각적 밀도 확보                                  |
 
 ### Reference 3: Product Hunt (producthunt.com)
 
-| 항목 | 내용 |
-|------|------|
-| 어떻게 해결하는가 | 제품 정보를 카드 피드로 발견. 각 카드에 핵심 정보(이름/태그라인/태그/투표수)를 밀도 있게 노출 |
-| 우리 타겟이 쓰는가 | Partially — 테크 편향이지만 카드 UX 패턴은 동일하게 적용 가능 |
+| 항목                | 내용                                                                                                    |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
+| 어떻게 해결하는가   | 제품 정보를 카드 피드로 발견. 각 카드에 핵심 정보(이름/태그라인/태그/투표수)를 밀도 있게 노출           |
+| 우리 타겟이 쓰는가  | Partially — 테크 편향이지만 카드 UX 패턴은 동일하게 적용 가능                                           |
 | **배울 점 (Steal)** | Rich Card의 정보 계층 구조 (제목 > 한 줄 설명 > 태그 순서) / 스크롤 탐색 흐름 / 섹션 헤더로 카드 그룹화 |
-| 피할 점 (Avoid) | 영어 위주, 테크 문화 특화, 광고와 프로모션이 혼재 |
-| 우리 차별화 | 한국어 + 부업 도메인 특화 + 광고 격리 = 신뢰도 |
+| 피할 점 (Avoid)     | 영어 위주, 테크 문화 특화, 광고와 프로모션이 혼재                                                       |
+| 우리 차별화         | 한국어 + 부업 도메인 특화 + 광고 격리 = 신뢰도                                                          |
 
 ### 공통 인사이트
 
@@ -76,7 +76,7 @@
 ```
 /                              → 홈 (매거진 카드 피드)
   └─ /side-hustle/[slug]       → 부업 상세 페이지
-  
+
 (미래 확장 - Out of Scope)
   └─ /category/[tag]           → 태그별 목록 페이지
   └─ /about                    → 소개 페이지 (AdSense 승인 전 추가)
@@ -84,10 +84,10 @@
 
 ### 페이지 목적 정의
 
-| 경로 | 목적 | 핵심 사용자 행동 |
-|------|------|-----------------|
-| `/` | 탐색 — "뭐가 있나 둘러보기" | 카드 클릭 → 상세 페이지 진입 |
-| `/side-hustle/[slug]` | 판단 — "이게 나한테 맞나?" | 가이드 읽기 → 시작 결정 or 다른 부업 탐색 |
+| 경로                  | 목적                        | 핵심 사용자 행동                          |
+| --------------------- | --------------------------- | ----------------------------------------- |
+| `/`                   | 탐색 — "뭐가 있나 둘러보기" | 카드 클릭 → 상세 페이지 진입              |
+| `/side-hustle/[slug]` | 판단 — "이게 나한테 맞나?"  | 가이드 읽기 → 시작 결정 or 다른 부업 탐색 |
 
 ---
 
@@ -136,16 +136,16 @@ components/
 
 ### 컴포넌트 책임 요약
 
-| 컴포넌트 | Server/Client | 핵심 책임 |
-|----------|---------------|-----------|
-| `app/layout.tsx` | Server | Navbar + Footer + Analytics 마운트 |
-| `app/page.tsx` | Server | JSON 읽기, 섹션별 데이터 분류 후 렌더링 |
-| `app/side-hustle/[slug]/page.tsx` | Server | `generateStaticParams` + slug로 항목 조회 |
-| `TagFilterBar` | **Client** | 선택 태그 상태 → URL search params 동기화 |
-| `Navbar` | **Client** | 모바일 햄버거 메뉴 토글 |
-| `HustleCard` | Server | 카드 렌더링 (상태 없음, 순수 표시) |
-| `AdSlot` | **Client** | AdSense 스크립트 로드 (useEffect 필요) |
-| `Analytics` | **Client** | GA4 pageview 이벤트 |
+| 컴포넌트                          | Server/Client | 핵심 책임                                 |
+| --------------------------------- | ------------- | ----------------------------------------- |
+| `app/layout.tsx`                  | Server        | Navbar + Footer + Analytics 마운트        |
+| `app/page.tsx`                    | Server        | JSON 읽기, 섹션별 데이터 분류 후 렌더링   |
+| `app/side-hustle/[slug]/page.tsx` | Server        | `generateStaticParams` + slug로 항목 조회 |
+| `TagFilterBar`                    | **Client**    | 선택 태그 상태 → URL search params 동기화 |
+| `Navbar`                          | **Client**    | 모바일 햄버거 메뉴 토글                   |
+| `HustleCard`                      | Server        | 카드 렌더링 (상태 없음, 순수 표시)        |
+| `AdSlot`                          | **Client**    | AdSense 스크립트 로드 (useEffect 필요)    |
+| `Analytics`                       | **Client**    | GA4 pageview 이벤트                       |
 
 ---
 
@@ -325,25 +325,26 @@ components/
 
 > **원칙**: 광고는 사이드바와 본문 하단에 격리. 카드 피드 내 광고는 콘텐츠 섹션 사이에만 삽입하여 스캔 흐름 방해 최소화.
 
-| 슬롯 ID | 위치 | 규격 | 노출 조건 |
-|---------|------|------|-----------|
-| `sidebar-top` | 홈/상세 우측 사이드바 상단 | 300×250 (rectangle) | 데스크톱만 |
-| `sidebar-bottom` | 홈 우측 사이드바 하단 | 300×600 (half-page) | 데스크톱만 |
-| `in-feed` | 홈 '모든 부업' 섹션 중간 (6번째 카드 이후) | 728×90 (leaderboard) | 데스크톱 |
-| `in-content` | 상세 페이지 개요↔시작가이드 사이 | 728×90 | 데스크톱 |
-| `mobile-banner` | 홈 뜨는 부업↔많이 찾는 부업 사이 | 320×100 (mobile banner) | 모바일만 |
+| 슬롯 ID          | 위치                                       | 규격                    | 노출 조건  |
+| ---------------- | ------------------------------------------ | ----------------------- | ---------- |
+| `sidebar-top`    | 홈/상세 우측 사이드바 상단                 | 300×250 (rectangle)     | 데스크톱만 |
+| `sidebar-bottom` | 홈 우측 사이드바 하단                      | 300×600 (half-page)     | 데스크톱만 |
+| `in-feed`        | 홈 '모든 부업' 섹션 중간 (6번째 카드 이후) | 728×90 (leaderboard)    | 데스크톱   |
+| `in-content`     | 상세 페이지 개요↔시작가이드 사이           | 728×90                  | 데스크톱   |
+| `mobile-banner`  | 홈 뜨는 부업↔많이 찾는 부업 사이           | 320×100 (mobile banner) | 모바일만   |
 
 ### `AdSlot` 컴포넌트 인터페이스
 
 ```typescript
 // components/ui/AdSlot.tsx
 interface AdSlotProps {
-  size: 'rectangle'     // 300×250
-      | 'half-page'     // 300×600
-      | 'leaderboard'   // 728×90
-      | 'mobile-banner' // 320×100
-  slotId: string        // AdSense slot ID (현재는 빈 문자열 ""로 placeholder)
-  className?: string
+  size:
+    | "rectangle" // 300×250
+    | "half-page" // 300×600
+    | "leaderboard" // 728×90
+    | "mobile-banner"; // 320×100
+  slotId: string; // AdSense slot ID (현재는 빈 문자열 ""로 placeholder)
+  className?: string;
 }
 
 // MVP 단계: slotId가 비어 있으면 회색 placeholder 렌더링
@@ -357,59 +358,59 @@ interface AdSlotProps {
 ### TypeScript 타입 정의
 
 ```typescript
-type Difficulty = 'beginner' | 'intermediate' | 'advanced'
+type Difficulty = "beginner" | "intermediate" | "advanced";
 
 interface MonthlyIncome {
-  min: number        // 단위: 만원
-  max: number        // 단위: 만원
-  note?: string      // "초기 3개월 평균", "채널 규모에 따라 상이" 등
+  min: number; // 단위: 만원
+  max: number; // 단위: 만원
+  note?: string; // "초기 3개월 평균", "채널 규모에 따라 상이" 등
 }
 
 interface InitialCost {
-  amount: number     // 단위: 만원. 0이면 무자본
-  note?: string      // "도메인 구매비 포함" 등 부연
+  amount: number; // 단위: 만원. 0이면 무자본
+  note?: string; // "도메인 구매비 포함" 등 부연
 }
 
 interface GuideStep {
-  step: number
-  title: string
-  description: string
+  step: number;
+  title: string;
+  description: string;
 }
 
 interface SideHustle {
   // ─── 식별자 ───────────────────────────────────────────
-  id: string                   // "coupang-partners" (URL-safe kebab-case)
-  slug: string                 // Next.js 라우팅 기준: /side-hustle/{slug}
+  id: string; // "coupang-partners" (URL-safe kebab-case)
+  slug: string; // Next.js 라우팅 기준: /side-hustle/{slug}
 
   // ─── 카드 표시 필드 (홈 HustleCard) ─────────────────
-  icon: string                 // Emoji: "🛒" (이미지 없이 시각화)
-  title: string                // "쿠팡파트너스"
-  summary: string              // 1줄 설명, 40자 이내 권장
+  icon: string; // Emoji: "🛒" (이미지 없이 시각화)
+  title: string; // "쿠팡파트너스"
+  summary: string; // 1줄 설명, 40자 이내 권장
 
   // ─── 핵심 지표 ───────────────────────────────────────
-  difficulty: Difficulty
-  expectedMonthlyIncome: MonthlyIncome
-  initialCost: InitialCost
-  timeToFirstIncome: string    // "1~4주", "즉시~1개월"
-  weeklyTimeRequired: string   // "주 3~5시간"
+  difficulty: Difficulty;
+  expectedMonthlyIncome: MonthlyIncome;
+  initialCost: InitialCost;
+  timeToFirstIncome: string; // "1~4주", "즉시~1개월"
+  weeklyTimeRequired: string; // "주 3~5시간"
 
   // ─── 분류 ────────────────────────────────────────────
-  category: string             // 대분류: "온라인 마케팅"
-  tags: string[]               // ["제휴마케팅", "온라인마케팅", "무자본"]
+  category: string; // 대분류: "온라인 마케팅"
+  tags: string[]; // ["제휴마케팅", "온라인마케팅", "무자본"]
 
   // ─── 큐레이션 (수동 운영) ────────────────────────────
-  isTrending: boolean          // 홈 '뜨는 부업' 섹션 노출
-  isPopular: boolean           // 홈 '많이 찾는 부업' 섹션 노출
-  trendScore: number           // 0~100, 향후 자동화 대비 (초기: 수동 입력)
+  isTrending: boolean; // 홈 '뜨는 부업' 섹션 노출
+  isPopular: boolean; // 홈 '많이 찾는 부업' 섹션 노출
+  trendScore: number; // 0~100, 향후 자동화 대비 (초기: 수동 입력)
 
   // ─── 상세 페이지 전용 ────────────────────────────────
-  overview: string             // 2~3단락 상세 설명 (마크다운 허용)
-  startGuide: GuideStep[]      // 번호형 시작 가이드 (최소 3단계)
-  relatedTags: string[]        // 관련 부업 탐색용 추가 태그 (상세 페이지 전용)
+  overview: string; // 2~3단락 상세 설명 (마크다운 허용)
+  startGuide: GuideStep[]; // 번호형 시작 가이드 (최소 3단계)
+  relatedTags: string[]; // 관련 부업 탐색용 추가 태그 (상세 페이지 전용)
 
   // ─── 메타 ────────────────────────────────────────────
-  lastUpdated: string          // ISO 8601: "2026-06-17"
-  dataVersion: string          // 스키마 버전: "1.0"
+  lastUpdated: string; // ISO 8601: "2026-06-17"
+  dataVersion: string; // 스키마 버전: "1.0"
 }
 ```
 
@@ -471,55 +472,58 @@ interface SideHustle {
 
 ```css
 /* 배경 */
---color-bg-base:     #FAFAF8;   /* 전체 배경 — 따뜻한 오프화이트 */
---color-bg-card:     #FFFFFF;   /* 카드 배경 */
---color-bg-sidebar:  #F5F3EF;   /* 사이드바 배경 */
+--color-bg-base: #fafaf8; /* 전체 배경 — 따뜻한 오프화이트 */
+--color-bg-card: #ffffff; /* 카드 배경 */
+--color-bg-sidebar: #f5f3ef; /* 사이드바 배경 */
 
 /* 브랜드 파스텔 팔레트 */
---color-primary:     #FF8FAB;   /* 소프트 코랄 — CTA, 섹션 헤더 강조 */
---color-primary-light: #FFD6E0; /* 연한 핑크 — 뱃지 배경 */
---color-accent:      #A8D8B9;   /* 민트 그린 — 초급 배지, 무자본 태그 */
---color-accent-warm: #FFD97D;   /* 노란 크림 — 중급 배지, 수익 강조 */
+--color-primary: #ff8fab; /* 소프트 코랄 — CTA, 섹션 헤더 강조 */
+--color-primary-light: #ffd6e0; /* 연한 핑크 — 뱃지 배경 */
+--color-accent: #a8d8b9; /* 민트 그린 — 초급 배지, 무자본 태그 */
+--color-accent-warm: #ffd97d; /* 노란 크림 — 중급 배지, 수익 강조 */
 
 /* 텍스트 */
---color-text-primary:   #1A1A1A;  /* 제목, 본문 */
---color-text-secondary: #6B7280;  /* 설명, 부가 정보 */
---color-text-muted:     #9CA3AF;  /* 날짜, 레이블 */
+--color-text-primary: #1a1a1a; /* 제목, 본문 */
+--color-text-secondary: #6b7280; /* 설명, 부가 정보 */
+--color-text-muted: #9ca3af; /* 날짜, 레이블 */
 
 /* 배지 — 난이도별 */
---badge-beginner-bg:      #D1FAE5;  --badge-beginner-text:      #065F46;
---badge-intermediate-bg:  #FEF3C7;  --badge-intermediate-text:  #92400E;
---badge-advanced-bg:      #FEE2E2;  --badge-advanced-text:      #991B1B;
+--badge-beginner-bg: #d1fae5;
+--badge-beginner-text: #065f46;
+--badge-intermediate-bg: #fef3c7;
+--badge-intermediate-text: #92400e;
+--badge-advanced-bg: #fee2e2;
+--badge-advanced-text: #991b1b;
 ```
 
 ### 타이포그래피
 
 ```css
 /* 폰트: Noto Sans KR (Google Fonts, 무료) */
---font-heading: 700  /* 카드 제목: 18px / 상세 페이지 H1: 28px */
---font-body:    400  /* 본문: 15px, line-height 1.7 */
---font-meta:    400  /* 태그, 날짜: 13px */
+--font-heading: 700 /* 카드 제목: 18px / 상세 페이지 H1: 28px */
+  --font-body: 400 /* 본문: 15px, line-height 1.7 */ --font-meta: 400
+  /* 태그, 날짜: 13px */;
 ```
 
 ### 스페이싱 & 레이아웃
 
 ```css
---card-radius:    12px;    /* 카드 모서리 */
---card-shadow:    0 2px 8px rgba(0,0,0,0.06);
---card-shadow-hover: 0 6px 20px rgba(0,0,0,0.10);
+--card-radius: 12px; /* 카드 모서리 */
+--card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+--card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.1);
 
 /* 홈 그리드 */
---grid-home-desktop: grid-cols-[2fr_1fr]  /* 메인:사이드바 = 65:35 */
---grid-cards-desktop: grid-cols-3          /* 모든 부업 섹션: 3열 */
---grid-cards-trending: grid-cols-2         /* 뜨는/인기 섹션: 2열 */
+--grid-home-desktop: grid-cols-[2fr_1fr] /* 메인:사이드바 = 65:35 */
+  --grid-cards-desktop: grid-cols-3 /* 모든 부업 섹션: 3열 */
+  --grid-cards-trending: grid-cols-2 /* 뜨는/인기 섹션: 2열 */;
 ```
 
 ---
 
 ## 📁 Output Files
 
-| 파일 | 설명 | 상태 |
-|------|------|------|
+| 파일           | 설명                                              | 상태    |
+| -------------- | ------------------------------------------------- | ------- |
 | `03_DESIGN.md` | IA, 컴포넌트 계층, 와이어프레임, 스키마 (이 파일) | ✅ 완료 |
 
 ---

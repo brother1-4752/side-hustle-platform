@@ -1,5 +1,5 @@
 ---
-name: "AI Sprint Framework"
+name: "Side Hustle Information Platform"
 version: "1.0"
 phases:
   ["Discover", "Define", "Design", "Prompt", "Build", "Validate", "Iterate"]
@@ -64,11 +64,11 @@ phases:
 
 ### 라이브 URL
 
-| 환경 | URL |
-|------|-----|
-| Production | https://side-hustle-platform.vercel.app |
+| 환경            | URL                                                            |
+| --------------- | -------------------------------------------------------------- |
+| Production      | https://side-hustle-platform.vercel.app                        |
 | Vercel 대시보드 | https://vercel.com/brother14752s-projects/side-hustle-platform |
-| GitHub | https://github.com/brother1-4752/side-hustle-platform |
+| GitHub          | https://github.com/brother1-4752/side-hustle-platform          |
 
 ### Completed
 

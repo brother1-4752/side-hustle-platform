@@ -1,31 +1,31 @@
-'use client'
+"use client";
 
-import { useSearchParams } from 'next/navigation'
-import type { SideHustle } from '@/types'
-import HustleCard    from '@/components/ui/HustleCard'
-import TagFilterBar  from '@/components/ui/TagFilterBar'
-import AdSlot        from '@/components/ui/AdSlot'
-import SectionHeader from '@/components/home/SectionHeader'
+import { useSearchParams } from "next/navigation";
+import type { SideHustle } from "@/types";
+import HustleCard from "@/components/ui/HustleCard";
+import TagFilterBar from "@/components/ui/TagFilterBar";
+import AdSlot from "@/components/ui/AdSlot";
+import SectionHeader from "@/components/home/SectionHeader";
 
 interface FilteredFeedProps {
-  hustles: SideHustle[]
-  allTags: string[]
+  hustles: SideHustle[];
+  allTags: string[];
 }
 
 export default function FilteredFeed({ hustles, allTags }: FilteredFeedProps) {
-  const searchParams = useSearchParams()
-  const activeTag    = searchParams.get('tag')
+  const searchParams = useSearchParams();
+  const activeTag = searchParams.get("tag");
 
   // ── 필터링 ─────────────────────────────────────────────────────────────
-  const filtered  = activeTag
+  const filtered = activeTag
     ? hustles.filter((h) => h.tags.includes(activeTag))
-    : hustles
+    : hustles;
 
-  const trending  = filtered.filter((h) => h.isTrending)
-  const popular   = filtered.filter((h) => h.isPopular)
+  const trending = filtered.filter((h) => h.isTrending);
+  const popular = filtered.filter((h) => h.isPopular);
   // 모든 부업: trendScore 내림차순
-  const all       = [...filtered].sort((a, b) => b.trendScore - a.trendScore)
-  const isEmpty   = filtered.length === 0
+  const all = [...filtered].sort((a, b) => b.trendScore - a.trendScore);
+  const isEmpty = filtered.length === 0;
 
   return (
     <div className="space-y-10">
@@ -43,7 +43,10 @@ export default function FilteredFeed({ hustles, allTags }: FilteredFeedProps) {
       {trending.length > 0 && (
         <section aria-labelledby="section-trending">
           <SectionHeader emoji="🔥" title="뜨는 부업" />
-          <div id="section-trending" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            id="section-trending"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
             {trending.map((h) => (
               <HustleCard key={h.id} hustle={h} />
             ))}
@@ -55,7 +58,10 @@ export default function FilteredFeed({ hustles, allTags }: FilteredFeedProps) {
       {popular.length > 0 && (
         <section aria-labelledby="section-popular">
           <SectionHeader emoji="💡" title="많이 찾는 부업" />
-          <div id="section-popular" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            id="section-popular"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
             {popular.map((h) => (
               <HustleCard key={h.id} hustle={h} />
             ))}
@@ -69,7 +75,10 @@ export default function FilteredFeed({ hustles, allTags }: FilteredFeedProps) {
           <SectionHeader emoji="📚" title="모든 부업" />
 
           {/* 첫 6개 카드 */}
-          <div id="section-all" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div
+            id="section-all"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
             {all.slice(0, 6).map((h) => (
               <HustleCard key={h.id} hustle={h} />
             ))}
@@ -98,5 +107,5 @@ export default function FilteredFeed({ hustles, allTags }: FilteredFeedProps) {
         </div>
       )}
     </div>
-  )
+  );
 }

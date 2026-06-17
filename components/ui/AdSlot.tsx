@@ -1,30 +1,37 @@
-'use client'
+"use client";
 
 type AdSize =
-  | 'rectangle'
-  | 'half-page'
-  | 'leaderboard'
-  | 'in-feed'
-  | 'in-content'
-  | 'mobile-banner'
+  | "rectangle"
+  | "half-page"
+  | "leaderboard"
+  | "in-feed"
+  | "in-content"
+  | "mobile-banner";
 
 interface AdSlotProps {
-  size: AdSize
-  slotId?: string
-  className?: string
+  size: AdSize;
+  slotId?: string;
+  className?: string;
 }
 
-const SIZE_CONFIG: Record<AdSize, { minHeight: number; maxWidth: number; label: string }> = {
-  rectangle:       { minHeight: 250, maxWidth: 300, label: '300×250' },
-  'half-page':     { minHeight: 600, maxWidth: 300, label: '300×600' },
-  leaderboard:     { minHeight: 90,  maxWidth: 728, label: '728×90'  },
-  'in-feed':       { minHeight: 90,  maxWidth: 728, label: '728×90'  },
-  'in-content':    { minHeight: 90,  maxWidth: 728, label: '728×90'  },
-  'mobile-banner': { minHeight: 100, maxWidth: 320, label: '320×100' },
-}
+const SIZE_CONFIG: Record<
+  AdSize,
+  { minHeight: number; maxWidth: number; label: string }
+> = {
+  rectangle: { minHeight: 250, maxWidth: 300, label: "300×250" },
+  "half-page": { minHeight: 600, maxWidth: 300, label: "300×600" },
+  leaderboard: { minHeight: 90, maxWidth: 728, label: "728×90" },
+  "in-feed": { minHeight: 90, maxWidth: 728, label: "728×90" },
+  "in-content": { minHeight: 90, maxWidth: 728, label: "728×90" },
+  "mobile-banner": { minHeight: 100, maxWidth: 320, label: "320×100" },
+};
 
-export default function AdSlot({ size, slotId = '', className = '' }: AdSlotProps) {
-  const { minHeight, maxWidth, label } = SIZE_CONFIG[size]
+export default function AdSlot({
+  size,
+  slotId = "",
+  className = "",
+}: AdSlotProps) {
+  const { minHeight, maxWidth, label } = SIZE_CONFIG[size];
 
   return (
     <div
@@ -40,5 +47,5 @@ export default function AdSlot({ size, slotId = '', className = '' }: AdSlotProp
         </span>
       )}
     </div>
-  )
+  );
 }

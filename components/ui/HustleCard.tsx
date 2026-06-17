@@ -1,22 +1,22 @@
-import Link from 'next/link'
-import type { SideHustle } from '@/types'
+import Link from "next/link";
+import type { SideHustle } from "@/types";
 
 const DIFFICULTY_BADGE: Record<string, { label: string; className: string }> = {
-  beginner:     { label: '초급', className: 'bg-green-100 text-green-800' },
-  intermediate: { label: '중급', className: 'bg-yellow-100 text-yellow-800' },
-  advanced:     { label: '고급', className: 'bg-red-100 text-red-800'    },
-}
+  beginner: { label: "초급", className: "bg-green-100 text-green-800" },
+  intermediate: { label: "중급", className: "bg-yellow-100 text-yellow-800" },
+  advanced: { label: "고급", className: "bg-red-100 text-red-800" },
+};
 
-const FEATURE_TAGS = new Set(['무자본', '재택', 'AI활용', '프리랜서'])
+const FEATURE_TAGS = new Set(["무자본", "재택", "AI활용", "프리랜서"]);
 
 interface HustleCardProps {
-  hustle: SideHustle
+  hustle: SideHustle;
 }
 
 export default function HustleCard({ hustle }: HustleCardProps) {
-  const badge   = DIFFICULTY_BADGE[hustle.difficulty]
-  const features = hustle.tags.filter((t) => FEATURE_TAGS.has(t)).slice(0, 2)
-  const { min, max } = hustle.expectedMonthlyIncome
+  const badge = DIFFICULTY_BADGE[hustle.difficulty];
+  const features = hustle.tags.filter((t) => FEATURE_TAGS.has(t)).slice(0, 2);
+  const { min, max } = hustle.expectedMonthlyIncome;
 
   return (
     <Link
@@ -29,7 +29,9 @@ export default function HustleCard({ hustle }: HustleCardProps) {
           <span className="text-2xl leading-none" aria-hidden="true">
             {hustle.icon}
           </span>
-          <span className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${badge.className}`}>
+          <span
+            className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${badge.className}`}
+          >
             {badge.label}
           </span>
           {features.map((f) => (
@@ -70,5 +72,5 @@ export default function HustleCard({ hustle }: HustleCardProps) {
         </div>
       </div>
     </Link>
-  )
+  );
 }

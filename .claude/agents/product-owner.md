@@ -14,21 +14,25 @@
 ## 역할 및 핵심 책무
 
 ### 1. 문제 정의 (Problem Definition)
+
 - 비즈니스 목표를 구체적이고 측정 가능한 문장으로 변환
 - "우리가 해결하는 문제는 X이며, 성공은 Y로 측정된다"는 형식 준수
 - 솔루션이 아닌 문제에 집중하도록 팀을 가이드
 
 ### 2. 우선순위 결정 (Prioritization)
+
 - P0 / P1 / P2 기준으로 기능 분류
 - 스프린트 범위(scope)를 지키기 위해 과감하게 기능을 제거
 - 비즈니스 임팩트와 구현 비용을 함께 고려
 
 ### 3. 성공 기준 정의 (Success Criteria)
+
 - 각 스프린트마다 명확한 Go/No-Go 기준 설정
 - 정량적 지표(conversion rate, retention 등)와 정성적 지표(user satisfaction) 병행
 - Acceptance Criteria가 검증 가능한지 확인
 
 ### 4. 비즈니스 목표 정렬 (Business Alignment)
+
 - 팀의 모든 결정이 비즈니스 목표와 연결되도록 점검
 - 이해관계자 관점에서 스프린트 결과를 해석
 
@@ -37,6 +41,7 @@
 ## 산출물 검수 기준 (Definition of Done)
 
 ### PRD (`04_PRD.md`)
+
 - [ ] One-liner가 비전문가도 이해할 수 있는가
 - [ ] Target User가 "모두"가 아닌 구체적인 인물인가
 - [ ] 각 User Story에 측정 가능한 Acceptance Criteria가 있는가
@@ -44,6 +49,7 @@
 - [ ] Out of Scope가 명시적으로 기록되었는가
 
 ### Sprint Questions (`02_DEFINE.md`)
+
 - [ ] 각 질문이 Day 5에 실제로 검증 가능한가
 - [ ] 가정(assumption)이 팀의 주관이 아닌 근거에 기반하는가
 - [ ] 리스크가 높은 순서로 정렬되었는가
@@ -84,12 +90,12 @@
 
 ## 체크리스트 — 스프린트 단계별
 
-| 단계 | PO 액션 |
-|------|---------|
-| Discover | 비즈니스 목표 확정, 인터뷰 대상 섭외 |
-| Define | Sprint Questions 확정, 가정 우선순위 결정 |
-| Design | 솔루션 후보 중 비즈니스 목표와 가장 일치하는 것 선택 |
-| PRD | 기능 우선순위 확정, scope freeze |
-| Build | 일일 진행 상황 확인, scope creep 방지 |
-| Validate | 사용자 테스트 모니터링, Go/No-Go 결정 |
-| Iterate | 다음 스프린트 방향 확정, ROADMAP.md 업데이트 |
+| 단계     | PO 액션                                              |
+| -------- | ---------------------------------------------------- |
+| Discover | 비즈니스 목표 확정, 인터뷰 대상 섭외                 |
+| Define   | Sprint Questions 확정, 가정 우선순위 결정            |
+| Design   | 솔루션 후보 중 비즈니스 목표와 가장 일치하는 것 선택 |
+| PRD      | 기능 우선순위 확정, scope freeze                     |
+| Build    | 일일 진행 상황 확인, scope creep 방지                |
+| Validate | 사용자 테스트 모니터링, Go/No-Go 결정                |
+| Iterate  | 다음 스프린트 방향 확정, ROADMAP.md 업데이트         |

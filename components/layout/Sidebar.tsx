@@ -1,9 +1,15 @@
-import AdSlot from '@/components/ui/AdSlot'
+import AdSlot from "@/components/ui/AdSlot";
 
 const POPULAR_TAGS = [
-  '무자본', 'AI활용', '재택', '스마트스토어',
-  '블로그', '영상편집', '제휴마케팅', '프리랜서',
-]
+  "무자본",
+  "AI활용",
+  "재택",
+  "스마트스토어",
+  "블로그",
+  "영상편집",
+  "제휴마케팅",
+  "프리랜서",
+];
 
 export default function Sidebar() {
   return (
@@ -32,5 +38,5 @@ export default function Sidebar() {
         <AdSlot size="half-page" slotId="" />
       </div>
     </aside>
-  )
+  );
 }
