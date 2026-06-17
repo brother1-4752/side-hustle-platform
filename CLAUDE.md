@@ -72,11 +72,12 @@ phases:
 ### Build 진행 현황
 
 - [x] Task 1: 디자인 토큰 + 데이터 구조 + 레이아웃 뼈대 (2026-06-17)
-  - `tailwind.config.ts`, `globals.css`, `next.config.mjs`
-  - `data/side-hustles.json` (5개 Mock 데이터, 17필드 완전 스펙)
-  - `app/layout.tsx`, `Navbar`, `Footer`, `Sidebar`, `AdSlot`
-  - 린트 에러 0, TypeScript 에러 0 확인
-- [ ] Task 2: 홈 카드 피드 (HustleCard, TagFilterBar, 3섹션 렌더링)
+- [x] Task 2: Rich 카드 + URL 태그 필터 + 홈 3섹션 렌더링 (2026-06-17)
+  - `HustleCard.tsx`: 아이콘/배지/수익/태그 Rich 카드, hover 애니메이션
+  - `TagFilterBar.tsx`: useSearchParams + useRouter, URL `/?tag=` 동기화
+  - `FilteredFeed.tsx`: Client Component, Suspense 격리, 3섹션 필터링
+  - `app/page.tsx`: Server Component, Suspense 래핑, 사이드바 분리
+  - `npm run build` 정적 빌드 성공 (lint 0, tsc 0, SSG 0 에러)
 - [ ] Task 3: 상세 페이지 (generateStaticParams, MetricPanel, StartGuide)
 - [ ] Task 4: 콘텐츠 데이터 (30~50개 항목 완성)
 - [ ] Task 5: Analytics + SEO 메타태그 + 최종 점검
