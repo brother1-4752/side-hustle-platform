@@ -14,29 +14,42 @@ interface FilteredFeedProps {
 
 export default function FilteredFeed({ hustles, allTags }: FilteredFeedProps) {
   const searchParams = useSearchParams();
-  const activeTag = searchParams.get("tag");
 
-  // ── 필터링 ─────────────────────────────────────────────────────────────
-  const filtered = activeTag
-    ? hustles.filter((h) => h.tags.includes(activeTag))
-    : hustles;
+  // Comma-separated multi-tag param → string[]
+  const tagParam = searchParams.get("tag") ?? "";
+  const activeTags = tagParam ? tagParam.split(",").filter(Boolean) : [];
+
+  // AND 교차 필터: 선택된 모든 태그를 보유한 항목만 통과
+  const filtered =
+    activeTags.length > 0
+      ? hustles.filter((h) => activeTags.every((t) => h.tags.includes(t)))
+      : hustles;
 
   const trending = filtered.filter((h) => h.isTrending);
   const popular = filtered.filter((h) => h.isPopular);
-  // 모든 부업: trendScore 내림차순
   const all = [...filtered].sort((a, b) => b.trendScore - a.trendScore);
   const isEmpty = filtered.length === 0;
 
   return (
     <div className="space-y-10">
-      {/* TagFilterBar — useSearchParams 사용, 이 컴포넌트 전체가 Suspense로 격리됨 */}
+      {/* TagFilterBar — useSearchParams 포함, Suspense로 격리됨 */}
       <TagFilterBar tags={allTags} />
 
-      {/* 전체 필터 결과 없음 */}
+      {/* 필터 결과 없음 */}
       {isEmpty && (
-        <p className="text-center text-gray-400 py-16 text-sm">
-          해당 태그의 부업 정보를 준비 중입니다.
-        </p>
+        <div className="text-center py-20">
+          <p className="text-4xl mb-4">🔍</p>
+          <p className="text-gray-500 text-sm font-medium">
+            {activeTags.length > 0
+              ? `#${activeTags.join(" + #")} 조건을 모두 충족하는 부업을 준비 중입니다.`
+              : "해당 태그의 부업 정보를 준비 중입니다."}
+          </p>
+          {activeTags.length > 1 && (
+            <p className="text-gray-400 text-xs mt-2">
+              태그를 하나씩 해제해보면 더 많은 결과를 볼 수 있어요.
+            </p>
+          )}
+        </div>
       )}
 
       {/* ── Section 1: 뜨는 부업 ────────────────────────────────────────── */}
