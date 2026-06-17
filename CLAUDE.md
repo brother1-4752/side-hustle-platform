@@ -59,21 +59,31 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-001
-**Phase**: Discover ✅ → Define ✅ → **Design** (Next)
+**Phase**: Discover ✅ → Define ✅ → Design ✅ → **Build** (Next)
 **Status**: 🟢 Active
 
 ### Completed
+
 - [x] Discover — `01_DISCOVER.md` 완성 (2026-06-17)
 - [x] Define — `02_DEFINE.md` 완성 (2026-06-17) ⚠️ Scope Freeze
+- [x] Design — `03_DESIGN.md` 완성 (2026-06-17)
 
-### Decisions Locked (Scope Freeze)
-- MVP 데이터: 30~50개 항목, 대분류 단위, AI 초안 + PO 검수, 1주 내 완성 목표
-- 스키마: 태그 기반 다중 분류, `isTrending` / `isPopular` Boolean
-- 홈 UX: 매거진형 카드 피드 (탐색 중심)
-- Analytics: GA4 또는 Vercel Analytics (P0, 클릭 이벤트 포함)
-- AdSense: 레이아웃 + 코드 삽입만 (승인 신청은 KPI 검증 후)
-- 성공 지표 (Go): Engagement Rate 30% + 정성 신뢰도 5명 중 4명 이상
-- 아키텍처: Next.js SSG / JAMstack, Vercel 배포
+### Decisions Locked (Design Freeze)
+
+- 라우터: Next.js App Router, Server Components + generateStaticParams
+- 레이아웃: 메인 피드 2/3 + 우측 사이드바 1/3 (매거진 스타일)
+- 카드: Rich Card (아이콘 + 배지 + 수익 + 설명 + 태그)
+- AdSense: Level 2 (슬롯 5개 위치 확정, slotId는 승인 후 채움)
+- 스키마: `side-hustles.json` 필드 17개 완전 확정
+- 디자인 토큰: 파스텔 코랄/민트 팔레트, Noto Sans KR
 
 ### Next Action
-→ `sprint-design.md` 프롬프트로 DESIGN 단계 시작
+
+→ PRD(`04_PRD.md`) 작성 후 Build 단계 시작
+
+## Automated Workflow Rules
+
+- **자동 Git 워크플로우 (CRITICAL)**: 각 스프린트의 Phase(Discover, Define, Design, Build, Validate) 관련 문서 작업이나 코드 구현이 완료되면, 사용자에게 재확인("커밋할까요?")하지 말고 즉시 자동으로 Git 스테이징, 커밋, 푸시를 수행한다.
+- **커밋 메시지 규격**: Conventional Commits 규격을 준수하되, 내용은 반드시 '한글'로 작성한다.
+  - 형식: `<type>: SPRINT-001 <phase_name> 단계 완료 (<핵심 변경 사항>)`
+  - 예시: `docs: SPRINT-001 디자인 단계 완료 (컴포넌트 및 데이터 스키마 확정)`
