@@ -59,8 +59,8 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-001
-**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → **Build** 🔨 (진행 중)
-**Status**: 🟢 Active
+**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → **Build** ✅ → Validate 🔜
+**Status**: 🏁 Build 완료, Validate 대기 중
 
 ### Completed
 
@@ -91,7 +91,12 @@ phases:
   - 카테고리: AI활용(5), 제휴마케팅(2), 이커머스(6), 지식창업(3), 크리에이터(5), 프리랜서(5), 교육(1), 기타(3)
   - 난이도: beginner(18), intermediate(11), advanced(1)
   - `npm run build` 34/34 pages SSG 성공 (lint 0, tsc 0, 에러 0)
-- [ ] Task 5: Analytics + SEO 메타태그 + 최종 점검
+- [x] Task 5: Analytics + SEO 메타태그 + 최종 점검 (2026-06-17)
+  - `@vercel/analytics` + `@vercel/speed-insights` 패키지 설치
+  - `app/layout.tsx`: `<Analytics />` + `<SpeedInsights />` 주입, `metadataBase` 설정, OG/Twitter 카드 메타태그 추가
+  - `app/sitemap.ts`: Next.js 내장 MetadataRoute.Sitemap — 홈(priority 1.0) + 30개 상세 페이지(0.8) 자동 생성
+  - `app/robots.ts`: Next.js 내장 MetadataRoute.Robots — All crawlers Allow, sitemap.xml 경로 명시
+  - `npm run build` 36/36 pages 성공, `out/sitemap.xml` (31 URLs) + `out/robots.txt` 정상 출력 확인
 
 ### 기술 스택 (확정)
 
@@ -102,7 +107,7 @@ phases:
 
 ### Next Action
 
-→ Task 5: Vercel Analytics + SEO 메타태그 + 최종 점검
+→ SPRINT-001 Build 완료. 다음 단계: Validate — Vercel 배포 후 실 사용자 피드백 5명 수집
 
 ## Automated Workflow Rules
 
