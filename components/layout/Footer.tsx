@@ -1,3 +1,10 @@
+import Link from "next/link";
+
+const LEGAL_LINKS = [
+  { label: "개인정보처리방침", href: "/privacy" },
+  { label: "이용약관", href: "/terms" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-bg-sidebar border-t border-gray-100 mt-16">
@@ -8,7 +15,18 @@ export default function Footer() {
             데이터는 정기적으로 업데이트됩니다. 수익은 개인 역량에 따라
             상이합니다.
           </span>
-          <span>© 2026 부업레이더</span>
+          <div className="flex items-center gap-4">
+            {LEGAL_LINKS.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className="hover:text-gray-600 transition-colors underline underline-offset-2 decoration-gray-300"
+              >
+                {label}
+              </Link>
+            ))}
+            <span>© 2026 부업레이더</span>
+          </div>
         </div>
       </div>
     </footer>
