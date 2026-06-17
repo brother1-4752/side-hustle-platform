@@ -86,19 +86,20 @@ SPRINT-001 Validate 단계에서 유저 5명 테스트 결과, 핵심 KPI(CTR 10
 
 ---
 
-### ⬜ Task 4 — AI 자동 데이터 수집 파이프라인 기반 구축 (미시작)
+### ✅ Task 4 — AI 자동 데이터 수집 파이프라인 기반 구축 (완료)
 
 **근거**: SPRINT-001 Iterate "시도해볼 것" — AI 에이전트 유튜브 자막 파싱
 
 **목표**: 부업 데이터를 수동으로 JSON에 입력하는 방식 → AI 에이전트가 자동 수집·가공하도록 파이프라인 구축
 
-**예상 구현 범위**:
+- `scripts/mine-hustle.ts`: 3단계 AI 마이닝 파이프라인 (`npm run mine -- <VIDEO_ID>`)
+  - YouTube URL/ID → `youtube-transcript`로 한국어 자막 추출 (ko 우선, 폴백 포함)
+  - 자막 → Claude Sonnet 4.6 API → 21개 필드 정형 JSON 추출
+  - 추출 결과 검증 (필드 누락·enum·범위) → `side-hustles.json` 중복 방지 append
+- `package.json`: `"mine"` npm 스크립트 추가 (`tsx` 기반)
+- 추가 의존성 (devDeps): `youtube-transcript`, `@anthropic-ai/sdk`, `tsx`
 
-- [ ] 데이터 수집 프롬프트 스펙 확정 (`requiredHoursPerDay` 포함 전체 필드)
-- [ ] 수집 대상 정의 (유튜브 자막, 블로그 포스트, 커뮤니티 글 등)
-- [ ] 파싱 스크립트 또는 Claude API 연동 워크플로우 설계
-- [ ] 수집된 데이터 검증 및 `side-hustles.json` 자동 갱신 방식 결정
-- [ ] 데이터 30개 → 50개 이상으로 확장
+**커밋**: `152727b` | `feat: SPRINT-002 유튜브 자막 기반 AI 리서치 수집 스크립트 구현`
 
 ---
 
@@ -117,4 +118,4 @@ SPRINT-001 Validate 단계에서 유저 5명 테스트 결과, 핵심 KPI(CTR 10
 | Task 1 완료 후 | 36 pages  | 0    | 0   | ✅  |
 | Task 2 완료 후 | 38 pages  | 0    | 0   | ✅  |
 | Task 3 완료 후 | 38 pages  | 0    | 0   | ✅  |
-| Task 4 완료 후 | 38+ pages | -    | -   | ⬜  |
+| Task 4 완료 후 | 38 pages  | 0    | 0   | ✅  |

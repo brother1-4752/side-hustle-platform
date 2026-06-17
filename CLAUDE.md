@@ -59,8 +59,8 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-002
-**Phase**: Build 🔨 (Task 3/4 완료)
-**Status**: 🔨 SPRINT-002 Build 진행 중
+**Phase**: Build ✅ (Task 4/4 완료) → Validate 단계 진입 대기
+**Status**: ✅ SPRINT-002 Build 완료 — Validate 준비 중
 
 ### 라이브 URL
 
@@ -77,12 +77,12 @@ phases:
 - [x] Validate — `07_VALIDATE.md` 완성 (2026-06-17) — CTR 100%, 체류 75.4초
 - [x] Iterate — `08_ITERATE.md` 완성 (2026-06-17) — Sprint 002 진입 승인
 
-### SPRINT-002 — Build 진행 현황
+### SPRINT-002 — Build 완료 ✅
 
 - [x] Task 1: `requiredHoursPerDay` 스키마 + MetricPanel 5메트릭 벤토 그리드 (커밋: `f2dc4d2`)
 - [x] Task 2: AdSense 승인용 Privacy·Terms 페이지 신설 + Footer 링크 (커밋: `2197adf`)
 - [x] Task 3: 다중 태그 AND 교차 필터링 + URL 동기화 (커밋: `e38c4a7`)
-- [ ] Task 4: AI 자동 데이터 수집 파이프라인 기반 구축 (미시작)
+- [x] Task 4: AI 자동 데이터 수집 파이프라인 구축 — `scripts/mine-hustle.ts` (커밋: `152727b`)
 
 ### 기술 스택 (확정)
 
@@ -91,9 +91,15 @@ phases:
 - `next/font/google` (Noto Sans KR)
 - Vercel Analytics, Google AdSense Level 2
 
+### 기술 스택 추가 (SPRINT-002)
+
+- `youtube-transcript` — YouTube 자막 추출
+- `@anthropic-ai/sdk` — Claude API 공식 SDK
+- `tsx` — TypeScript 스크립트 실행기
+
 ### Next Action
 
-→ SPRINT-002 Task 4: AI 자동 데이터 수집 파이프라인 (`scripts/collect.ts` + Claude API 연동)
+→ SPRINT-002 Validate: `mine-hustle.ts`로 실제 영상 수집 테스트 + 유저 5명 재검증
 
 ## Automated Workflow Rules
 

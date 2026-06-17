@@ -1,17 +1,17 @@
 # SPRINT-002 BUILD LOG
 
-> **Sprint**: SPRINT-002 | **상태**: 🔨 진행 중 (Task 3/4 완료)
+> **Sprint**: SPRINT-002 | **상태**: ✅ Build 완료 (Task 4/4 완료)
 
 ---
 
 ## 진행 현황 요약
 
-| Task   | 제목                                     | 상태      | 커밋      |
-| ------ | ---------------------------------------- | --------- | --------- |
-| Task 1 | 하루 권장 투입 시간 스키마 및 UI 반영    | ✅ 완료   | `f2dc4d2` |
-| Task 2 | AdSense 승인용 법적 문서 페이지 신설     | ✅ 완료   | `2197adf` |
-| Task 3 | 다중 태그 복합 필터링 기능 구현          | ✅ 완료   | `e38c4a7` |
-| Task 4 | AI 자동 데이터 수집 파이프라인 기반 구축 | ⬜ 미시작 | —         |
+| Task   | 제목                                     | 상태    | 커밋      |
+| ------ | ---------------------------------------- | ------- | --------- |
+| Task 1 | 하루 권장 투입 시간 스키마 및 UI 반영    | ✅ 완료 | `f2dc4d2` |
+| Task 2 | AdSense 승인용 법적 문서 페이지 신설     | ✅ 완료 | `2197adf` |
+| Task 3 | 다중 태그 복합 필터링 기능 구현          | ✅ 완료 | `e38c4a7` |
+| Task 4 | AI 자동 데이터 수집 파이프라인 기반 구축 | ✅ 완료 | `152727b` |
 
 ---
 
@@ -128,34 +128,75 @@ const filtered =
 
 ---
 
-## Task 4: AI 자동 데이터 수집 파이프라인 기반 구축 ⬜
+## Task 4: AI 자동 데이터 수집 파이프라인 기반 구축 ✅
 
-**상태**: 미시작
+**날짜**: 2026-06-17 | **커밋**: `152727b`
 
-### 배경
+### 변경 파일
 
-현재 `data/side-hustles.json` (30개 항목)은 전부 수동 입력. SPRINT-001 Iterate에서 "AI 에이전트 자동 데이터 수집 파이프라인"을 다음 시도 항목으로 지정.
+| 파일                     | 변경 내용                                                    |
+| ------------------------ | ------------------------------------------------------------ |
+| `scripts/mine-hustle.ts` | 3단계 AI 마이닝 파이프라인 스크립트 신규 작성                |
+| `package.json`           | `"mine"` npm 스크립트 추가 (`tsx` 기반)                      |
+| `package-lock.json`      | `youtube-transcript`, `@anthropic-ai/sdk`, `tsx` 의존성 추가 |
 
-### 예상 구현 방향
+### 파이프라인 구조
 
 ```
-[수집 타겟]
-유튜브 자막 → Claude API 파싱 → JSON 스키마 변환 → side-hustles.json 갱신
+입력: npm run mine -- <YouTube URL or ID>
 
-[필드 추출 대상]
-title, summary, difficulty, expectedMonthlyIncome,
-initialCost, timeToFirstIncome, weeklyTimeRequired,
-requiredHoursPerDay, overview, startGuide (steps)
+[Step 1] URL → Video ID 파싱
+  → 정규식 4패턴: watch?v= / youtu.be/ / embed/ / raw 11자 ID
+
+[Step 2] YoutubeTranscript.fetchTranscript() 자막 추출
+  → 한국어(ko) 자막 우선, 없으면 기본 언어 폴백
+  → 8,000자 초과 시 앞부분만 전달 (토큰 최적화)
+  → 공백 정규화 후 단일 string으로 병합
+
+[Step 3] Claude Sonnet 4.6 API 호출
+  → SYSTEM_PROMPT: 21개 필드 TypeScript 스펙 + 8개 출력 규칙 내장
+  → 순수 JSON 반환 강제 (마크다운 코드블록 방어 파싱)
+
+[검증]
+  → 21개 필드 필수 존재 확인
+  → difficulty enum 값 검증 (beginner|intermediate|advanced)
+  → trendScore 범위 검증 (1~100 정수)
+  → startGuide 최소 단계 수 확인 (3개 이상)
+
+[병합]
+  → slug/id 중복 감지 후 에러 종료
+  → side-hustles.json 배열 append + 파일 저장
 ```
 
-### 작업 예정 항목
+### 추가된 의존성 (devDependencies)
 
-- [ ] 데이터 수집 프롬프트 스펙 작성 (모든 JSON 필드 추출 가이드)
-- [ ] 수집 대상 소스 확정 (유튜브 영상 URL 목록 또는 블로그 URL)
-- [ ] Claude API 활용 파싱 스크립트 작성 (`scripts/collect.ts` 또는 `collect.mjs`)
-- [ ] 수집 결과 검증 로직 (필수 필드 누락 체크)
-- [ ] 데이터 30개 → 50개 이상으로 확장
-- [ ] 빌드 검증 (`npm run build`)
+| 패키지               | 버전     | 용도                     |
+| -------------------- | -------- | ------------------------ |
+| `youtube-transcript` | ^1.3.1   | YouTube 자막 추출        |
+| `@anthropic-ai/sdk`  | ^0.104.2 | Claude API 공식 SDK      |
+| `tsx`                | ^4.22.4  | TypeScript 스크립트 실행 |
+
+### 사용법
+
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...
+
+# Video ID 직접 입력
+npm run mine -- dQw4w9WgXcQ
+
+# 또는 YouTube URL 전달
+npm run mine -- https://youtu.be/dQw4w9WgXcQ
+npm run mine -- "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+```
+
+### 완료된 구현 항목
+
+- [x] 데이터 수집 프롬프트 스펙 확정 (21개 필드 전체 + 8개 출력 규칙)
+- [x] 수집 대상 소스: 유튜브 영상 (ID 또는 URL)
+- [x] Claude Sonnet 4.6 API 연동 파싱 스크립트 (`scripts/mine-hustle.ts`)
+- [x] 수집 결과 검증 로직 (21개 필드 + enum + 범위 검증)
+- [x] `side-hustles.json` 자동 병합 및 중복 방지
+- [x] Next.js 빌드 영향 없음 확인 (38/38 pages SSG)
 
 ---
 
