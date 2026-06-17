@@ -78,7 +78,14 @@ phases:
   - `FilteredFeed.tsx`: Client Component, Suspense 격리, 3섹션 필터링
   - `app/page.tsx`: Server Component, Suspense 래핑, 사이드바 분리
   - `npm run build` 정적 빌드 성공 (lint 0, tsc 0, SSG 0 에러)
-- [ ] Task 3: 상세 페이지 (generateStaticParams, MetricPanel, StartGuide)
+- [x] Task 3: 상세 페이지 동적 라우팅 + SSG (2026-06-17)
+  - `app/side-hustle/[slug]/page.tsx`: generateStaticParams (5 slugs), generateMetadata, notFound
+  - `components/detail/DetailHeader.tsx`: 아이콘 + 난이도 배지 + 트렌딩/인기 배지 + 태그
+  - `components/detail/MetricPanel.tsx`: 난이도/예상월수익/초기비용/첫수입까지 4-메트릭 패널
+  - `components/detail/StartGuide.tsx`: 번호 배지 + 타임라인 카드 리스트
+  - `AdSlot.tsx`: `in-content` 사이즈 타입 추가 (728×90)
+  - 사이드바: 관련 부업 2개 (공통 태그 기준, trendScore 정렬) + AdSlot rectangle/half-page
+  - `npm run build` 정적 빌드 성공 (9/9 pages, lint 0, tsc 0, SSG 0 에러)
 - [ ] Task 4: 콘텐츠 데이터 (30~50개 항목 완성)
 - [ ] Task 5: Analytics + SEO 메타태그 + 최종 점검
 
@@ -91,7 +98,7 @@ phases:
 
 ### Next Action
 
-→ Task 2: 홈 카드 피드 구현 (HustleCard Rich 컴포넌트, TagFilterBar URL 파라미터)
+→ Task 4: 콘텐츠 데이터 확장 (data/side-hustles.json, 30~50개 항목)
 
 ## Automated Workflow Rules
 

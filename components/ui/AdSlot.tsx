@@ -1,6 +1,12 @@
 'use client'
 
-type AdSize = 'rectangle' | 'half-page' | 'leaderboard' | 'mobile-banner' | 'in-feed'
+type AdSize =
+  | 'rectangle'
+  | 'half-page'
+  | 'leaderboard'
+  | 'in-feed'
+  | 'in-content'
+  | 'mobile-banner'
 
 interface AdSlotProps {
   size: AdSize
@@ -12,8 +18,9 @@ const SIZE_CONFIG: Record<AdSize, { minHeight: number; maxWidth: number; label: 
   rectangle:       { minHeight: 250, maxWidth: 300, label: '300×250' },
   'half-page':     { minHeight: 600, maxWidth: 300, label: '300×600' },
   leaderboard:     { minHeight: 90,  maxWidth: 728, label: '728×90'  },
-  'mobile-banner': { minHeight: 100, maxWidth: 320, label: '320×100' },
   'in-feed':       { minHeight: 90,  maxWidth: 728, label: '728×90'  },
+  'in-content':    { minHeight: 90,  maxWidth: 728, label: '728×90'  },
+  'mobile-banner': { minHeight: 100, maxWidth: 320, label: '320×100' },
 }
 
 export default function AdSlot({ size, slotId = '', className = '' }: AdSlotProps) {
