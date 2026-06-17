@@ -59,27 +59,38 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-001
-**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → **Build** (Next)
+**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → **Build** 🔨 (진행 중)
 **Status**: 🟢 Active
 
 ### Completed
 
 - [x] Discover — `01_DISCOVER.md` 완성 (2026-06-17)
 - [x] Define — `02_DEFINE.md` 완성 (2026-06-17) ⚠️ Scope Freeze
-- [x] Design — `03_DESIGN.md` 완성 (2026-06-17) [검색 아이콘 제거 수정 포함]
-- [x] PRD — `04_PRD.md` 완성 (2026-06-17) ⚠️ SCOPE FREEZE 확정
+- [x] Design — `03_DESIGN.md` 완성 (2026-06-17)
+- [x] PRD — `04_PRD.md` 완성 (2026-06-17) ⚠️ SCOPE FREEZE
 
-### Decisions Locked (PRD Freeze — 절대 기준)
+### Build 진행 현황
 
-- 태그 필터: URL 파라미터 방식 (`/?tag=`), `useSearchParams` + `<Suspense>` 필수
-- Navbar: 검색 아이콘 없음 (완전 제거)
-- FR: 21개 기능 요구사항 확정
-- NFR: 15개 비기능 요구사항 확정 (SEO, 성능, AdSense 안정성, 접근성)
-- Scope Freeze: 13개 미구현 항목 명시적 선언
+- [x] Task 1: 디자인 토큰 + 데이터 구조 + 레이아웃 뼈대 (2026-06-17)
+  - `tailwind.config.ts`, `globals.css`, `next.config.mjs`
+  - `data/side-hustles.json` (5개 Mock 데이터, 17필드 완전 스펙)
+  - `app/layout.tsx`, `Navbar`, `Footer`, `Sidebar`, `AdSlot`
+  - 린트 에러 0, TypeScript 에러 0 확인
+- [ ] Task 2: 홈 카드 피드 (HustleCard, TagFilterBar, 3섹션 렌더링)
+- [ ] Task 3: 상세 페이지 (generateStaticParams, MetricPanel, StartGuide)
+- [ ] Task 4: 콘텐츠 데이터 (30~50개 항목 완성)
+- [ ] Task 5: Analytics + SEO 메타태그 + 최종 점검
+
+### 기술 스택 (확정)
+
+- Next.js 14.2.x, App Router, `output: 'export'`
+- TypeScript + Tailwind CSS 3.4.x
+- `next/font/google` (Noto Sans KR)
+- Vercel Analytics, Google AdSense Level 2
 
 ### Next Action
 
-→ Build 단계 시작 — `03_DESIGN.md` 컴포넌트 트리 + `04_PRD.md` FR/NFR이 유일한 기준
+→ Task 2: 홈 카드 피드 구현 (HustleCard Rich 컴포넌트, TagFilterBar URL 파라미터)
 
 ## Automated Workflow Rules
 

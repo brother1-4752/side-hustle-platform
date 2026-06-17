@@ -1,0 +1,227 @@
+[
+  {
+    "id": "coupang-partners",
+    "slug": "coupang-partners",
+    "icon": "🛒",
+    "title": "쿠팡파트너스",
+    "summary": "링크 공유만으로 구매 수수료를 받는 제휴마케팅의 가장 쉬운 시작점",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": {
+      "min": 5,
+      "max": 30,
+      "note": "채널 규모 및 활동량에 따라 상이"
+    },
+    "initialCost": {
+      "amount": 0,
+      "note": "무료 가입, 별도 비용 없음"
+    },
+    "timeToFirstIncome": "1~4주",
+    "weeklyTimeRequired": "주 3~5시간",
+    "category": "온라인 마케팅",
+    "tags": ["제휴마케팅", "온라인마케팅", "무자본", "재택"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 88,
+    "overview": "쿠팡파트너스는 쿠팡의 공식 제휴 프로그램입니다. 파트너로 가입 후 상품 링크를 생성해 블로그, SNS, 카카오채널 등에 공유하면, 해당 링크로 구매가 발생할 때마다 판매액의 일정 비율을 수수료로 받을 수 있습니다.\n\n초기 비용이 전혀 없고 가입 절차가 간단해 부업 입문자에게 가장 많이 추천되는 방식입니다. 특히 이미 블로그나 SNS 채널을 운영 중이라면 기존 콘텐츠에 링크만 추가해도 즉시 시작할 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "쿠팡파트너스 가입",
+        "description": "partners.coupang.com 접속 후 이메일로 무료 계정 생성. 심사 없이 즉시 승인됩니다."
+      },
+      {
+        "step": 2,
+        "title": "상품 링크 생성",
+        "description": "파트너스 대시보드에서 추천할 상품을 검색한 뒤 '링크 생성' 버튼 클릭. 단축 URL이 자동 생성됩니다."
+      },
+      {
+        "step": 3,
+        "title": "채널에 자연스럽게 공유",
+        "description": "블로그 리뷰, 인스타 스토리, 카카오채널 포스팅 등에 링크 삽입. 링크 클릭 후 24시간 이내 발생하는 주문에 수수료가 적용됩니다."
+      }
+    ],
+    "relatedTags": ["네이버블로그", "인스타그램", "카카오채널"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "naver-blog-monetization",
+    "slug": "naver-blog-monetization",
+    "icon": "✍️",
+    "title": "네이버 블로그 수익화",
+    "summary": "일상 글쓰기로 애드포스트·협찬·체험단 수익을 동시에 만드는 검증된 방법",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": {
+      "min": 10,
+      "max": 100,
+      "note": "방문자 수와 포스팅 빈도에 따라 차이 큼"
+    },
+    "initialCost": {
+      "amount": 0,
+      "note": "네이버 계정만 있으면 무료 시작"
+    },
+    "timeToFirstIncome": "1~3개월",
+    "weeklyTimeRequired": "주 5~10시간",
+    "category": "콘텐츠 크리에이터",
+    "tags": ["블로그", "글쓰기", "무자본", "재택", "온라인마케팅"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 82,
+    "overview": "네이버 블로그는 국내 최대 검색 포털인 네이버에서 운영하는 블로그 플랫폼입니다. 꾸준한 포스팅으로 방문자를 모으면 네이버 애드포스트(광고 수익), 기업 협찬, 체험단 참여 등 다양한 방법으로 수익을 창출할 수 있습니다.\n\n특별한 기술 없이 글쓰기만 잘 할 수 있으면 시작 가능하며, 음식, 여행, 육아, 재테크 등 내가 잘 아는 분야로 시작하면 됩니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "블로그 개설 및 주제 설정",
+        "description": "네이버 로그인 후 블로그 개설. 내가 꾸준히 쓸 수 있는 주제 1~2개를 정합니다. 잡블로그보다 전문 블로그가 검색 유입에 유리합니다."
+      },
+      {
+        "step": 2,
+        "title": "주 3회 이상 꾸준한 포스팅",
+        "description": "초기 3개월은 수익보다 콘텐츠 쌓기에 집중합니다. 키워드 검색량을 확인하고 사람들이 실제로 찾는 주제로 작성합니다."
+      },
+      {
+        "step": 3,
+        "title": "애드포스트 신청 및 체험단 지원",
+        "description": "방문자가 일 500명을 넘으면 네이버 애드포스트 신청이 가능합니다. 동시에 리뷰어, 소셜 체험단 플랫폼(레뷰, 강남언니 등)에서 협찬 기회를 찾습니다."
+      }
+    ],
+    "relatedTags": ["SEO", "애드포스트", "체험단", "협찬"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "ai-content-creation",
+    "slug": "ai-content-creation",
+    "icon": "🤖",
+    "title": "AI 콘텐츠 제작 서비스",
+    "summary": "ChatGPT·Claude 등 AI 툴을 활용해 블로그 글·SNS 카피·상세페이지를 대행 제작",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": {
+      "min": 30,
+      "max": 200,
+      "note": "건당 3~20만원, 단가는 경력에 따라 급상승"
+    },
+    "initialCost": {
+      "amount": 2,
+      "note": "ChatGPT Plus 월 구독료 약 2만원"
+    },
+    "timeToFirstIncome": "2~4주",
+    "weeklyTimeRequired": "주 10~20시간",
+    "category": "AI 활용",
+    "tags": ["AI활용", "프리랜서", "재택", "글쓰기", "온라인마케팅"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 95,
+    "overview": "AI 언어모델(ChatGPT, Claude 등)을 활용해 기업 클라이언트의 마케팅 콘텐츠를 제작해주는 서비스입니다. 블로그 포스팅, 인스타그램 캡션, 유튜브 스크립트, 스마트스토어 상세페이지 등 수요가 폭발적으로 늘고 있는 분야입니다.\n\nAI 툴 활용 능력 + 편집·검수 능력을 갖추면, 기존 콘텐츠 작가 대비 3~5배 빠른 속도로 작업할 수 있어 높은 시간 당 수익을 기대할 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "AI 툴 숙련도 높이기",
+        "description": "ChatGPT Plus 또는 Claude Pro 구독 후 프롬프트 엔지니어링을 연습합니다. 좋은 결과물을 뽑는 프롬프트 패턴을 직접 개발하세요."
+      },
+      {
+        "step": 2,
+        "title": "포트폴리오 샘플 제작",
+        "description": "실제 의뢰를 받기 전 3~5개의 가상 샘플 콘텐츠를 제작합니다. 블로그 글, 인스타 카피, 상품 상세페이지 등 다양한 유형으로 준비합니다."
+      },
+      {
+        "step": 3,
+        "title": "크몽·프리모아에서 첫 의뢰 수주",
+        "description": "크몽, 프리모아, 숨고 등 프리랜서 플랫폼에 서비스를 등록합니다. 초기에는 낮은 단가로 후기를 쌓고, 경력이 쌓이면 단가를 올립니다."
+      }
+    ],
+    "relatedTags": ["ChatGPT", "Claude", "프롬프트엔지니어링", "크몽"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "smart-store",
+    "slug": "smart-store",
+    "icon": "🏪",
+    "title": "네이버 스마트스토어",
+    "summary": "국내 최대 쇼핑 플랫폼에서 내 상품을 판매하는 온라인 창업의 정석",
+    "difficulty": "intermediate",
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 300,
+      "note": "상품 카테고리와 마케팅 역량에 따라 편차 매우 큼"
+    },
+    "initialCost": {
+      "amount": 30,
+      "note": "초기 재고 매입비 (위탁판매 시 0원으로 시작 가능)"
+    },
+    "timeToFirstIncome": "2~8주",
+    "weeklyTimeRequired": "주 10~15시간",
+    "category": "이커머스",
+    "tags": ["스마트스토어", "이커머스", "온라인쇼핑몰", "재택"],
+    "isTrending": false,
+    "isPopular": true,
+    "trendScore": 79,
+    "overview": "네이버 스마트스토어는 네이버가 운영하는 국내 최대 쇼핑 플랫폼입니다. 입점 비용이 없고 판매 수수료만 부담하면 되어 초기 창업 비용이 낮습니다.\n\n자신이 직접 제작한 상품, 도매처에서 구매한 상품, 또는 제조사의 상품을 위탁판매하는 방식으로 운영할 수 있습니다. 특히 위탁판매 방식은 재고 부담 없이 시작할 수 있어 입문자에게 적합합니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "스마트스토어 개설",
+        "description": "스마트스토어 센터(sell.smartstore.naver.com)에서 사업자 또는 개인 계정으로 무료 개설. 초기에는 개인 판매자로 시작 가능합니다."
+      },
+      {
+        "step": 2,
+        "title": "판매 상품 및 공급처 확보",
+        "description": "직접 제작, 도매 매입, 위탁판매(오너클랜, 도매꾹) 중 자신에게 맞는 방식 선택. 위탁판매는 재고 없이 시작 가능합니다."
+      },
+      {
+        "step": 3,
+        "title": "상품 등록 및 첫 판매",
+        "description": "상품명·설명·대표 이미지를 최적화해 등록합니다. 스마트스토어 쇼핑 검색에서 상위 노출을 위한 키워드를 꼼꼼히 설정하세요."
+      }
+    ],
+    "relatedTags": ["위탁판매", "도매", "네이버쇼핑", "상세페이지"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  },
+  {
+    "id": "shorts-reels-editing",
+    "slug": "shorts-reels-editing",
+    "icon": "🎬",
+    "title": "쇼츠·릴스 영상 편집 대행",
+    "summary": "스마트폰 하나로 유튜브 쇼츠·인스타 릴스 편집을 대행해 수익을 올리는 트렌디한 부업",
+    "difficulty": "beginner",
+    "expectedMonthlyIncome": {
+      "min": 20,
+      "max": 150,
+      "note": "클라이언트 수와 편집 단가에 따라 상이"
+    },
+    "initialCost": {
+      "amount": 0,
+      "note": "CapCut 등 무료 앱으로 시작 가능"
+    },
+    "timeToFirstIncome": "1~3주",
+    "weeklyTimeRequired": "주 5~15시간",
+    "category": "영상 편집",
+    "tags": ["영상편집", "쇼츠", "릴스", "AI활용", "무자본", "재택", "프리랜서"],
+    "isTrending": true,
+    "isPopular": false,
+    "trendScore": 91,
+    "overview": "유튜브 쇼츠와 인스타그램 릴스 등 숏폼 영상 콘텐츠의 수요가 폭발적으로 증가하면서, 이를 전문적으로 편집해주는 서비스에 대한 기업·크리에이터들의 수요도 함께 늘고 있습니다.\n\nCapCut, 프리미어 프로 등 편집 툴을 익히고 포트폴리오를 준비하면 크몽이나 SNS를 통해 빠르게 첫 클라이언트를 찾을 수 있습니다. AI 편집 기능을 활용하면 작업 속도를 크게 높일 수 있습니다.",
+    "startGuide": [
+      {
+        "step": 1,
+        "title": "편집 툴 익히기",
+        "description": "CapCut(무료, 모바일·PC), VLLO, 또는 어도비 프리미어 프로 중 하나를 선택해 기본 컷 편집·자막·배경음악 삽입을 익힙니다. 유튜브 무료 강의로 1주일이면 기초 완성."
+      },
+      {
+        "step": 2,
+        "title": "샘플 포트폴리오 3개 제작",
+        "description": "직접 촬영한 영상이나 저작권 free 소스를 편집해 샘플 쇼츠 3개를 만듭니다. 내가 잘 표현할 수 있는 분야(음식, 여행, 일상 등)로 시작하면 좋습니다."
+      },
+      {
+        "step": 3,
+        "title": "크몽 등록 또는 SNS 영업",
+        "description": "크몽에 '쇼츠 편집' 서비스를 등록하거나, 직접 인스타그램에서 영상 콘텐츠를 올리는 소상공인·크리에이터에게 DM 영업합니다. 첫 의뢰는 낮은 단가로 후기를 확보하는 것이 핵심입니다."
+      }
+    ],
+    "relatedTags": ["CapCut", "유튜브쇼츠", "인스타그램릴스", "크몽"],
+    "lastUpdated": "2026-06-17",
+    "dataVersion": "1.0"
+  }
+]

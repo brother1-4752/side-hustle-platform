@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-noto-sans-kr: 'Noto Sans KR', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-base text-gray-900 antialiased;
+    font-family: var(--font-noto-sans-kr), sans-serif;
+  }
+
+  /* 카드 hover 트랜지션 전역 설정 */
+  * {
+    @apply transition-colors duration-150;
+  }
+}
+
+@layer utilities {
+  /* AdSlot 컨테이너: CLS(누적 레이아웃 이동) 방지 — 항상 최소 높이 유지 */
+  .ad-slot-stable {
+    contain: layout;
+  }
+}
