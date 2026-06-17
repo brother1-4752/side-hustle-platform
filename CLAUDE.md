@@ -59,8 +59,16 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-001
-**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → **Build** ✅ → Validate 🔜
-**Status**: 🏁 Build 완료, Validate 대기 중
+**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → Build ✅ → **Validate** 🔍 (진행 중)
+**Status**: 🚀 프로덕션 배포 완료
+
+### 라이브 URL
+
+| 환경 | URL |
+|------|-----|
+| Production | https://side-hustle-platform.vercel.app |
+| Vercel 대시보드 | https://vercel.com/brother14752s-projects/side-hustle-platform |
+| GitHub | https://github.com/brother1-4752/side-hustle-platform |
 
 ### Completed
 
@@ -107,7 +115,15 @@ phases:
 
 ### Next Action
 
-→ SPRINT-001 Build 완료. 다음 단계: Validate — Vercel 배포 후 실 사용자 피드백 5명 수집
+→ Validate: 실 사용자 5명 피드백 수집 + Vercel Analytics 데이터 분석
+
+### Validate 체크리스트
+
+- [ ] 유저 5명에게 미션 부여: "관심 가는 부업 하나 찾아서 상세 가이드까지 읽어보세요"
+- [ ] 행동 관찰: 어떤 카드를 먼저 누르는지, 태그 필터 사용 여부 확인
+- [ ] 이탈 지점: 상세 페이지 어느 섹션(MetricPanel/StartGuide)에서 스크롤 멈추는지
+- [ ] Analytics 대조: Vercel 대시보드에서 클릭 이벤트 + Core Web Vitals 확인
+- [ ] KPI 달성 여부: 카드 클릭률 30% 이상, 상세 페이지 체류 60초+ 목표
 
 ## Automated Workflow Rules
 
