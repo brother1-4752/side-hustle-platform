@@ -11,9 +11,13 @@
       "max": 30,
       "note": "채널 규모 및 활동량에 따라 상이"
     },
-    "initialCost": { "amount": 0, "note": "무료 가입, 별도 비용 없음" },
+    "initialCost": {
+      "amount": 0,
+      "note": "무료 가입, 별도 비용 없음"
+    },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 3~5시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "온라인 마케팅",
     "tags": ["제휴마케팅", "온라인마케팅", "무자본", "재택"],
     "isTrending": false,
@@ -53,9 +57,13 @@
       "max": 100,
       "note": "방문자 수와 포스팅 빈도에 따라 차이 큼"
     },
-    "initialCost": { "amount": 0, "note": "네이버 계정만 있으면 무료 시작" },
+    "initialCost": {
+      "amount": 0,
+      "note": "네이버 계정만 있으면 무료 시작"
+    },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 5~10시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "콘텐츠 크리에이터",
     "tags": ["블로그", "글쓰기", "무자본", "재택", "온라인마케팅"],
     "isTrending": false,
@@ -95,9 +103,13 @@
       "max": 200,
       "note": "건당 3~20만원, 단가는 경력에 따라 급상승"
     },
-    "initialCost": { "amount": 2, "note": "ChatGPT Plus 월 구독료 약 2만원" },
+    "initialCost": {
+      "amount": 2,
+      "note": "ChatGPT Plus 월 구독료 약 2만원"
+    },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 10~20시간",
+    "requiredHoursPerDay": "2~3시간",
     "category": "AI 활용",
     "tags": ["AI활용", "프리랜서", "재택", "글쓰기", "온라인마케팅"],
     "isTrending": true,
@@ -143,6 +155,7 @@
     },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 10~15시간",
+    "requiredHoursPerDay": "2~3시간",
     "category": "이커머스",
     "tags": ["스마트스토어", "이커머스", "온라인쇼핑몰", "재택"],
     "isTrending": false,
@@ -182,9 +195,13 @@
       "max": 150,
       "note": "클라이언트 수와 편집 단가에 따라 상이"
     },
-    "initialCost": { "amount": 0, "note": "CapCut 등 무료 앱으로 시작 가능" },
+    "initialCost": {
+      "amount": 0,
+      "note": "CapCut 등 무료 앱으로 시작 가능"
+    },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "영상 편집",
     "tags": [
       "영상편집",
@@ -232,9 +249,13 @@
       "max": 80,
       "note": "디자인 업로드 수와 플랫폼 노출에 비례"
     },
-    "initialCost": { "amount": 1, "note": "미드저니 Basic 플랜 월 약 1.2만원" },
+    "initialCost": {
+      "amount": 1,
+      "note": "미드저니 Basic 플랜 월 약 1.2만원"
+    },
     "timeToFirstIncome": "2~6주",
     "weeklyTimeRequired": "주 3~8시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "AI 활용",
     "tags": ["AI활용", "디자인", "무재고", "재택", "패시브인컴"],
     "isTrending": true,
@@ -280,6 +301,7 @@
     },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 10~20시간",
+    "requiredHoursPerDay": "2~3시간",
     "category": "AI 활용",
     "tags": ["AI활용", "개발", "SaaS", "재택", "패시브인컴"],
     "isTrending": true,
@@ -319,9 +341,13 @@
       "max": 200,
       "note": "구독자 1000명·시청 4000시간 달성 후 수익화 시작"
     },
-    "initialCost": { "amount": 3, "note": "HeyGen Starter 플랜 월 약 3만원" },
+    "initialCost": {
+      "amount": 3,
+      "note": "HeyGen Starter 플랜 월 약 3만원"
+    },
     "timeToFirstIncome": "3~6개월",
     "weeklyTimeRequired": "주 5~10시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "AI 활용",
     "tags": ["AI활용", "유튜브", "재택", "크리에이터", "패시브인컴"],
     "isTrending": true,
@@ -361,9 +387,13 @@
       "max": 50,
       "note": "달러 수수료 최대 8.5%, 환율 이득 포함"
     },
-    "initialCost": { "amount": 0, "note": "무료 가입, 별도 비용 없음" },
+    "initialCost": {
+      "amount": 0,
+      "note": "무료 가입, 별도 비용 없음"
+    },
     "timeToFirstIncome": "2~6주",
     "weeklyTimeRequired": "주 3~7시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "온라인 마케팅",
     "tags": ["제휴마케팅", "온라인마케팅", "무자본", "재택", "달러수익"],
     "isTrending": false,
@@ -409,6 +439,7 @@
     },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 1~3시간",
+    "requiredHoursPerDay": "30분 이하",
     "category": "지식 창업",
     "tags": ["전자책", "지식창업", "무자본", "재택", "패시브인컴"],
     "isTrending": false,
@@ -448,9 +479,13 @@
       "max": 100,
       "note": "Gumroad 글로벌 판매 시 달러 수익 가능"
     },
-    "initialCost": { "amount": 0, "note": "Notion 무료 플랜으로 충분" },
+    "initialCost": {
+      "amount": 0,
+      "note": "Notion 무료 플랜으로 충분"
+    },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 2~5시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "지식 창업",
     "tags": ["노션", "지식창업", "무자본", "재택", "패시브인컴", "생산성"],
     "isTrending": true,
@@ -496,6 +531,7 @@
     },
     "timeToFirstIncome": "1~3개월",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "지식 창업",
     "tags": ["강의", "지식창업", "재택", "패시브인컴", "교육"],
     "isTrending": false,
@@ -541,6 +577,7 @@
     },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 2~5시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "이커머스",
     "tags": ["리셀", "이커머스", "스니커즈", "재테크"],
     "isTrending": false,
@@ -586,6 +623,7 @@
     },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 3~8시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "이커머스",
     "tags": ["Etsy", "디자인", "무재고", "재택", "달러수익", "패시브인컴"],
     "isTrending": true,
@@ -625,9 +663,13 @@
       "max": 50,
       "note": "팬덤 또는 바이럴 콘텐츠 보유 시 급등 가능"
     },
-    "initialCost": { "amount": 0, "note": "완전 무료, 판매 수수료만 발생" },
+    "initialCost": {
+      "amount": 0,
+      "note": "완전 무료, 판매 수수료만 발생"
+    },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 1~3시간",
+    "requiredHoursPerDay": "30분 이하",
     "category": "이커머스",
     "tags": ["마플샵", "무재고", "굿즈", "무자본", "재택", "POD"],
     "isTrending": false,
@@ -673,6 +715,7 @@
     },
     "timeToFirstIncome": "3~12개월",
     "weeklyTimeRequired": "주 5~20시간",
+    "requiredHoursPerDay": "1~3시간",
     "category": "콘텐츠 크리에이터",
     "tags": ["유튜브", "크리에이터", "재택", "광고수익", "협찬"],
     "isTrending": false,
@@ -712,9 +755,13 @@
       "max": 80,
       "note": "포트폴리오 수에 비례, 달러 수익"
     },
-    "initialCost": { "amount": 0, "note": "스마트폰 카메라로 시작 가능" },
+    "initialCost": {
+      "amount": 0,
+      "note": "스마트폰 카메라로 시작 가능"
+    },
     "timeToFirstIncome": "2~8주",
     "weeklyTimeRequired": "주 2~5시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "콘텐츠 크리에이터",
     "tags": ["사진", "영상", "스톡", "달러수익", "패시브인컴", "무자본"],
     "isTrending": false,
@@ -754,9 +801,13 @@
       "max": 200,
       "note": "전문 분야 번역은 건당 단가 10~30만원 수준"
     },
-    "initialCost": { "amount": 0, "note": "별도 비용 없음" },
+    "initialCost": {
+      "amount": 0,
+      "note": "별도 비용 없음"
+    },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "프리랜서",
     "tags": ["번역", "영어", "프리랜서", "재택", "언어"],
     "isTrending": false,
@@ -802,6 +853,7 @@
     },
     "timeToFirstIncome": "2~6주",
     "weeklyTimeRequired": "주 5~20시간",
+    "requiredHoursPerDay": "2~4시간",
     "category": "프리랜서",
     "tags": ["웹개발", "워드프레스", "프리랜서", "재택", "소상공인"],
     "isTrending": false,
@@ -846,9 +898,13 @@
       "max": 250,
       "note": "로고 1건 30~100만원, 풀 브랜딩은 100~300만원"
     },
-    "initialCost": { "amount": 0, "note": "Figma 무료 플랜으로 시작 가능" },
+    "initialCost": {
+      "amount": 0,
+      "note": "Figma 무료 플랜으로 시작 가능"
+    },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "프리랜서",
     "tags": ["디자인", "로고", "프리랜서", "재택", "브랜딩"],
     "isTrending": false,
@@ -888,9 +944,13 @@
       "max": 200,
       "note": "계정당 월 10~50만원, 3~5개 계정 동시 운영 가능"
     },
-    "initialCost": { "amount": 0, "note": "별도 초기 비용 없음" },
+    "initialCost": {
+      "amount": 0,
+      "note": "별도 초기 비용 없음"
+    },
     "timeToFirstIncome": "1~3주",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "프리랜서",
     "tags": ["SNS", "인스타그램", "마케팅", "프리랜서", "재택"],
     "isTrending": false,
@@ -930,9 +990,13 @@
       "max": 150,
       "note": "주 5~10시간 수업 기준, 학생 수에 따라 상승"
     },
-    "initialCost": { "amount": 0, "note": "Zoom 무료 플랜으로 충분" },
+    "initialCost": {
+      "amount": 0,
+      "note": "Zoom 무료 플랜으로 충분"
+    },
     "timeToFirstIncome": "1~2주",
     "weeklyTimeRequired": "주 5~10시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "교육",
     "tags": ["과외", "영어", "재택", "교육", "튜터링"],
     "isTrending": false,
@@ -972,9 +1036,13 @@
       "max": 60,
       "note": "작업량에 비례, 숙련도 높아질수록 시간당 단가 상승"
     },
-    "initialCost": { "amount": 0, "note": "PC와 인터넷만 있으면 무료 시작" },
+    "initialCost": {
+      "amount": 0,
+      "note": "PC와 인터넷만 있으면 무료 시작"
+    },
     "timeToFirstIncome": "1~2주",
     "weeklyTimeRequired": "주 5~20시간",
+    "requiredHoursPerDay": "1~3시간",
     "category": "기타",
     "tags": ["데이터라벨링", "재택", "AI", "알바", "무자본"],
     "isTrending": true,
@@ -1020,6 +1088,7 @@
     },
     "timeToFirstIncome": "1~7일",
     "weeklyTimeRequired": "주 5~20시간",
+    "requiredHoursPerDay": "2~4시간",
     "category": "기타",
     "tags": ["배달", "라이더", "즉시수익", "알바"],
     "isTrending": false,
@@ -1059,9 +1128,13 @@
       "max": 100,
       "note": "팔로워 수보다 라이브 소통 능력이 수익에 직결"
     },
-    "initialCost": { "amount": 0, "note": "스마트폰만 있으면 무료 시작" },
+    "initialCost": {
+      "amount": 0,
+      "note": "스마트폰만 있으면 무료 시작"
+    },
     "timeToFirstIncome": "1~4주",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "콘텐츠 크리에이터",
     "tags": ["틱톡", "라이브", "크리에이터", "무자본", "재택"],
     "isTrending": true,
@@ -1101,9 +1174,13 @@
       "max": 50,
       "note": "판매량과 소싱 역량에 따라 상이"
     },
-    "initialCost": { "amount": 0, "note": "집 안 물건부터 시작 시 0원" },
+    "initialCost": {
+      "amount": 0,
+      "note": "집 안 물건부터 시작 시 0원"
+    },
     "timeToFirstIncome": "1~7일",
     "weeklyTimeRequired": "주 2~5시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "이커머스",
     "tags": ["중고판매", "재테크", "무자본", "당근마켓", "번개장터"],
     "isTrending": false,
@@ -1149,6 +1226,7 @@
     },
     "timeToFirstIncome": "1~2주",
     "weeklyTimeRequired": "주 5~10시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "AI 활용",
     "tags": ["AI활용", "디자인", "썸네일", "프리랜서", "재택", "Canva"],
     "isTrending": true,
@@ -1194,6 +1272,7 @@
     },
     "timeToFirstIncome": "2~6개월",
     "weeklyTimeRequired": "주 3~8시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "콘텐츠 크리에이터",
     "tags": ["팟캐스트", "오디오", "크리에이터", "재택", "스폰서십"],
     "isTrending": false,
@@ -1239,6 +1318,7 @@
     },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 5~15시간",
+    "requiredHoursPerDay": "1~2시간",
     "category": "이커머스",
     "tags": ["구매대행", "직구", "이커머스", "재택", "일본직구"],
     "isTrending": false,
@@ -1284,6 +1364,7 @@
     },
     "timeToFirstIncome": "2~4주",
     "weeklyTimeRequired": "주 3~10시간",
+    "requiredHoursPerDay": "1시간 이하",
     "category": "프리랜서",
     "tags": ["성우", "녹음", "프리랜서", "재택", "목소리"],
     "isTrending": false,

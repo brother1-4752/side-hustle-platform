@@ -28,6 +28,7 @@ export interface SideHustle {
   initialCost: InitialCost;
   timeToFirstIncome: string;
   weeklyTimeRequired: string;
+  requiredHoursPerDay: string;
   category: string;
   tags: string[];
   isTrending: boolean;
