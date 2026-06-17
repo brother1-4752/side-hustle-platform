@@ -59,27 +59,27 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-001
-**Phase**: Discover ✅ → Define ✅ → Design ✅ → **Build** (Next)
+**Phase**: Discover ✅ → Define ✅ → Design ✅ → PRD ✅ → **Build** (Next)
 **Status**: 🟢 Active
 
 ### Completed
 
 - [x] Discover — `01_DISCOVER.md` 완성 (2026-06-17)
 - [x] Define — `02_DEFINE.md` 완성 (2026-06-17) ⚠️ Scope Freeze
-- [x] Design — `03_DESIGN.md` 완성 (2026-06-17)
+- [x] Design — `03_DESIGN.md` 완성 (2026-06-17) [검색 아이콘 제거 수정 포함]
+- [x] PRD — `04_PRD.md` 완성 (2026-06-17) ⚠️ SCOPE FREEZE 확정
 
-### Decisions Locked (Design Freeze)
+### Decisions Locked (PRD Freeze — 절대 기준)
 
-- 라우터: Next.js App Router, Server Components + generateStaticParams
-- 레이아웃: 메인 피드 2/3 + 우측 사이드바 1/3 (매거진 스타일)
-- 카드: Rich Card (아이콘 + 배지 + 수익 + 설명 + 태그)
-- AdSense: Level 2 (슬롯 5개 위치 확정, slotId는 승인 후 채움)
-- 스키마: `side-hustles.json` 필드 17개 완전 확정
-- 디자인 토큰: 파스텔 코랄/민트 팔레트, Noto Sans KR
+- 태그 필터: URL 파라미터 방식 (`/?tag=`), `useSearchParams` + `<Suspense>` 필수
+- Navbar: 검색 아이콘 없음 (완전 제거)
+- FR: 21개 기능 요구사항 확정
+- NFR: 15개 비기능 요구사항 확정 (SEO, 성능, AdSense 안정성, 접근성)
+- Scope Freeze: 13개 미구현 항목 명시적 선언
 
 ### Next Action
 
-→ PRD(`04_PRD.md`) 작성 후 Build 단계 시작
+→ Build 단계 시작 — `03_DESIGN.md` 컴포넌트 트리 + `04_PRD.md` FR/NFR이 유일한 기준
 
 ## Automated Workflow Rules
 
