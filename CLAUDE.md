@@ -59,19 +59,21 @@ phases:
 ## Current Sprint Status
 
 **Sprint**: SPRINT-001
-**Phase**: Discover ✅ → **Define** (Next)
+**Phase**: Discover ✅ → Define ✅ → **Design** (Next)
 **Status**: 🟢 Active
 
 ### Completed
 - [x] Discover — `01_DISCOVER.md` 완성 (2026-06-17)
-  - Business Goal, Problem Statement, Personas, User Journey Map, Sprint Questions, Data Architecture 확정
+- [x] Define — `02_DEFINE.md` 완성 (2026-06-17) ⚠️ Scope Freeze
 
-### Decisions Locked
-- MVP 데이터: 30~50개 항목, 대분류 단위
-- 스키마: 태그 기반 다중 분류, `isTrending` / `isPopular` Boolean 필드
+### Decisions Locked (Scope Freeze)
+- MVP 데이터: 30~50개 항목, 대분류 단위, AI 초안 + PO 검수, 1주 내 완성 목표
+- 스키마: 태그 기반 다중 분류, `isTrending` / `isPopular` Boolean
 - 홈 UX: 매거진형 카드 피드 (탐색 중심)
-- 성공 지표: 방문자 30% 이상 상세 페이지 2개 이상 클릭
-- 아키텍처: Next.js SSG / JAMstack, 정적 JSON
+- Analytics: GA4 또는 Vercel Analytics (P0, 클릭 이벤트 포함)
+- AdSense: 레이아웃 + 코드 삽입만 (승인 신청은 KPI 검증 후)
+- 성공 지표 (Go): Engagement Rate 30% + 정성 신뢰도 5명 중 4명 이상
+- 아키텍처: Next.js SSG / JAMstack, Vercel 배포
 
 ### Next Action
-→ `sprint-define.md` 프롬프트로 DEFINE 단계 시작
+→ `sprint-design.md` 프롬프트로 DESIGN 단계 시작
