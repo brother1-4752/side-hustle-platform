@@ -45,7 +45,7 @@ export default function StartGuide({ steps }: StartGuideProps) {
 
               {/* Step card */}
               <div
-                className={`flex-1 bg-white/70 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-[0_2px_12px_rgb(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.08)] hover:border-black/[0.07] transition-all duration-200 p-4 ${isLast ? "mb-0" : "mb-3"}`}
+                className={`flex-1 bg-white/70 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-card hover:shadow-[0_4px_20px_rgb(0,0,0,0.08)] hover:border-black/[0.07] transition-all duration-200 p-4 ${isLast ? "mb-0" : "mb-3"}`}
               >
                 <h3 className="font-semibold text-gray-900 mb-1.5 text-sm md:text-base leading-snug">
                   {step.title}

@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { SideHustle } from "@/types";
 import HustleCard from "@/components/ui/HustleCard";
 import TagFilterBar from "@/components/ui/TagFilterBar";
 import AdSlot from "@/components/ui/AdSlot";
 import SectionHeader from "@/components/home/SectionHeader";
+import CompareTray from "@/components/home/CompareTray";
+
+const MAX_COMPARE = 3;
 
 interface FilteredFeedProps {
   hustles: SideHustle[];
@@ -27,6 +31,26 @@ export default function FilteredFeed({
   featureTags,
 }: FilteredFeedProps) {
   const searchParams = useSearchParams();
+  const [compareSlugs, setCompareSlugs] = useState<string[]>([]);
+
+  const toggleCompare = (slug: string) => {
+    setCompareSlugs((prev) =>
+      prev.includes(slug)
+        ? prev.filter((s) => s !== slug)
+        : prev.length < MAX_COMPARE
+          ? [...prev, slug]
+          : prev,
+    );
+  };
+  const compareHustles = compareSlugs
+    .map((slug) => hustles.find((h) => h.slug === slug))
+    .filter((h): h is SideHustle => h !== undefined);
+  const compareProp = (slug: string) => ({
+    checked: compareSlugs.includes(slug),
+    disabled:
+      !compareSlugs.includes(slug) && compareSlugs.length >= MAX_COMPARE,
+    onToggle: toggleCompare,
+  });
 
   // 카테고리·난이도: 단일값 필드라 그룹 내 OR (여러 개 선택 = 그중 하나만 맞아도 통과)
   const activeCategories = readParam(searchParams, "category");
@@ -92,7 +116,7 @@ export default function FilteredFeed({
           >
             {rail.map((h) => (
               <div key={h.id} className="w-64 flex-shrink-0 snap-start">
-                <HustleCard hustle={h} />
+                <HustleCard hustle={h} compare={compareProp(h.slug)} />
               </div>
             ))}
           </div>
@@ -110,7 +134,7 @@ export default function FilteredFeed({
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {all.slice(0, 6).map((h) => (
-              <HustleCard key={h.id} hustle={h} />
+              <HustleCard key={h.id} hustle={h} compare={compareProp(h.slug)} />
             ))}
           </div>
 
@@ -122,7 +146,11 @@ export default function FilteredFeed({
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {all.slice(6).map((h) => (
-                  <HustleCard key={h.id} hustle={h} />
+                  <HustleCard
+                    key={h.id}
+                    hustle={h}
+                    compare={compareProp(h.slug)}
+                  />
                 ))}
               </div>
             </>
@@ -136,6 +164,15 @@ export default function FilteredFeed({
           <AdSlot size="mobile-banner" slotId="" />
         </div>
       )}
+
+      {compareHustles.length > 0 && <div className="h-16" aria-hidden="true" />}
+      <CompareTray
+        hustles={compareHustles}
+        onRemove={(slug) =>
+          setCompareSlugs((prev) => prev.filter((s) => s !== slug))
+        }
+        onClear={() => setCompareSlugs([])}
+      />
     </div>
   );
 }
