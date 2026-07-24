@@ -1,3 +1,9 @@
+---
+name: developer
+description: 시스템 아키텍처 설계, PRD 기반 기능 구현, 기술적 타당성 검토가 필요할 때 사용. "구현해줘", "빌드해줘", "기술 스택 정해줘" 같은 요청에 사용.
+tools: Read, Write, Edit, Bash, Grep, Glob
+---
+
 # Agent: Developer
 
 ## Persona
