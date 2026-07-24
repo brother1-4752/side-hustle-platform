@@ -6,6 +6,7 @@ import type { SideHustle } from "@/types";
 import DetailHeader from "@/components/detail/DetailHeader";
 import MetricPanel from "@/components/detail/MetricPanel";
 import StartGuide from "@/components/detail/StartGuide";
+import Pitfalls from "@/components/detail/Pitfalls";
 import AdSlot from "@/components/ui/AdSlot";
 
 const hustles = hustleData as SideHustle[];
@@ -90,6 +91,9 @@ export default function SideHustleDetailPage({
 
           {/* 시작 가이드 */}
           <StartGuide steps={hustle.startGuide} />
+
+          {/* 주의사항 (AI 마이닝 항목만 존재) */}
+          {hustle.pitfalls && <Pitfalls items={hustle.pitfalls} />}
 
           {/* 모바일 AdSlot */}
           <div

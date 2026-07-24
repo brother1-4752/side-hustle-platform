@@ -39,6 +39,8 @@ export interface SideHustle {
   relatedTags: string[];
   lastUpdated: string;
   dataVersion: string;
+  /** 흔한 실패 요인·주의사항 3~5개 (수동 큐레이션 항목은 없음) */
+  pitfalls?: string[];
   /** AI 마이닝 파이프라인 출처 (수동 큐레이션 항목은 없음) */
   sourceUrl?: string;
   /** AI 마이닝 결과의 검수 상태. 없으면 수동 큐레이션(이미 신뢰됨)으로 간주 */

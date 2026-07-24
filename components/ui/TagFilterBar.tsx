@@ -1,31 +1,54 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
+import { DIFFICULTY_CONFIG } from "@/components/ui/HustleCard";
+
+type FacetKey = "category" | "difficulty" | "tag";
+
+const DIFFICULTY_OPTIONS: [string, string][] = [
+  ["beginner", DIFFICULTY_CONFIG.beginner.label],
+  ["intermediate", DIFFICULTY_CONFIG.intermediate.label],
+  ["advanced", DIFFICULTY_CONFIG.advanced.label],
+];
 
 interface TagFilterBarProps {
-  tags: string[];
+  categories: string[];
+  featureTags: string[];
 }
 
-export default function TagFilterBar({ tags }: TagFilterBarProps) {
+function readFacet(
+  searchParams: { get(key: string): string | null },
+  key: FacetKey,
+): string[] {
+  const raw = searchParams.get(key) ?? "";
+  return raw ? raw.split(",").filter(Boolean) : [];
+}
+
+export default function TagFilterBar({
+  categories,
+  featureTags,
+}: TagFilterBarProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Comma-separated → string[] (URLSearchParams auto-decodes Korean)
-  const tagParam = searchParams.get("tag") ?? "";
-  const activeTags = tagParam ? tagParam.split(",").filter(Boolean) : [];
+  const activeCategories = readFacet(searchParams, "category");
+  const activeDifficulties = readFacet(searchParams, "difficulty");
+  const activeTags = readFacet(searchParams, "tag");
+  const totalActive =
+    activeCategories.length + activeDifficulties.length + activeTags.length;
 
-  const toggle = (tag: string) => {
-    const next = activeTags.includes(tag)
-      ? activeTags.filter((t) => t !== tag)
-      : [...activeTags, tag];
+  const toggle = (key: FacetKey, value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    const current = readFacet(params, key);
+    const next = current.includes(value)
+      ? current.filter((v) => v !== value)
+      : [...current, value];
 
-    if (next.length === 0) {
-      router.push("/", { scroll: false });
-    } else {
-      const params = new URLSearchParams();
-      params.set("tag", next.join(","));
-      router.push(`/?${params.toString()}`, { scroll: false });
-    }
+    if (next.length === 0) params.delete(key);
+    else params.set(key, next.join(","));
+
+    const qs = params.toString();
+    router.push(qs ? `/?${qs}` : "/", { scroll: false });
   };
 
   const clearAll = () => router.push("/", { scroll: false });
@@ -36,66 +59,84 @@ export default function TagFilterBar({ tags }: TagFilterBarProps) {
   const idle =
     "bg-white border-gray-200 text-gray-500 hover:border-primary hover:text-primary";
 
-  return (
-    <div className="space-y-3">
-      {/* 필터 버튼 행 */}
-      <div className="flex flex-wrap gap-2" role="group" aria-label="태그 필터">
-        <button
-          onClick={clearAll}
-          className={`${base} ${activeTags.length === 0 ? active : idle}`}
-          aria-pressed={activeTags.length === 0}
-        >
-          전체
-        </button>
-
-        {tags.map((tag) => {
-          const isOn = activeTags.includes(tag);
+  const Facet = ({
+    label,
+    facetKey,
+    options,
+    activeValues,
+  }: {
+    label: string;
+    facetKey: FacetKey;
+    options: [string, string][];
+    activeValues: string[];
+  }) => (
+    <div>
+      <p className="text-xs font-semibold text-gray-400 mb-1.5">{label}</p>
+      <div
+        className="flex flex-wrap gap-2"
+        role="group"
+        aria-label={`${label} 필터`}
+      >
+        {options.map(([value, display]) => {
+          const isOn = activeValues.includes(value);
           return (
             <button
-              key={tag}
-              onClick={() => toggle(tag)}
+              key={value}
+              onClick={() => toggle(facetKey, value)}
               className={`${base} ${isOn ? active : idle}`}
               aria-pressed={isOn}
             >
-              #{tag}
+              {display}
             </button>
           );
         })}
       </div>
+    </div>
+  );
 
-      {/* 활성 필터 요약 — 1개 이상 선택 시만 표시 */}
-      {activeTags.length > 0 && (
-        <div className="flex flex-wrap items-center gap-1.5 text-xs text-gray-500">
-          <span className="font-semibold text-gray-700">
-            {activeTags.length}개 필터 적용 중
-          </span>
-          <span className="text-gray-300">—</span>
-          {activeTags.map((t, i) => (
-            <span key={t} className="flex items-center gap-1">
-              {i > 0 && (
-                <span className="text-[10px] font-bold text-primary/70 px-0.5">
-                  AND
-                </span>
-              )}
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
-                #{t}
-                <button
-                  onClick={() => toggle(t)}
-                  aria-label={`${t} 필터 해제`}
-                  className="ml-0.5 hover:opacity-60"
-                >
-                  ×
-                </button>
-              </span>
-            </span>
-          ))}
+  return (
+    <div className="space-y-4">
+      <div className="flex items-start justify-between gap-4">
+        <div className="space-y-3 flex-1 min-w-0">
+          <Facet
+            label="카테고리"
+            facetKey="category"
+            options={categories.map((c) => [c, c])}
+            activeValues={activeCategories}
+          />
+          <Facet
+            label="난이도"
+            facetKey="difficulty"
+            options={DIFFICULTY_OPTIONS}
+            activeValues={activeDifficulties}
+          />
+          <Facet
+            label="특징"
+            facetKey="tag"
+            options={featureTags.map((t) => [t, `#${t}`])}
+            activeValues={activeTags}
+          />
+        </div>
+        {totalActive > 0 && (
           <button
             onClick={clearAll}
-            className="ml-1 text-gray-400 hover:text-gray-600 underline underline-offset-2"
+            className="flex-shrink-0 text-xs text-gray-400 hover:text-gray-600 underline underline-offset-2 mt-5"
           >
             전체 해제
           </button>
-        </div>
+        )}
+      </div>
+
+      {/* 활성 필터 요약 — 실제 매칭 규칙과 동일하게 명시 (FilteredFeed 로직 참조) */}
+      {totalActive > 0 && (
+        <p className="text-xs text-gray-500">
+          <span className="font-semibold text-gray-700">
+            {totalActive}개 필터 적용 중
+          </span>
+          <span className="text-gray-300 mx-1.5">—</span>
+          카테고리·난이도는 선택한 것 중 하나만 맞아도(OR), 특징 태그는 선택한
+          걸 전부 포함해야(AND) 표시돼요.
+        </p>
       )}
     </div>
   );
