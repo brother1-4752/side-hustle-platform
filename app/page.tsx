@@ -6,14 +6,29 @@ import FilteredFeed from "@/components/home/FilteredFeed";
 
 const hustles = hustleData as SideHustle[];
 
-/** 태그 빈도 내림차순으로 정렬된 고유 태그 목록 */
-function getSortedTags(data: SideHustle[]): string[] {
+/** 카테고리를 빈도 내림차순으로 정렬 (category는 항목당 1개 — 필터 facet으로 그대로 사용 가능) */
+function getCategories(data: SideHustle[]): string[] {
+  const freq = new Map<string, number>();
+  data.forEach((h) => freq.set(h.category, (freq.get(h.category) ?? 0) + 1));
+  return Array.from(freq.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([category]) => category);
+}
+
+/**
+ * 필터로 쓸만한 특징 태그만 추출. 75개 전체 태그를 다 보여주면 필터가 아니라
+ * 벽이 되므로: 너무 흔한 태그(대부분 항목에 붙어 변별력 없음)와 너무 드문 태그
+ * (1회성이라 필터 의미 없음)를 제외하고 상위 N개만.
+ */
+function getFeatureTags(data: SideHustle[], max = 8): string[] {
   const freq = new Map<string, number>();
   data.forEach((h) =>
     h.tags.forEach((t) => freq.set(t, (freq.get(t) ?? 0) + 1)),
   );
   return Array.from(freq.entries())
+    .filter(([, count]) => count >= 2 && count / data.length < 0.6)
     .sort((a, b) => b[1] - a[1])
+    .slice(0, max)
     .map(([tag]) => tag);
 }
 
@@ -41,7 +56,8 @@ function FeedSkeleton() {
 }
 
 export default function HomePage() {
-  const allTags = getSortedTags(hustles);
+  const categories = getCategories(hustles);
+  const featureTags = getFeatureTags(hustles);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -65,7 +81,11 @@ export default function HomePage() {
             FilteredFeed 전체를 Suspense로 격리
           */}
           <Suspense fallback={<FeedSkeleton />}>
-            <FilteredFeed hustles={hustles} allTags={allTags} />
+            <FilteredFeed
+              hustles={hustles}
+              categories={categories}
+              featureTags={featureTags}
+            />
           </Suspense>
         </div>
 

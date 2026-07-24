@@ -4,7 +4,7 @@ import Link from "next/link";
 import { track } from "@vercel/analytics";
 import type { SideHustle } from "@/types";
 
-const DIFFICULTY_CONFIG: Record<
+export const DIFFICULTY_CONFIG: Record<
   string,
   { label: string; chip: string; dot: string }
 > = {
