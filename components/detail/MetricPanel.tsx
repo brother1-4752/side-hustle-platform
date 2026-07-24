@@ -80,7 +80,7 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
 
       {/* Row 2: 난이도 */}
       <div
-        className={`${diff.bg} rounded-2xl border ${diff.border} shadow-[0_2px_12px_rgb(0,0,0,0.04)] p-5 flex flex-col gap-2`}
+        className={`${diff.bg} rounded-2xl border ${diff.border} shadow-card p-5 flex flex-col gap-2`}
       >
         <div className="flex items-center justify-between">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">
@@ -94,7 +94,7 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
       </div>
 
       {/* Row 2: 초기 비용 */}
-      <div className="bg-slate-50/80 rounded-2xl border border-slate-200/60 shadow-[0_2px_12px_rgb(0,0,0,0.04)] p-5 flex flex-col gap-2">
+      <div className="bg-slate-50/80 rounded-2xl border border-slate-200/60 shadow-card p-5 flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">
             초기 비용
@@ -112,7 +112,7 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
       </div>
 
       {/* Row 2: 첫 수입까지 */}
-      <div className="col-span-2 md:col-span-1 bg-white/80 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-[0_2px_12px_rgb(0,0,0,0.04)] p-5 flex flex-col gap-2">
+      <div className="col-span-2 md:col-span-1 bg-white/80 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-card p-5 flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">
             첫 수입까지

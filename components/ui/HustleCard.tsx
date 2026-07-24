@@ -29,9 +29,14 @@ const FEATURE_TAGS = new Set(["무자본", "재택", "AI활용", "프리랜서"]
 
 interface HustleCardProps {
   hustle: SideHustle;
+  compare?: {
+    checked: boolean;
+    disabled?: boolean;
+    onToggle: (slug: string) => void;
+  };
 }
 
-export default function HustleCard({ hustle }: HustleCardProps) {
+export default function HustleCard({ hustle, compare }: HustleCardProps) {
   const badge = DIFFICULTY_CONFIG[hustle.difficulty];
   const features = hustle.tags.filter((t) => FEATURE_TAGS.has(t)).slice(0, 2);
   const restTags = hustle.tags.filter((t) => !FEATURE_TAGS.has(t)).slice(0, 3);
@@ -43,8 +48,30 @@ export default function HustleCard({ hustle }: HustleCardProps) {
       onClick={() =>
         track("hustle_card_click", { slug: hustle.slug, title: hustle.title })
       }
-      className="group block bg-white/80 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-[0_2px_12px_rgb(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.10)] hover:-translate-y-1.5 hover:border-black/[0.08] transition-all duration-300 ease-out"
+      className="group relative block bg-white/80 backdrop-blur-sm rounded-2xl border border-black/[0.04] shadow-card hover:shadow-card-hover hover:-translate-y-1.5 hover:border-black/[0.08] transition-all duration-300 ease-out"
     >
+      {compare && (
+        <button
+          type="button"
+          aria-label={
+            compare.checked ? "비교 목록에서 빼기" : "비교 목록에 담기"
+          }
+          aria-pressed={compare.checked}
+          disabled={compare.disabled}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            compare.onToggle(hustle.slug);
+          }}
+          className={`absolute top-3 left-3 z-10 w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold transition-colors ${
+            compare.checked
+              ? "bg-primary border-primary text-white"
+              : "bg-white/90 border-gray-300 text-transparent hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed"
+          }`}
+        >
+          ✓
+        </button>
+      )}
       <div className="p-5">
         {/* Icon + Status badges */}
         <div className="flex items-start justify-between mb-4">
