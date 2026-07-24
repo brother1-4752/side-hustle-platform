@@ -10,6 +10,11 @@
  * 예시:
  *   npm run mine -- dQw4w9WgXcQ
  *   npm run mine -- https://youtu.be/dQw4w9WgXcQ
+ *
+ * Anthropic API 키 없이 하려면: `npm run transcript -- <URL>`로 자막만
+ * 뽑아서 Claude Code(에이전트)가 직접 읽고 이 파일의 SYSTEM_PROMPT 스펙에
+ * 맞춰 JSON을 작성한 뒤 data/_inbox/{slug}.json에 저장하고
+ * `npm run approve -- <slug>`로 검증·승격하면 된다.
  */
 
 import { YoutubeTranscript } from "youtube-transcript";
@@ -23,7 +28,7 @@ const INBOX_DIR = resolve(__dirname, "../data/_inbox");
 
 // ─── Step 1: YouTube ID 파싱 ────────────────────────────────────────────────
 
-function extractVideoId(input: string): string {
+export function extractVideoId(input: string): string {
   const patterns = [
     /[?&]v=([a-zA-Z0-9_-]{11})/, // youtube.com/watch?v=ID
     /youtu\.be\/([a-zA-Z0-9_-]{11})/, // youtu.be/ID
@@ -41,7 +46,7 @@ function extractVideoId(input: string): string {
 
 // ─── Step 2: 자막 추출 ──────────────────────────────────────────────────────
 
-async function fetchTranscript(videoId: string): Promise<string> {
+export async function fetchTranscript(videoId: string): Promise<string> {
   console.log(`\n📥 [Step 1] 자막 추출 중 — https://youtu.be/${videoId}`);
 
   let segments;
@@ -199,7 +204,7 @@ const REQUIRED_KEYS: (keyof SideHustle)[] = [
   "dataVersion",
 ];
 
-function validate(hustle: SideHustle): void {
+export function validate(hustle: SideHustle): void {
   const missing = REQUIRED_KEYS.filter(
     (k) => hustle[k] === undefined || hustle[k] === null,
   );
@@ -240,7 +245,7 @@ function validate(hustle: SideHustle): void {
 // side-hustles.json(공개 데이터)에 바로 반영하지 않고, 사람이
 // `npm run approve -- <slug>` 로 승인해야 승격되도록 검수 게이트를 둔다.
 
-function writeToInbox(hustle: SideHustle, videoId: string): void {
+export function writeToInbox(hustle: SideHustle, videoId: string): void {
   console.log(`\n💾 [Step 3] 검수 대기함(data/_inbox)에 저장`);
 
   const existing: SideHustle[] = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
@@ -315,4 +320,8 @@ async function main() {
   }
 }
 
-main();
+// require.main 가드 — 다른 스크립트가 이 파일의 함수를 재사용하려고
+// import할 때 main()이 같이 실행되는 걸 방지 (API 키 요구·네트워크 호출 포함)
+if (require.main === module) {
+  main();
+}

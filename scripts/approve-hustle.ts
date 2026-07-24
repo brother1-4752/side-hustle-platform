@@ -11,6 +11,7 @@
 import { readFileSync, writeFileSync, unlinkSync, existsSync } from "fs";
 import { resolve } from "path";
 import type { SideHustle } from "../types";
+import { validate } from "./mine-hustle";
 
 const DATA_PATH = resolve(__dirname, "../data/side-hustles.json");
 const INBOX_DIR = resolve(__dirname, "../data/_inbox");
@@ -29,6 +30,11 @@ function main() {
   }
 
   const hustle: SideHustle = JSON.parse(readFileSync(inboxPath, "utf-8"));
+
+  // mine-hustle.ts가 만들지 않은 항목(직접 손으로 작성한 JSON 등)도
+  // 같은 구조 검증을 통과해야 승격 가능
+  validate(hustle);
+
   const existing: SideHustle[] = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
 
   const dup = existing.find(

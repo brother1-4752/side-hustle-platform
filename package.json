@@ -10,6 +10,7 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "mine": "tsx scripts/mine-hustle.ts",
+    "transcript": "tsx scripts/fetch-transcript.ts",
     "approve": "tsx scripts/approve-hustle.ts",
     "new-sprint": "tsx scripts/new-sprint.ts"
   },
