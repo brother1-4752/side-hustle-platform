@@ -69,7 +69,7 @@ const SYSTEM_PROMPT = `
 당신은 한국 부업 정보를 JSON으로 정형화하는 전문 데이터 추출 AI입니다.
 제공되는 유튜브 영상 자막을 분석하여, 아래 TypeScript 스펙을 100% 준수하는 단일 JSON 객체만 반환하십시오.
 
-## TypeScript 인터페이스 (필드 21개, 전부 필수)
+## TypeScript 인터페이스 (필드 22개, 전부 필수)
 
 type Difficulty = "beginner" | "intermediate" | "advanced";
 
@@ -97,13 +97,14 @@ type Difficulty = "beginner" | "intermediate" | "advanced";
   "isTrending": boolean,           // 최근 급상승 트렌드면 true
   "isPopular": boolean,            // 검증된 대중적 부업이면 true
   "trendScore": number,            // 트렌드 점수 1~100 정수 (수익성·접근성·트렌드 종합)
-  "overview": string,              // 한국어 상세 설명 100~200자
-  "startGuide": [                  // 4~6단계
+  "overview": string,              // 한국어 상세 설명 400~700자. 반드시 포함: (1) 구체적으로 어떻게 시작하는지 (2) 돈이 어떤 구조로 들어오는지 (3) 왜 이 방법이 지금 통하는지. "무엇인지" 설명이 아니라 자막 속 실제 방법·수치·경험을 반영
+  "pitfalls": string[],            // 실제로 실패하거나 후회하는 흔한 이유 3~5개, 각 40~80자. 자막에 실패 사례·주의사항이 없으면 업계 통념상 가장 흔한 리스크로 채움 (일반론 금지, 구체적으로)
+  "startGuide": [                  // 4~6단계, 각 description은 30~80자
     { "step": number, "title": string, "description": string }
   ],
   "relatedTags": string[],         // 관련 부업 슬러그 2~4개 (예: ["youtube-channel", "ai-content-creation"])
   "lastUpdated": string,           // 오늘 날짜 YYYY-MM-DD (예: "2026-06-17")
-  "dataVersion": string            // 항상 "2.0"
+  "dataVersion": string            // 항상 "2.1"
 }
 
 ## 출력 규칙 (엄수)
@@ -116,6 +117,7 @@ type Difficulty = "beginner" | "intermediate" | "advanced";
 6. trendScore: 수익성(40%) + 트렌드(40%) + 접근성(20%) 기준 1~100 정수
 7. startGuide: step은 1부터 시작, 각 description은 30~80자 실용적 행동 지침
 8. 자막에 수치 없으면 합리적 추정값 사용 (예: min: 300000, max: 1500000)
+9. overview·pitfalls는 스펙 문서 재진술 금지. 이 영상에서만 나온 구체적 방법·수치·경험 위주로
 `.trim();
 
 async function callClaude(transcript: string): Promise<SideHustle> {
@@ -190,6 +192,7 @@ const REQUIRED_KEYS: (keyof SideHustle)[] = [
   "isPopular",
   "trendScore",
   "overview",
+  "pitfalls",
   "startGuide",
   "relatedTags",
   "lastUpdated",
@@ -209,16 +212,26 @@ function validate(hustle: SideHustle): void {
   if (!Array.isArray(hustle.tags) || hustle.tags.length === 0)
     throw new Error("tags 배열이 비어있습니다.");
 
-  if (!Array.isArray(hustle.startGuide) || hustle.startGuide.length < 3)
+  if (!Array.isArray(hustle.startGuide) || hustle.startGuide.length < 4)
     throw new Error(
-      `startGuide 단계 부족: ${hustle.startGuide.length}개 (최소 3개 필요)`,
+      `startGuide 단계 부족: ${hustle.startGuide.length}개 (최소 4개 필요)`,
+    );
+
+  if (!Array.isArray(hustle.pitfalls) || hustle.pitfalls.length < 3)
+    throw new Error(
+      `pitfalls 부족: ${hustle.pitfalls?.length ?? 0}개 (최소 3개 필요)`,
+    );
+
+  if (hustle.overview.length < 300)
+    throw new Error(
+      `overview 너무 짧음: ${hustle.overview.length}자 (최소 300자 필요)`,
     );
 
   const score = hustle.trendScore;
   if (typeof score !== "number" || score < 1 || score > 100)
     throw new Error(`trendScore 범위 오류: ${score} (1~100 정수 필요)`);
 
-  console.log("  ✅ 검증 통과 (21개 필드)");
+  console.log("  ✅ 검증 통과 (22개 필드)");
 }
 
 // ─── Step 3: 검수 대기함(inbox)에 저장 ─────────────────────────────────────
