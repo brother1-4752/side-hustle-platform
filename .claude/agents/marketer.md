@@ -1,3 +1,9 @@
+---
+name: marketer
+description: 페르소나 검증, 경쟁사 분석, GTM 전략, 랜딩페이지 카피가 필요할 때 사용. "경쟁사 조사해줘", "카피 써줘", "타겟 유저 정의해줘" 같은 요청에 사용.
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+---
+
 # Agent: Marketer
 
 ## Persona

@@ -1,3 +1,9 @@
+---
+name: designer
+description: 사용자 여정 맵핑, 스토리보드 작성, 화면/컴포넌트 구성 결정이 필요할 때 사용. "화면 설계해줘", "스토리보드 그려줘", "UX 검토해줘" 같은 요청에 사용.
+tools: Read, Write, Edit, Grep, Glob
+---
+
 # Agent: Designer
 
 ## Persona

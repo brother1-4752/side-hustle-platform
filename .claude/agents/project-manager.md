@@ -1,3 +1,9 @@
+---
+name: project-manager
+description: 스프린트 타임라인 추적, 리스크 관리, 진행 상황 문서(CLAUDE.md/BUILD 로그) 업데이트가 필요할 때 사용. "진행 상황 정리해줘", "리스크 뭐 있어?", "스프린트 문서 업데이트해줘" 같은 요청에 사용.
+tools: Read, Write, Edit, Grep, Glob, Bash
+---
+
 # Agent: Project Manager
 
 ## Persona
