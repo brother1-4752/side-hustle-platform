@@ -14,11 +14,12 @@
 
 import { YoutubeTranscript } from "youtube-transcript";
 import Anthropic from "@anthropic-ai/sdk";
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { resolve } from "path";
 import type { SideHustle } from "../types";
 
 const DATA_PATH = resolve(__dirname, "../data/side-hustles.json");
+const INBOX_DIR = resolve(__dirname, "../data/_inbox");
 
 // ─── Step 1: YouTube ID 파싱 ────────────────────────────────────────────────
 
@@ -220,24 +221,32 @@ function validate(hustle: SideHustle): void {
   console.log("  ✅ 검증 통과 (21개 필드)");
 }
 
-// ─── Step 3: 병합 ───────────────────────────────────────────────────────────
+// ─── Step 3: 검수 대기함(inbox)에 저장 ─────────────────────────────────────
+//
+// AI가 추출한 값(수익, trendScore 등)은 사실 검증이 안 된 상태이므로
+// side-hustles.json(공개 데이터)에 바로 반영하지 않고, 사람이
+// `npm run approve -- <slug>` 로 승인해야 승격되도록 검수 게이트를 둔다.
 
-function mergeIntoJson(hustle: SideHustle): void {
-  console.log(`\n💾 [Step 3] side-hustles.json에 병합`);
+function writeToInbox(hustle: SideHustle, videoId: string): void {
+  console.log(`\n💾 [Step 3] 검수 대기함(data/_inbox)에 저장`);
 
   const existing: SideHustle[] = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
-
   const dup = existing.find(
     (h) => h.slug === hustle.slug || h.id === hustle.id,
   );
-  if (dup) throw new Error(`중복 항목 감지: slug="${dup.slug}"`);
+  if (dup) throw new Error(`중복 항목 감지 (이미 승인됨): slug="${dup.slug}"`);
 
-  existing.push(hustle);
-  writeFileSync(DATA_PATH, JSON.stringify(existing, null, 2) + "\n");
+  const inboxPath = resolve(INBOX_DIR, `${hustle.slug}.json`);
+  if (existsSync(inboxPath))
+    throw new Error(`이미 검수 대기 중인 항목입니다: ${inboxPath}`);
 
-  console.log(
-    `  ✅ "${hustle.title}" 추가 완료 — 총 ${existing.length}개 항목`,
-  );
+  hustle.sourceUrl = `https://youtu.be/${videoId}`;
+  hustle.reviewStatus = "pending";
+
+  mkdirSync(INBOX_DIR, { recursive: true });
+  writeFileSync(inboxPath, JSON.stringify(hustle, null, 2) + "\n");
+
+  console.log(`  ✅ "${hustle.title}" 검수 대기 저장 완료 → ${inboxPath}`);
 }
 
 // ─── main ────────────────────────────────────────────────────────────────────
@@ -282,9 +291,11 @@ async function main() {
     console.log(`   트렌드 점수: ${hustle.trendScore}/100`);
 
     validate(hustle);
-    mergeIntoJson(hustle);
+    writeToInbox(hustle, videoId);
 
-    console.log("\n🎉 완료! npm run build 로 SSG 페이지 생성을 확인하세요.\n");
+    console.log(
+      `\n🎉 완료! 사람이 검토 후 승인하세요: npm run approve -- ${hustle.slug}\n`,
+    );
   } catch (err) {
     console.error("\n❌ 오류:", err instanceof Error ? err.message : err);
     process.exit(1);

@@ -9,7 +9,8 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "prepare": "husky",
-    "mine": "tsx scripts/mine-hustle.ts"
+    "mine": "tsx scripts/mine-hustle.ts",
+    "approve": "tsx scripts/approve-hustle.ts"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md}": [
