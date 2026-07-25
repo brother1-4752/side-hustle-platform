@@ -12,6 +12,8 @@
     "mine": "tsx scripts/mine-hustle.ts",
     "transcript": "tsx scripts/fetch-transcript.ts",
     "approve": "tsx scripts/approve-hustle.ts",
+    "discover": "tsx scripts/discover-new-videos.ts",
+    "reject": "tsx scripts/reject-video.ts",
     "new-sprint": "tsx scripts/new-sprint.ts"
   },
   "lint-staged": {
