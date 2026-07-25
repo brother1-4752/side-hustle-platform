@@ -1,18 +1,9 @@
 import type { SideHustle } from "@/types";
 
-const DIFFICULTY_CONFIG: Record<string, { label: string; chip: string }> = {
-  beginner: {
-    label: "초급",
-    chip: "bg-badge-beginnerBg text-badge-beginnerText",
-  },
-  intermediate: {
-    label: "중급",
-    chip: "bg-badge-intermediateBg text-badge-intermediateText",
-  },
-  advanced: {
-    label: "고급",
-    chip: "bg-badge-advancedBg text-badge-advancedText",
-  },
+const DIFFICULTY_CONFIG: Record<string, { label: string; dot: string }> = {
+  beginner: { label: "초급", dot: "bg-success" },
+  intermediate: { label: "중급", dot: "bg-amber-500" },
+  advanced: { label: "고급", dot: "bg-red-500" },
 };
 
 interface DetailHeaderProps {
@@ -30,9 +21,8 @@ export default function DetailHeader({ hustle }: DetailHeaderProps) {
           {hustle.icon}
         </div>
 
-        <span
-          className={`inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full font-semibold ${diff.chip}`}
-        >
+        <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-gray-100 text-gray-600 font-semibold">
+          <span className={`w-2 h-2 rounded-full ${diff.dot}`} />
           {diff.label}
         </span>
 
@@ -44,8 +34,8 @@ export default function DetailHeader({ hustle }: DetailHeaderProps) {
         )}
 
         {hustle.isPopular && (
-          <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-accent-lime/15 text-accent-lime font-semibold">
-            ★ 인기
+          <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-gray-100 text-gray-600 font-semibold">
+            <span className="text-amber-500">★</span> 인기
           </span>
         )}
       </div>

@@ -1,24 +1,9 @@
 import type { SideHustle } from "@/types";
 
-const DIFFICULTY_CONFIG: Record<
-  string,
-  { label: string; bg: string; text: string }
-> = {
-  beginner: {
-    label: "초급",
-    bg: "bg-badge-beginnerBg",
-    text: "text-badge-beginnerText",
-  },
-  intermediate: {
-    label: "중급",
-    bg: "bg-badge-intermediateBg",
-    text: "text-badge-intermediateText",
-  },
-  advanced: {
-    label: "고급",
-    bg: "bg-badge-advancedBg",
-    text: "text-badge-advancedText",
-  },
+const DIFFICULTY_CONFIG: Record<string, { label: string; dot: string }> = {
+  beginner: { label: "초급", dot: "bg-success" },
+  intermediate: { label: "중급", dot: "bg-amber-500" },
+  advanced: { label: "고급", dot: "bg-red-500" },
 };
 
 interface MetricPanelProps {
@@ -32,7 +17,7 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-      {/* Row 1-left: 예상 월 수익 — hero, 다크 블록 + 그린 숫자 */}
+      {/* Row 1-left: 예상 월 수익 — hero, 유일한 다크 블록 */}
       <div className="card-soft col-span-2 md:col-span-2 bg-ink rounded-2xl p-6">
         <div className="flex items-center justify-between mb-3">
           <p className="text-xs font-semibold text-white/50 uppercase tracking-widest">
@@ -42,9 +27,9 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
             💰
           </span>
         </div>
-        <p className="text-3xl font-bold text-accent-lime tracking-tight">
+        <p className="text-3xl font-bold text-success tracking-tight">
           {min}~{max}
-          <span className="text-lg font-semibold ml-1 text-accent-lime/80">
+          <span className="text-lg font-semibold ml-1 text-success/80">
             만원
           </span>
         </p>
@@ -55,10 +40,10 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
         )}
       </div>
 
-      {/* Row 1-right: 하루 투입 시간 — 코발트 블루 블록 */}
-      <div className="card-soft col-span-2 md:col-span-1 bg-accent rounded-2xl p-5 flex flex-col justify-between text-white">
+      {/* Row 1-right: 하루 투입 시간 */}
+      <div className="card-soft col-span-2 md:col-span-1 bg-bg-card rounded-2xl p-5 flex flex-col justify-between">
         <div className="flex items-center justify-between mb-3">
-          <p className="text-xs font-semibold text-white/70 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
             하루 투입 시간
           </p>
           <span className="text-lg" aria-hidden="true">
@@ -66,19 +51,17 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
           </span>
         </div>
         <div>
-          <p className="text-xl font-bold tracking-tight">
+          <p className="text-xl font-bold text-ink tracking-tight">
             {hustle.requiredHoursPerDay}
           </p>
-          <p className="text-xs text-white/70 mt-1.5 leading-snug">
+          <p className="text-xs text-gray-500 mt-1.5 leading-snug">
             직장인 퇴근 후 가능
           </p>
         </div>
       </div>
 
       {/* Row 2: 난이도 */}
-      <div
-        className={`card-soft ${diff.bg} rounded-2xl p-5 flex flex-col gap-2`}
-      >
+      <div className="card-soft bg-bg-card rounded-2xl p-5 flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
             난이도
@@ -87,7 +70,10 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
             📊
           </span>
         </div>
-        <p className={`text-xl font-bold ${diff.text}`}>{diff.label}</p>
+        <p className="text-xl font-bold text-ink flex items-center gap-2">
+          <span className={`w-2 h-2 rounded-full ${diff.dot}`} />
+          {diff.label}
+        </p>
       </div>
 
       {/* Row 2: 초기 비용 */}
