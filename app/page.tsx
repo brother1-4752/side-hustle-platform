@@ -68,10 +68,10 @@ export default function HomePage() {
       <div className="max-w-6xl mx-auto px-4 pb-8">
         {/* ── Hero (서버 렌더링, URL 무관) ─────────────────────────────── */}
         <section className="mb-10">
-          <h1 className="text-3xl md:text-5xl font-black text-ink mb-3 leading-[1.1] tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-ink mb-3 leading-[1.1] tracking-tight">
             지금 가장 뜨는 부업,
             <br />
-            <span className="bg-primary text-white px-2 -rotate-1 inline-block">
+            <span className="bg-primary text-white px-2 rounded-lg inline-block">
               과장 없이
             </span>{" "}
             한눈에.

@@ -54,9 +54,9 @@ export default function TagFilterBar({
   const clearAll = () => router.push("/", { scroll: false });
 
   const base =
-    "chip-brutal text-sm px-4 py-1.5 rounded-full whitespace-nowrap select-none font-bold";
-  const active = "bg-primary text-white";
-  const idle = "bg-white text-gray-600";
+    "chip-soft text-sm px-4 py-1.5 rounded-full whitespace-nowrap select-none font-semibold border";
+  const active = "bg-primary border-primary text-white";
+  const idle = "bg-white border-gray-200 text-gray-600 hover:border-primary/40";
 
   const Facet = ({
     label,
@@ -70,7 +70,7 @@ export default function TagFilterBar({
     activeValues: string[];
   }) => (
     <div>
-      <p className="text-xs font-black text-ink/50 uppercase tracking-widest mb-1.5">
+      <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1.5">
         {label}
       </p>
       <div

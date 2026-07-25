@@ -13,29 +13,29 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-bg-base/95 backdrop-blur-sm border-b-2 border-ink">
+    <header className="sticky top-0 z-50 bg-bg-base/95 backdrop-blur-sm border-b border-gray-200">
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 group"
+          className="inline-flex items-center gap-2"
           aria-label="부업레이더 홈"
         >
-          <span className="chip-brutal w-9 h-9 flex items-center justify-center bg-accent-lime rounded-lg text-lg -rotate-6 group-hover:rotate-6 transition-transform">
+          <span className="w-9 h-9 flex items-center justify-center bg-accent-lime/15 rounded-lg text-lg">
             ☀️
           </span>
-          <span className="text-lg font-black text-ink tracking-tight">
+          <span className="text-lg font-bold text-ink tracking-tight">
             부업레이더
           </span>
         </Link>
 
         {/* Desktop nav — 검색 아이콘 없음 (PRD Scope Freeze) */}
-        <ul className="hidden md:flex items-center gap-2 text-sm">
+        <ul className="hidden md:flex items-center gap-1 text-sm">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="px-3 py-1.5 rounded-full font-bold text-gray-600 hover:bg-ink hover:text-white transition-colors"
+                className="px-3 py-1.5 rounded-full font-semibold text-gray-600 hover:bg-gray-100 transition-colors"
               >
                 {label}
               </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="chip-brutal md:hidden p-2 flex flex-col gap-1 bg-white rounded-lg"
+          className="md:hidden p-2 flex flex-col gap-1 rounded-lg border border-gray-200"
           aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -58,13 +58,13 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-bg-base border-t-2 border-ink px-4 py-3">
+        <div className="md:hidden bg-bg-base border-t border-gray-200 px-4 py-3">
           <ul className="flex flex-col gap-1 text-sm">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="block px-3 py-2 rounded-lg font-bold text-gray-600 hover:bg-ink hover:text-white transition-colors"
+                  className="block px-3 py-2 rounded-lg font-semibold text-gray-600 hover:bg-gray-100 transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {label}

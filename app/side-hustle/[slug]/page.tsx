@@ -122,8 +122,8 @@ export default function SideHustleDetailPage({
 
             {/* 관련 부업 */}
             {related.length > 0 && (
-              <div className="card-brutal bg-bg-sidebar rounded-xl p-4">
-                <h3 className="text-sm font-black text-ink mb-3">
+              <div className="card-soft bg-bg-sidebar rounded-2xl p-4">
+                <h3 className="text-sm font-bold text-ink mb-3">
                   이런 부업도 있어요
                 </h3>
                 <ul className="space-y-3">
