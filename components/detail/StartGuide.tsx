@@ -1,12 +1,5 @@
 import type { GuideStep } from "@/types";
 
-const STEP_COLORS = [
-  "bg-primary",
-  "bg-accent",
-  "bg-accent-lime",
-  "bg-amber-400",
-];
-
 interface StartGuideProps {
   steps: GuideStep[];
 }
@@ -26,19 +19,12 @@ export default function StartGuide({ steps }: StartGuideProps) {
       <ol className="space-y-0">
         {steps.map((step, idx) => {
           const isLast = idx === steps.length - 1;
-          const color = STEP_COLORS[idx % STEP_COLORS.length];
-          const textOnColor =
-            color === "bg-accent-lime" || color === "bg-amber-400"
-              ? "text-ink"
-              : "text-white";
 
           return (
             <li key={step.step} className="flex gap-4">
-              {/* Step number + connector */}
+              {/* Step number + connector — 색 순환 없이 잉크색 원형으로 통일 */}
               <div className="flex flex-col items-center flex-shrink-0">
-                <div
-                  className={`w-8 h-8 rounded-full ${color} ${textOnColor} flex items-center justify-center text-xs font-bold`}
-                >
+                <div className="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-xs font-bold">
                   {step.step}
                 </div>
                 {!isLast && <div className="w-0.5 flex-1 bg-ink/10 my-2" />}

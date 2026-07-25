@@ -70,17 +70,17 @@ const SECTIONS = [
     content: (
       <ul className="space-y-2 text-gray-600">
         <li className="flex gap-2">
-          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
           <span>서비스 품질 개선 및 이용자 경험 분석</span>
         </li>
         <li className="flex gap-2">
-          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
           <span>
             이용자 관심사 기반의 맞춤형 광고 제공 (Google AdSense 연동)
           </span>
         </li>
         <li className="flex gap-2">
-          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
           <span>서비스 접속 패턴 분석 및 안정성 모니터링</span>
         </li>
       </ul>

@@ -21,7 +21,7 @@ export default function Navbar() {
           className="inline-flex items-center gap-2"
           aria-label="부업레이더 홈"
         >
-          <span className="w-9 h-9 flex items-center justify-center bg-accent-lime/15 rounded-lg text-lg">
+          <span className="w-9 h-9 flex items-center justify-center bg-bg-sidebar rounded-lg text-lg">
             ☀️
           </span>
           <span className="text-lg font-bold text-ink tracking-tight">

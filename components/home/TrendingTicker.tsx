@@ -19,7 +19,7 @@ export default function TrendingTicker({ hustles }: TrendingTickerProps) {
         <span key={h.slug} className="inline-flex items-center gap-2 px-6">
           <span aria-hidden="true">{h.icon}</span>
           <span className="font-bold">{h.title}</span>
-          <span className="text-accent-lime font-bold">
+          <span className="text-success font-bold">
             {h.expectedMonthlyIncome.min}~{h.expectedMonthlyIncome.max}만원
           </span>
         </span>
