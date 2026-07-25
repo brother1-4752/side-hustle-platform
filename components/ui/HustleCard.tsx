@@ -27,7 +27,7 @@ export const DIFFICULTY_CONFIG: Record<
 
 const FEATURE_TAGS = new Set(["무자본", "재택", "AI활용", "프리랜서"]);
 
-// 카테고리 문자열 → 강렬한 스트라이프 색 순환 배정 (하드코딩 매핑 없이 해시로 결정)
+// 카테고리 문자열 → 절제된 톤의 상단 스트라이프 색 순환 배정 (하드코딩 매핑 없이 해시로 결정)
 const STRIPE_COLORS = [
   "bg-accent",
   "bg-primary",
@@ -61,10 +61,10 @@ export default function HustleCard({ hustle, compare }: HustleCardProps) {
       onClick={() =>
         track("hustle_card_click", { slug: hustle.slug, title: hustle.title })
       }
-      className="card-brutal group relative block bg-bg-card rounded-xl overflow-hidden"
+      className="card-soft group relative block bg-bg-card rounded-2xl overflow-hidden"
     >
       {/* 카테고리 스트라이프 */}
-      <div className={`h-1.5 ${stripeColor(hustle.category)}`} />
+      <div className={`h-1 ${stripeColor(hustle.category)}`} />
 
       {compare && (
         <button
@@ -79,38 +79,38 @@ export default function HustleCard({ hustle, compare }: HustleCardProps) {
             e.stopPropagation();
             compare.onToggle(hustle.slug);
           }}
-          className={`chip-brutal absolute top-4 left-3 z-10 w-7 h-7 rounded-full flex items-center justify-center text-sm font-black transition-colors ${
+          className={`chip-soft absolute top-4 left-3 z-10 w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold ${
             compare.checked
-              ? "bg-primary text-white"
-              : "bg-bg-card text-transparent hover:text-ink/20 disabled:opacity-30 disabled:cursor-not-allowed"
+              ? "bg-primary border-primary text-white"
+              : "bg-white border-gray-300 text-transparent hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed"
           }`}
         >
           ✓
         </button>
       )}
       <div className="p-5">
-        {/* Icon(스티커) + Status badges */}
+        {/* Icon + Status badges */}
         <div className="flex items-start justify-between mb-4">
           <span
-            className="chip-brutal w-12 h-12 flex items-center justify-center text-2xl bg-bg-sidebar rounded-xl -rotate-3 group-hover:rotate-3 transition-transform duration-300"
+            className="w-12 h-12 flex items-center justify-center text-2xl bg-bg-sidebar rounded-xl"
             aria-hidden="true"
           >
             {hustle.icon}
           </span>
           <div className="flex items-center gap-1.5 flex-wrap justify-end">
             {hustle.isTrending && (
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-primary text-white font-bold border-2 border-ink">
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-primary text-white font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                 뜨는 중
               </span>
             )}
             {hustle.isPopular && (
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-accent-lime text-ink font-bold border-2 border-ink">
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-accent-lime/15 text-accent-lime font-semibold">
                 ★ 인기
               </span>
             )}
             <span
-              className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full font-bold border-2 border-ink ${badge.chip}`}
+              className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full font-semibold ${badge.chip}`}
             >
               <span className={`w-1.5 h-1.5 rounded-full ${badge.dot}`} />
               {badge.label}
@@ -119,21 +119,21 @@ export default function HustleCard({ hustle, compare }: HustleCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-base font-black text-ink mb-2 group-hover:text-primary transition-colors duration-200 line-clamp-1 tracking-tight">
+        <h3 className="text-base font-bold text-ink mb-2 group-hover:text-primary transition-colors duration-200 line-clamp-1 tracking-tight">
           {hustle.title}
         </h3>
 
         {/* Summary */}
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">
+        <p className="text-sm text-gray-500 mb-4 line-clamp-2 leading-relaxed">
           {hustle.summary}
         </p>
 
-        {/* Income block — 파스텔 대신 솔리드 컬러 블록 */}
-        <div className="flex items-center justify-between mb-4 px-3.5 py-2.5 rounded-lg bg-ink text-white">
-          <span className="text-xs font-medium text-white/70">
+        {/* Income block — 다크 블록 + 그린 숫자 */}
+        <div className="flex items-center justify-between mb-4 px-3.5 py-2.5 rounded-xl bg-ink text-white">
+          <span className="text-xs font-medium text-white/60">
             예상 월 수익
           </span>
-          <span className="text-sm font-black text-accent-lime">
+          <span className="text-sm font-bold text-accent-lime">
             {min}~{max}만원
           </span>
         </div>
@@ -143,7 +143,7 @@ export default function HustleCard({ hustle, compare }: HustleCardProps) {
           {features.map((f) => (
             <span
               key={f}
-              className="text-xs px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/30 font-bold"
+              className="text-xs px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-semibold"
             >
               {f}
             </span>
@@ -151,7 +151,7 @@ export default function HustleCard({ hustle, compare }: HustleCardProps) {
           {restTags.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-500 border border-gray-200"
+              className="text-xs px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-500"
             >
               #{tag}
             </span>

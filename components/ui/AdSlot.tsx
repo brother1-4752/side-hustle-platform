@@ -35,7 +35,7 @@ export default function AdSlot({
 
   return (
     <div
-      className={`w-full overflow-hidden rounded-lg bg-gray-50 border-2 border-dashed border-ink/15 flex items-center justify-center ${className}`}
+      className={`w-full overflow-hidden rounded-xl bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center ${className}`}
       style={{ minHeight, maxWidth }}
       aria-label={`광고 영역 ${label}`}
       role="complementary"

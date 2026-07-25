@@ -19,7 +19,7 @@ export default function TrendingTicker({ hustles }: TrendingTickerProps) {
         <span key={h.slug} className="inline-flex items-center gap-2 px-6">
           <span aria-hidden="true">{h.icon}</span>
           <span className="font-bold">{h.title}</span>
-          <span className="text-accent-lime font-black">
+          <span className="text-accent-lime font-bold">
             {h.expectedMonthlyIncome.min}~{h.expectedMonthlyIncome.max}만원
           </span>
         </span>
@@ -28,7 +28,7 @@ export default function TrendingTicker({ hustles }: TrendingTickerProps) {
   );
 
   return (
-    <div className="border-y-2 border-ink bg-ink text-white overflow-hidden whitespace-nowrap py-2.5 mb-8">
+    <div className="bg-ink text-white overflow-hidden whitespace-nowrap py-2.5 mb-8">
       <div className="animate-marquee inline-flex w-max" aria-hidden="true">
         {strip}
         {strip}

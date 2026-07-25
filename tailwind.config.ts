@@ -13,14 +13,14 @@ const config: Config = {
           card: "#FFFFFF",
           sidebar: "#FFEFD1",
         },
-        ink: "#141414", // 브루탈 보더·하드섀도우 전용 near-black
+        ink: "#141B2E", // 본문/헤딩·다크 블록 전용 near-black(살짝 네이비 톤)
         primary: {
-          DEFAULT: "#FF3D6E", // 파스텔 핑크(#FF8FAB) → 채도 높인 비비드 코럴핑크
+          DEFAULT: "#FF3D6E", // 브랜드 포인트 컬러(코럴핑크) — 버튼·링크에만 절제해서 사용
           light: "#FFD1DC",
         },
         accent: {
-          DEFAULT: "#2F5FFF", // 코발트 블루 — 3색 브루탈 팔레트의 두 번째 축
-          lime: "#D6FF3F", // 포인트용 형광 라임
+          DEFAULT: "#2F5FFF", // 코발트 블루 — 정보성 다크 블록 보조색
+          lime: "#22B573", // 포인트 그린(수익·긍정 지표) — 네온 라임 대신 차분한 그린으로
           warm: "#FFD97D",
         },
         badge: {

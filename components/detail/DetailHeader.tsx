@@ -24,34 +24,34 @@ export default function DetailHeader({ hustle }: DetailHeaderProps) {
 
   return (
     <div className="mb-10">
-      {/* Icon(스티커) + Badges */}
+      {/* Icon + Badges */}
       <div className="flex items-center gap-3 flex-wrap mb-5">
-        <div className="chip-brutal w-16 h-16 flex items-center justify-center text-3xl bg-bg-sidebar rounded-2xl -rotate-2">
+        <div className="w-16 h-16 flex items-center justify-center text-3xl bg-bg-sidebar rounded-2xl">
           {hustle.icon}
         </div>
 
         <span
-          className={`inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full font-bold border-2 border-ink ${diff.chip}`}
+          className={`inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full font-semibold ${diff.chip}`}
         >
           {diff.label}
         </span>
 
         {hustle.isTrending && (
-          <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-primary text-white font-bold border-2 border-ink">
+          <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-primary text-white font-semibold">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             뜨는 중
           </span>
         )}
 
         {hustle.isPopular && (
-          <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-accent-lime text-ink font-bold border-2 border-ink">
+          <span className="inline-flex items-center gap-2 text-sm px-3.5 py-1.5 rounded-full bg-accent-lime/15 text-accent-lime font-semibold">
             ★ 인기
           </span>
         )}
       </div>
 
       {/* Title */}
-      <h1 className="text-2xl md:text-[2.25rem] font-black text-ink mb-3 leading-tight tracking-tight">
+      <h1 className="text-2xl md:text-[2.25rem] font-bold text-ink mb-3 leading-tight tracking-tight">
         {hustle.title}
       </h1>
 
@@ -65,7 +65,7 @@ export default function DetailHeader({ hustle }: DetailHeaderProps) {
         {hustle.tags.map((tag) => (
           <span
             key={tag}
-            className="text-xs px-3 py-1 rounded-full bg-white text-gray-600 border-2 border-ink/15 hover:border-primary hover:text-primary transition-colors duration-150 cursor-default"
+            className="text-xs px-3 py-1 rounded-full bg-white text-gray-500 border border-gray-200 hover:border-primary hover:text-primary transition-colors duration-150 cursor-default"
           >
             #{tag}
           </span>

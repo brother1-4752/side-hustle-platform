@@ -7,10 +7,10 @@ const LEGAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-white border-t-4 border-primary mt-16">
+    <footer className="bg-ink text-white mt-16">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-white/50">
-          <span className="font-black text-white">☀️ 부업레이더</span>
+          <span className="font-bold text-white">☀️ 부업레이더</span>
           <span className="text-center">
             데이터는 정기적으로 업데이트됩니다. 수익은 개인 역량에 따라
             상이합니다.

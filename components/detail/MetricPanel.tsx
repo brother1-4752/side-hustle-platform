@@ -32,33 +32,33 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-      {/* Row 1-left: 예상 월 수익 — hero, 솔리드 잉크 블록 + 라임 숫자 */}
-      <div className="card-brutal col-span-2 md:col-span-2 bg-ink rounded-xl p-6">
+      {/* Row 1-left: 예상 월 수익 — hero, 다크 블록 + 그린 숫자 */}
+      <div className="card-soft col-span-2 md:col-span-2 bg-ink rounded-2xl p-6">
         <div className="flex items-center justify-between mb-3">
-          <p className="text-xs font-bold text-white/60 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-white/50 uppercase tracking-widest">
             예상 월 수익
           </p>
           <span className="text-lg" aria-hidden="true">
             💰
           </span>
         </div>
-        <p className="text-3xl font-black text-accent-lime tracking-tight">
+        <p className="text-3xl font-bold text-accent-lime tracking-tight">
           {min}~{max}
-          <span className="text-lg font-bold ml-1 text-accent-lime/80">
+          <span className="text-lg font-semibold ml-1 text-accent-lime/80">
             만원
           </span>
         </p>
         {incomeNote && (
-          <p className="text-xs text-white/50 mt-2 leading-snug">
+          <p className="text-xs text-white/40 mt-2 leading-snug">
             {incomeNote}
           </p>
         )}
       </div>
 
       {/* Row 1-right: 하루 투입 시간 — 코발트 블루 블록 */}
-      <div className="card-brutal col-span-2 md:col-span-1 bg-accent rounded-xl p-5 flex flex-col justify-between text-white">
+      <div className="card-soft col-span-2 md:col-span-1 bg-accent rounded-2xl p-5 flex flex-col justify-between text-white">
         <div className="flex items-center justify-between mb-3">
-          <p className="text-xs font-bold text-white/70 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-white/70 uppercase tracking-widest">
             하루 투입 시간
           </p>
           <span className="text-lg" aria-hidden="true">
@@ -66,7 +66,7 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
           </span>
         </div>
         <div>
-          <p className="text-xl font-black tracking-tight">
+          <p className="text-xl font-bold tracking-tight">
             {hustle.requiredHoursPerDay}
           </p>
           <p className="text-xs text-white/70 mt-1.5 leading-snug">
@@ -77,30 +77,30 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
 
       {/* Row 2: 난이도 */}
       <div
-        className={`card-brutal ${diff.bg} rounded-xl p-5 flex flex-col gap-2`}
+        className={`card-soft ${diff.bg} rounded-2xl p-5 flex flex-col gap-2`}
       >
         <div className="flex items-center justify-between">
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
             난이도
           </p>
           <span className="text-base" aria-hidden="true">
             📊
           </span>
         </div>
-        <p className={`text-xl font-black ${diff.text}`}>{diff.label}</p>
+        <p className={`text-xl font-bold ${diff.text}`}>{diff.label}</p>
       </div>
 
       {/* Row 2: 초기 비용 */}
-      <div className="card-brutal bg-bg-card rounded-xl p-5 flex flex-col gap-2">
+      <div className="card-soft bg-bg-card rounded-2xl p-5 flex flex-col gap-2">
         <div className="flex items-center justify-between">
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
             초기 비용
           </p>
           <span className="text-base" aria-hidden="true">
             💳
           </span>
         </div>
-        <p className="text-xl font-black text-ink">
+        <p className="text-xl font-bold text-ink">
           {amount === 0 ? "무자본" : `${amount}만원`}
         </p>
         {costNote && (
@@ -109,18 +109,16 @@ export default function MetricPanel({ hustle }: MetricPanelProps) {
       </div>
 
       {/* Row 2: 첫 수입까지 */}
-      <div className="card-brutal col-span-2 md:col-span-1 bg-bg-card rounded-xl p-5 flex flex-col gap-2">
+      <div className="card-soft col-span-2 md:col-span-1 bg-bg-card rounded-2xl p-5 flex flex-col gap-2">
         <div className="flex items-center justify-between">
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
             첫 수입까지
           </p>
           <span className="text-base" aria-hidden="true">
             ⏱️
           </span>
         </div>
-        <p className="text-lg font-black text-ink">
-          {hustle.timeToFirstIncome}
-        </p>
+        <p className="text-lg font-bold text-ink">{hustle.timeToFirstIncome}</p>
         <p className="text-xs text-gray-500 leading-snug">
           {hustle.weeklyTimeRequired} 필요
         </p>
