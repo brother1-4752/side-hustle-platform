@@ -19,14 +19,14 @@ export default function Sidebar() {
         <AdSlot size="rectangle" slotId="" />
 
         {/* 인기 태그 */}
-        <div className="bg-bg-sidebar rounded-card p-4">
-          <h3 className="text-sm font-bold text-gray-700 mb-3">인기 태그</h3>
+        <div className="card-brutal bg-bg-sidebar rounded-xl p-4">
+          <h3 className="text-sm font-black text-ink mb-3">인기 태그</h3>
           <div className="flex flex-wrap gap-2">
             {POPULAR_TAGS.map((tag) => (
               <a
                 key={tag}
                 href={`/?tag=${encodeURIComponent(tag)}`}
-                className="text-xs px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-500 hover:border-primary hover:text-primary transition-colors"
+                className="chip-brutal text-xs px-3 py-1.5 rounded-full bg-white text-gray-600 font-bold hover:bg-primary hover:text-white transition-colors"
               >
                 #{tag}
               </a>

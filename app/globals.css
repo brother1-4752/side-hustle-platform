@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --font-noto-sans-kr: "Noto Sans KR", sans-serif;
+    --ink: #141414;
   }
 
   html {
@@ -26,5 +27,67 @@
   /* AdSlot 컨테이너: CLS(누적 레이아웃 이동) 방지 — 항상 최소 높이 유지 */
   .ad-slot-stable {
     contain: layout;
+  }
+
+  /*
+   * 네오브루탈 카드 인터랙션 — 굵은 테두리 + 하드 오프셋 섀도우.
+   * 개별 컴포넌트마다 shadow-[...] 임의값을 흩뿌리지 않도록 여기 한 곳에서만 정의.
+   * hover: 살짝 떠오름(그림자 커짐) / active: 눌림(그림자 사라짐, 눌리는 촉감)
+   */
+  .card-brutal {
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    transition:
+      transform 150ms ease,
+      box-shadow 150ms ease;
+  }
+  .card-brutal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .card-brutal:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0 var(--ink);
+  }
+
+  /* 칩/버튼용 소형 버전 */
+  .chip-brutal {
+    border: 2px solid var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    transition:
+      transform 120ms ease,
+      box-shadow 120ms ease;
+  }
+  .chip-brutal:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .chip-brutal:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0 var(--ink);
+  }
+
+  /* 트렌딩 티커 — 무한 가로 스크롤 */
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-brutal,
+    .chip-brutal {
+      transition: none;
+    }
+    .animate-marquee {
+      animation: none;
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }

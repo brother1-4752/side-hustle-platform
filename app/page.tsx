@@ -3,6 +3,7 @@ import hustleData from "@/data/side-hustles.json";
 import type { SideHustle } from "@/types";
 import Sidebar from "@/components/layout/Sidebar";
 import FilteredFeed from "@/components/home/FilteredFeed";
+import TrendingTicker from "@/components/home/TrendingTicker";
 
 const hustles = hustleData as SideHustle[];
 
@@ -60,37 +61,48 @@ export default function HomePage() {
   const featureTags = getFeatureTags(hustles);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* ── Hero (서버 렌더링, URL 무관) ─────────────────────────────── */}
-      <section className="mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-          지금 가장 뜨는 부업, 광고 없이 한눈에. 🌿
-        </h1>
-        <p className="text-gray-500 text-base">
-          지금 바로 시작할 수 있는 부업 정보만 모았습니다.
-        </p>
-      </section>
+    <div>
+      {/* ── 트렌딩 티커 (full-bleed) ──────────────────────────────────── */}
+      <TrendingTicker hustles={hustles} />
 
-      {/* ── Main layout: 피드 + 사이드바 ────────────────────────────── */}
-      <div className="flex gap-8 items-start">
-        {/* 메인 피드: URL 파라미터 기반 동적 필터링 */}
-        <div className="flex-1 min-w-0">
-          {/*
+      <div className="max-w-6xl mx-auto px-4 pb-8">
+        {/* ── Hero (서버 렌더링, URL 무관) ─────────────────────────────── */}
+        <section className="mb-10">
+          <h1 className="text-3xl md:text-5xl font-black text-ink mb-3 leading-[1.1] tracking-tight">
+            지금 가장 뜨는 부업,
+            <br />
+            <span className="bg-primary text-white px-2 -rotate-1 inline-block">
+              광고 없이
+            </span>{" "}
+            한눈에.
+          </h1>
+          <p className="text-gray-600 text-base md:text-lg font-medium">
+            지금 바로 시작할 수 있는 부업 정보만 모았습니다. 최대 3개까지 골라서
+            바로 비교해보세요.
+          </p>
+        </section>
+
+        {/* ── Main layout: 피드 + 사이드바 ────────────────────────────── */}
+        <div className="flex gap-8 items-start">
+          {/* 메인 피드: URL 파라미터 기반 동적 필터링 */}
+          <div className="flex-1 min-w-0">
+            {/*
             CRITICAL (PRD FR-6): TagFilterBar가 useSearchParams를 사용하므로
             output: 'export' SSG 빌드 시 deoptimization 방지를 위해
             FilteredFeed 전체를 Suspense로 격리
           */}
-          <Suspense fallback={<FeedSkeleton />}>
-            <FilteredFeed
-              hustles={hustles}
-              categories={categories}
-              featureTags={featureTags}
-            />
-          </Suspense>
-        </div>
+            <Suspense fallback={<FeedSkeleton />}>
+              <FilteredFeed
+                hustles={hustles}
+                categories={categories}
+                featureTags={featureTags}
+              />
+            </Suspense>
+          </div>
 
-        {/* 사이드바: 서버 컴포넌트, URL 무관하게 정적 렌더링 */}
-        <Sidebar />
+          {/* 사이드바: 서버 컴포넌트, URL 무관하게 정적 렌더링 */}
+          <Sidebar />
+        </div>
       </div>
     </div>
   );

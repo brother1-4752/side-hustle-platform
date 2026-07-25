@@ -9,38 +9,36 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          base: "#FAFAF8",
+          base: "#FFF7E8", // 웜 크림(종이) — 흔한 순백/연회색 SaaS 배경과 차별화
           card: "#FFFFFF",
-          sidebar: "#F5F3EF",
+          sidebar: "#FFEFD1",
         },
+        ink: "#141414", // 브루탈 보더·하드섀도우 전용 near-black
         primary: {
-          DEFAULT: "#FF8FAB",
-          light: "#FFD6E0",
+          DEFAULT: "#FF3D6E", // 파스텔 핑크(#FF8FAB) → 채도 높인 비비드 코럴핑크
+          light: "#FFD1DC",
         },
         accent: {
-          DEFAULT: "#A8D8B9",
+          DEFAULT: "#2F5FFF", // 코발트 블루 — 3색 브루탈 팔레트의 두 번째 축
+          lime: "#D6FF3F", // 포인트용 형광 라임
           warm: "#FFD97D",
         },
         badge: {
-          beginnerBg: "#D1FAE5",
-          beginnerText: "#065F46",
-          intermediateBg: "#FEF3C7",
-          intermediateText: "#92400E",
-          advancedBg: "#FEE2E2",
-          advancedText: "#991B1B",
+          beginnerBg: "#CFFFE0",
+          beginnerText: "#02542D",
+          intermediateBg: "#FFECAD",
+          intermediateText: "#7A4100",
+          advancedBg: "#FFD0D0",
+          advancedText: "#7A0B0B",
         },
       },
       fontFamily: {
         sans: ["var(--font-noto-sans-kr)", "sans-serif"],
       },
-      boxShadow: {
-        // 실제로 반복 사용되던 값(0 2px 12px / 0.04)에 토큰을 맞춤 — 기존 토큰은 정의만
-        // 되어있고 실제 컴포넌트들은 전부 다른 임의값을 써서 어긋나 있었음
-        card: "0 2px 12px rgba(0,0,0,0.04)",
-        "card-hover": "0 12px 40px rgba(0,0,0,0.10)",
-      },
+      // 카드 그림자·호버 인터랙션은 globals.css의 .card-brutal / .chip-brutal
+      // 유틸리티 클래스로 일원화 — boxShadow 토큰은 더 이상 사용하지 않음
       borderRadius: {
-        card: "12px",
+        card: "10px",
       },
     },
   },

@@ -11,7 +11,7 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://side-hustle-platform.vercel.app";
 
 const notoSansKR = Noto_Sans_KR({
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "900"],
   subsets: ["latin"],
   variable: "--font-noto-sans-kr",
   display: "swap",

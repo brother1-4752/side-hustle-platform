@@ -39,13 +39,13 @@ export default function CompareTray({
   return (
     <div className="fixed bottom-0 inset-x-0 z-50">
       {open && (
-        <div className="bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgb(0,0,0,0.08)] max-h-[70vh] overflow-y-auto">
+        <div className="bg-white border-t-2 border-ink max-h-[70vh] overflow-y-auto">
           <div className="max-w-6xl mx-auto px-4 py-5">
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr>
-                    <th className="text-left text-xs text-gray-400 font-medium pb-3 pr-4 w-28">
+                    <th className="text-left text-xs text-ink/40 font-black uppercase pb-3 pr-4 w-28">
                       항목
                     </th>
                     {hustles.map((h) => (
@@ -55,7 +55,7 @@ export default function CompareTray({
                       >
                         <Link
                           href={`/side-hustle/${h.slug}`}
-                          className="font-bold text-gray-900 hover:text-primary transition-colors"
+                          className="font-black text-ink hover:text-primary transition-colors"
                         >
                           {h.icon} {h.title}
                         </Link>
@@ -65,14 +65,14 @@ export default function CompareTray({
                 </thead>
                 <tbody>
                   {ROWS.map(([label, getValue]) => (
-                    <tr key={label} className="border-t border-gray-100">
-                      <td className="text-xs font-semibold text-gray-400 py-3 pr-4 align-top">
+                    <tr key={label} className="border-t-2 border-ink/10">
+                      <td className="text-xs font-bold text-ink/50 py-3 pr-4 align-top">
                         {label}
                       </td>
                       {hustles.map((h) => (
                         <td
                           key={h.slug}
-                          className="py-3 pr-4 text-gray-700 align-top"
+                          className="py-3 pr-4 text-gray-700 align-top font-medium"
                         >
                           {getValue(h)}
                         </td>
@@ -86,13 +86,13 @@ export default function CompareTray({
         </div>
       )}
 
-      <div className="bg-gray-900 text-white">
+      <div className="bg-ink text-white border-t-4 border-primary">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2 min-w-0 overflow-x-auto">
             {hustles.map((h) => (
               <span
                 key={h.slug}
-                className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs bg-white/10 rounded-full pl-3 pr-1.5 py-1"
+                className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs bg-white/10 rounded-full pl-3 pr-1.5 py-1 font-bold"
               >
                 {h.icon} {h.title}
                 <button
@@ -118,7 +118,7 @@ export default function CompareTray({
               type="button"
               onClick={() => setOpen((v) => !v)}
               disabled={hustles.length < 2}
-              className="text-sm font-semibold bg-primary text-white px-4 py-2 rounded-full disabled:opacity-40 disabled:cursor-not-allowed hover:bg-primary/90 transition-colors"
+              className="chip-brutal text-sm font-black bg-primary text-white px-4 py-2 rounded-full disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {open ? "비교표 닫기" : `${hustles.length}개 비교하기`}
             </button>
