@@ -72,7 +72,7 @@ export default function HomePage() {
             지금 가장 뜨는 부업,
             <br />
             <span className="bg-primary text-white px-2 -rotate-1 inline-block">
-              광고 없이
+              과장 없이
             </span>{" "}
             한눈에.
           </h1>
