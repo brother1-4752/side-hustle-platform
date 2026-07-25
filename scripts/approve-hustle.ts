@@ -11,10 +11,11 @@
 import { readFileSync, writeFileSync, unlinkSync, existsSync } from "fs";
 import { resolve } from "path";
 import type { SideHustle } from "../types";
-import { validate } from "./mine-hustle";
+import { validate, extractVideoId } from "./mine-hustle";
 
 const DATA_PATH = resolve(__dirname, "../data/side-hustles.json");
 const INBOX_DIR = resolve(__dirname, "../data/_inbox");
+const SEEN_PATH = resolve(__dirname, "../data/_seen-videos.json");
 
 function main() {
   const slug = process.argv[2];
@@ -46,6 +47,23 @@ function main() {
   existing.push(hustle);
   writeFileSync(DATA_PATH, JSON.stringify(existing, null, 2) + "\n");
   unlinkSync(inboxPath);
+
+  // 승인된 영상도 seen 레지스트리에 기록 — discover-new-videos.ts가
+  // 이미 등록된 영상을 다시 추천하지 않도록
+  if (hustle.sourceUrl) {
+    try {
+      const videoId = extractVideoId(hustle.sourceUrl);
+      const seen = JSON.parse(readFileSync(SEEN_PATH, "utf-8"));
+      seen[videoId] = {
+        status: "approved",
+        slug: hustle.slug,
+        date: new Date().toISOString().slice(0, 10),
+      };
+      writeFileSync(SEEN_PATH, JSON.stringify(seen, null, 2) + "\n");
+    } catch {
+      // sourceUrl이 유튜브 형식이 아니면 조용히 건너뜀
+    }
+  }
 
   console.log(
     `✅ "${hustle.title}" 승인 완료 — side-hustles.json 총 ${existing.length}개 항목`,
